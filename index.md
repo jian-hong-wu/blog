@@ -1,8 +1,7 @@
 ## Welcome to Acchong's blog
 
 This is Acchong's blog. I will show you how to create a blog like this!
-
-
+![test](/pic/測試.png)
 ```markdown
 
 
