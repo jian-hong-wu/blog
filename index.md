@@ -1,9 +1,14 @@
 ## Welcome to Acchong's blog
 
 This is Acchong's blog. I will show you how to create a blog like this!
-![test](/pic/測試.png)
-```markdown
 
+```markdown
+1. sign in github
+2. create a new repository
+3. find "GitHub Pages" in settings
+4. choose a theme
+5. edit the file "index.md" to add content
+6. find the URL in "GitHub Pages" in settings
 ```
 
 ### reference
