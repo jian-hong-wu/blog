@@ -1,8 +1,10 @@
 ## Welcome to Acchong's blog
 
-This is Acchong's blog. I will show you how to create a blog like this!
+This is Acchong's blog.
 
 ```markdown
+### How to create a blog like this!
+
 1. sign in github
 2. create a new repository
 3. find "GitHub Pages" in settings
@@ -11,6 +13,11 @@ This is Acchong's blog. I will show you how to create a blog like this!
 6. find the URL in "GitHub Pages" in settings
 ```
 
+
+### I have learned 
+1. [Git GitHub GitLab使用教程](https://www.youtube.com/watch?v=usgghEA_BEk&list=PL5eFspCU9xDe4Gz0LotCdRg5V68AD3icH&index=1)
+
+
 ### reference
 
-[如何在 Github Pages 建立靜態網站](https://www.youtube.com/watch?v=bU0f1IvUcZA)
+1. [如何在 Github Pages 建立靜態網站](https://www.youtube.com/watch?v=bU0f1IvUcZA)
