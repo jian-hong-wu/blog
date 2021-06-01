@@ -21,7 +21,7 @@ This is Acchong's blog.
 4. [Docker教學 - 入門介紹](https://www.youtube.com/watch?v=pa1Zao1Hy2c&list=PLVVMQF8vWNCJnlO0Y34AE_1AgCapldp38)3ˇc
 
 ### note
-1.[docker](https://jian-hong-wu.github.io/blog/docker)
+1. [docker](https://jian-hong-wu.github.io/blog/docker)
 
 ### reference"
 1. [如何在 Github Pages 建立靜態網站](https://www.youtube.com/watch?v=bU0f1IvUcZA)
