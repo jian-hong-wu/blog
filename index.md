@@ -17,10 +17,11 @@ This is Acchong's blog.
 ### I have learned 
 1. [Git GitHub GitLab使用教程](https://www.youtube.com/watch?v=usgghEA_BEk&list=PL5eFspCU9xDe4Gz0LotCdRg5V68AD3icH&index=1)
 2. [尚硅谷 Docker教學](https://www.youtube.com/watch?v=37b3cWIIxUg&list=PLmOn9nNkQxJFX0YVLDw5EMUL-4cVzXL33&index=1)
-3. [【Docker入门教学】](https://www.youtube.com/watch?v=bumV64OfLCs&list=PLliocbKHJNwubNT2oK-xlB1GXTXuLFb0I)
-4. [Docker教學 - 入門介紹](https://www.youtube.com/watch?v=pa1Zao1Hy2c&list=PLVVMQF8vWNCJnlO0Y34AE_1AgCapldp38)
+3. [Docker入门教学](https://www.youtube.com/watch?v=bumV64OfLCs&list=PLliocbKHJNwubNT2oK-xlB1GXTXuLFb0I)
+4. [Docker教學 - 入門介紹](https://www.youtube.com/watch?v=pa1Zao1Hy2c&list=PLVVMQF8vWNCJnlO0Y34AE_1AgCapldp38)3ˇc
 
+### note
+1.[docker](https://jian-hong-wu.github.io/blog/docker/)
 
-### reference
-
+### reference"
 1. [如何在 Github Pages 建立靜態網站](https://www.youtube.com/watch?v=bU0f1IvUcZA)
