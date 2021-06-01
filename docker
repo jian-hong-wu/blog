@@ -1,13 +1,31 @@
 docker images (-a -q)
 
-docker run "image" 
+docker search -s 30 "image" ##只搜尋超過30星的image
 
-docker ps -a -q
+docker pull "image"
 
-docker start "image ID"
+docker rmi -f "image"
 
-docker stop "image ID"
+docker rmi -f $(docker images -a -q) ##刪除全部images
 
-docker rm -f "container" "or" $(docker ps -a -q) 
+docker run -it --name "name" "image"
 
 
+
+
+
+docker ps -l ##列出目前在運行的containers
+
+docker ps -a ##列出所有曾運行過的containers
+
+docker ps -q ##只顯示containers ID
+
+docker start "container ID"
+
+docker stop "container ID"
+
+docker kill "container ID" ##強制停止
+
+docker rm -f "container ID"
+
+docker rm -f $(docker ps -a -q) ##刪除全部container
