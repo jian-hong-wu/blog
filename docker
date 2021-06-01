@@ -1,0 +1,13 @@
+docker images (-a -q)
+
+docker run "image" 
+
+docker ps -a -q
+
+docker start "image ID"
+
+docker run "image"
+
+docker rm -f "container" "or" $(docker ps -a -q) 
+
+
