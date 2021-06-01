@@ -6,7 +6,7 @@ docker ps -a -q
 
 docker start "image ID"
 
-docker run "image"
+docker stop "image ID"
 
 docker rm -f "container" "or" $(docker ps -a -q) 
 
