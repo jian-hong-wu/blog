@@ -10,7 +10,7 @@ docker rmi -f $(docker images -a -q) ##刪除全部images
 
 docker run -it --name "name" "image"
 
-
+docker run -d --name "name" "image" ##不進入 container 運行
 
 
 
@@ -29,3 +29,17 @@ docker kill "container ID" ##強制停止
 docker rm -f "container ID"
 
 docker rm -f $(docker ps -a -q) ##刪除全部container
+
+docker log -t -f --tail 3 "container ID" ##增加時間標記 不停追加 只顯示最後三個
+
+docker top "container ID" 
+
+docker inspect "container ID" 
+
+docker exec -it "container ID" "command"
+
+
+
+
+
+
