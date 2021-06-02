@@ -32,13 +32,31 @@ docker rm -f $(docker ps -a -q) ##刪除全部container
 
 docker log -t -f --tail 3 "container ID" ##增加時間標記 不停追加 只顯示最後三個
 
-docker top "container ID" 
+docker top "container ID" ##顯示container的進程
 
-docker inspect "container ID" 
+docker inspect "container ID" ##顯示container的詳細進程
 
-docker exec -it "container ID" "command"
+docker exec -it "container ID" "command" ##在container打開新的終端執行，開啟新進程
+
+docker attach "container ID" ##進入container終端，不開啟新進程
+
+exit ##停止退出
+
+ctrl+P+Q ##不停止退出
+
+docker cp "container ID""path1" "path2" ##從container複製檔案到本機
 
 
+
+docker run -it -p 8888:8080 "container ID"
+
+docker run -it -P 'container ID"
+
+docker commit -m="信息" -a="作者" "container ID" "container's name"
+
+docker run -it -v "path1": "path2" "image"
+
+docker run -it -v "path1": "path2":or "image" ##container只可讀取
 
 
 
