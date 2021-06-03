@@ -58,7 +58,7 @@ docker run -it -v "path1": "path2" "image"
 
 docker run -it -v "path1": "path2":or "image" ##container只可讀取
 
-docker build -f "path" -t "name" .##创建镜像
+docker build -f "path" -t "name" .##用dockerfile创建镜像
 
 
 ### dockerfile體系結構
@@ -74,7 +74,7 @@ COPY ##複製文件和目錄到鏡像中。將從建構上下文目錄中<原路
 VOLUME ##用於數據保存和持久化工作
 CMD ##指定一個容器啟動時要運行的命令。Dockerfile中可以有多個CMD指令，但只有最後一個生效，會被docker run之後的參數替換
 ENTRYPOINT ##指定一個容器啟動時要運行的命令。
-ONBUILD ##建構一個被繼承的
+ONBUILD ##建構一個被繼承的Dockerfile時運行命令，父鏡像在被子鏡像繼承後父鏡像的onbuild被觸發
 
 
 
