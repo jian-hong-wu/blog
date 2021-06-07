@@ -24,7 +24,7 @@
 
 ### note
    1. [docker](https://jian-hong-wu.github.io/blog/docker)
-   2. [shell 命令](https://jian-hong-wu.github.io/blog/shell 命令)
+   2. [shell命令](https://jian-hong-wu.github.io/blog/shell命令)
 
 ### reference
    1. [如何在 Github Pages 建立靜態網站](https://www.youtube.com/watch?v=bU0f1IvUcZA)
