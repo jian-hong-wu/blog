@@ -22,9 +22,9 @@
    4. [Docker教學 - 入門介紹](https://www.youtube.com/watch?v=pa1Zao1Hy2c&list=PLVVMQF8vWNCJnlO0Y34AE_1AgCapldp38)
    5. [Ubuntu 入門](https://www.youtube.com/watch?v=u6-IMozWQG0&list=PLkmkNssEXKuxfpeezLrnmHsUoJRJzWVui&index=1)
 
-### note
-   1. [docker](https://jian-hong-wu.github.io/blog/docker)
-   2. [shell](https://jian-hong-wu.github.io/blog/shell)
+### Note
+   1. [docker常用指令](https://jian-hong-wu.github.io/blog/docker.txt)
+   2. [shell常用指令](https://jian-hong-wu.github.io/blog/shell.txt)
 
-### reference
+### Reference
    1. [如何在 Github Pages 建立靜態網站](https://www.youtube.com/watch?v=bU0f1IvUcZA)
