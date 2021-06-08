@@ -23,8 +23,8 @@
    5. [Ubuntu 入門](https://www.youtube.com/watch?v=u6-IMozWQG0&list=PLkmkNssEXKuxfpeezLrnmHsUoJRJzWVui&index=1)
 
 ### Note
-   1. [docker常用指令](https://jian-hong-wu.github.io/blog/docker.txt)
-   2. [shell常用指令](https://jian-hong-wu.github.io/blog/shell.txt)
+   1. [常用的docker指令](https://jian-hong-wu.github.io/blog/docker.txt)
+   2. [常用的shell指令](https://jian-hong-wu.github.io/blog/shell.txt)
 
 ### Reference
    1. [如何在 Github Pages 建立靜態網站](https://www.youtube.com/watch?v=bU0f1IvUcZA)
