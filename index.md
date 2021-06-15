@@ -26,6 +26,9 @@
 ### Note
    1. [常用的docker指令](https://jian-hong-wu.github.io/blog/docker.txt)
    2. [常用的shell指令](https://jian-hong-wu.github.io/blog/shell.txt)
+   3. [putty安裝指令](https://jian-hong-wu.github.io/blog/putty.txt)
+   4. [jenkins安裝指令](https://jian-hong-wu.github.io/blog/jenkins.txt)
+   5. [VScode安裝指令](https://jian-hong-wu.github.io/blog/VScode.txt)
 
 ### Reference
    1. [如何在 Github Pages 建立靜態網站](https://www.youtube.com/watch?v=bU0f1IvUcZA)
