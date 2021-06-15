@@ -1,7 +1,0 @@
-Bug1:
-How to fix docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.40/containers/json: dial unix /var/run/docker.sock: connect: permission denied
-Solution:
-just open terminal and type this command
-sudo chmod 666 /var/run/docker.sock
-
-Bug2:
