@@ -1,6 +1,6 @@
-##  Welcome to Acchong's blog
+#  Welcome to Hong's blog
 
-   This is Acchong's blog.
+   This is Hong's blog.
 
 ```markdown
 ### How to create a blog like this!
