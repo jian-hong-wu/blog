@@ -24,10 +24,10 @@
    6. [Jenkins 教學](https://www.youtube.com/watch?v=SbMabIXQd_A&list=PLmOn9nNkQxJE_3wrOfHdL1dWRY6CCHBnh)
 
 ### Note
-   1. [常用的docker指令](https://jian-hong-wu.github.io/blog/docker.txt)
-   2. [常用的shell指令](https://jian-hong-wu.github.io/blog/shell.txt)
-   3. [putty安裝指令](https://jian-hong-wu.github.io/blog/putty.txt)
-   4. [jenkins安裝指令](https://jian-hong-wu.github.io/blog/jenkins.txt)
+   1. [常用的docker指令](https://jian-hong-wu.github.io/blog/docker/)
+   2. [常用的shell指令](https://jian-hong-wu.github.io/blog/shell/)
+   3. [putty安裝指令](https://jian-hong-wu.github.io/blog/putty/)
+   4. [jenkins安裝指令](https://jian-hong-wu.github.io/blog/jenkins/)
    5. [VScode安裝指令](https://jian-hong-wu.github.io/blog/VScode/)
 
 ### Reference
