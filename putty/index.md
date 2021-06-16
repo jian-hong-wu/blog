@@ -1,3 +1,5 @@
+[上一頁](https://jian-hong-wu.github.io/blog/)
+
 安裝puttyz的方法
 
 sudo apt-get install putty
