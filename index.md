@@ -32,4 +32,3 @@
 
 ### Reference
    1. [如何在 Github Pages 建立靜態網站](https://www.youtube.com/watch?v=bU0f1IvUcZA)
-   2. [another](https://jian-hong-wu.github.io/blog/another/)
