@@ -1,3 +1,5 @@
+[上一頁](https://jian-hong-wu.github.io/blog/)
+
 先安裝java:
 
 sudo apt-get update
