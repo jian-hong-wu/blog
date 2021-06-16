@@ -64,16 +64,27 @@ docker build -f "path" -t "name" .##用dockerfile创建镜像
 ### dockerfile體系結構
 
 FROM ##基礎鏡像
+
 MAINTAINER ##鏡像維護者姓名及郵件地址
+
 RUN ##容器建構時需要運行的命令
+
 EXPOSE ##容器對外的端口
+
 WORKDIR ##創建容器後，終端默認登入的工作目錄
+
 ENV ##用來在建構鏡像過程中設置環境變量
+
 ADD ##將主機目錄下的文件複製進鏡像且ADD命令會自動處理URL和解壓縮
+
 COPY ##複製文件和目錄到鏡像中。將從建構上下文目錄中<原路徑>的文件/目錄複製到新一層的鏡像內的<目標路徑>位置
+
 VOLUME ##用於數據保存和持久化工作
+
 CMD ##指定一個容器啟動時要運行的命令。Dockerfile中可以有多個CMD指令，但只有最後一個生效，會被docker run之後的參數替換
+
 ENTRYPOINT ##指定一個容器啟動時要運行的命令。
+
 ONBUILD ##建構一個被繼承的Dockerfile時運行命令，父鏡像在被子鏡像繼承後父鏡像的onbuild被觸發
 
 
