@@ -1,3 +1,5 @@
+[上一頁](https://jian-hong-wu.github.io/blog/)
+
 ls -a
 
 cd
