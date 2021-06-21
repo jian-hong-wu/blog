@@ -1,7 +1,6 @@
 #  Hong's Blog
 
-   This is Hong's blog.
-
+   [testcase](https://jian-hong-wu.github.io/blog/testcase/)
 ```markdown
 ### How to create a blog like this!
 
