@@ -1,0 +1,30 @@
+docker run -it --name test sonic-mgmt-dev:ec202006 bash
+
+cd sonic-mgmt/
+
+cd server_config
+
+./server.sh 2
+
+cd ../ansible/
+
+vi testbed.csv
+
+./testbed-cli.sh -b VH0200 add-topo 2-7_t0 ~/.password -e ptf_imagetag=ec2020006
+
+ansible-playbook -i lab config_sonic_basedon_testbed.yml -l as5812-54x -e testbed_name=2-7_t0 -e deploy=true -e save=true
+
+ansible-playbook -i lab --limit as5812-54x test_sonic.yml -e testbed_name=2-7_t0 -e  testcase_name=syslog -vvvv
+
+cd ../test
+
+py.test --inventory=lab --host-pattern=2-7_t0 --module-path ../ansible/library/ --testbed=2-7_t0 --testbed_file=../ansible/testbed.csv ./syslog/test_syslog.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0
+
+cd ../ansible
+
+./testbed.cli.sh remove-topo 2-7_t0 ~/.password
+
+exit
+
+docker rm test
+
