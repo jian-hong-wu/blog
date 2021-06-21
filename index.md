@@ -2,19 +2,13 @@
    
 ## 目錄
    
-   [How to create a blog like this!](https://jian-hong-wu.github.io/blog/createblog/)
-   
-   [testcase](https://jian-hong-wu.github.io/blog/testcase/)
-
-   [常用的docker指令](https://jian-hong-wu.github.io/blog/docker/)
-   
-   [常用的shell指令](https://jian-hong-wu.github.io/blog/shell/)
-   
-   [putty安裝指令](https://jian-hong-wu.github.io/blog/putty/)
-   
-   [jenkins安裝指令](https://jian-hong-wu.github.io/blog/jenkins/)
-   
-   [VScode安裝指令](https://jian-hong-wu.github.io/blog/VScode/)
+   1. [How to create a blog like this!](https://jian-hong-wu.github.io/blog/createblog/)
+   2. [testcase](https://jian-hong-wu.github.io/blog/testcase/)
+   3. [常用的docker指令](https://jian-hong-wu.github.io/blog/docker/)
+   4. [常用的shell指令](https://jian-hong-wu.github.io/blog/shell/)
+   5. [putty安裝指令](https://jian-hong-wu.github.io/blog/putty/)
+   6. [jenkins安裝指令](https://jian-hong-wu.github.io/blog/jenkins/)
+   7. [VScode安裝指令](https://jian-hong-wu.github.io/blog/VScode/)
 
 ### I have learned 
    1. [Git GitHub GitLab使用教程](https://www.youtube.com/watch?v=usgghEA_BEk&list=PL5eFspCU9xDe4Gz0LotCdRg5V68AD3icH&index=1)
