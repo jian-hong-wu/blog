@@ -1,4 +1,4 @@
-#  Welcome to Hong's blog
+#  Hong's blog
 
    This is Hong's blog.
 
