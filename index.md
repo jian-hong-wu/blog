@@ -4,6 +4,16 @@
    
    [testcase](https://jian-hong-wu.github.io/blog/testcase/)
 
+   [常用的docker指令](https://jian-hong-wu.github.io/blog/docker/)
+   
+   [常用的shell指令](https://jian-hong-wu.github.io/blog/shell/)
+   
+   [putty安裝指令](https://jian-hong-wu.github.io/blog/putty/)
+   
+   [jenkins安裝指令](https://jian-hong-wu.github.io/blog/jenkins/)
+   
+   [VScode安裝指令](https://jian-hong-wu.github.io/blog/VScode/)
+
 ### I have learned 
    1. [Git GitHub GitLab使用教程](https://www.youtube.com/watch?v=usgghEA_BEk&list=PL5eFspCU9xDe4Gz0LotCdRg5V68AD3icH&index=1)
    2. [尚硅谷 Docker教學](https://www.youtube.com/watch?v=37b3cWIIxUg&list=PLmOn9nNkQxJFX0YVLDw5EMUL-4cVzXL33&index=1)
@@ -11,13 +21,6 @@
    4. [Docker教學 - 入門介紹](https://www.youtube.com/watch?v=pa1Zao1Hy2c&list=PLVVMQF8vWNCJnlO0Y34AE_1AgCapldp38)
    5. [Ubuntu 入門](https://www.youtube.com/watch?v=u6-IMozWQG0&list=PLkmkNssEXKuxfpeezLrnmHsUoJRJzWVui&index=1)
    6. [Jenkins 教學](https://www.youtube.com/watch?v=SbMabIXQd_A&list=PLmOn9nNkQxJE_3wrOfHdL1dWRY6CCHBnh)
-
-### Note
-   1. [常用的docker指令](https://jian-hong-wu.github.io/blog/docker/)
-   2. [常用的shell指令](https://jian-hong-wu.github.io/blog/shell/)
-   3. [putty安裝指令](https://jian-hong-wu.github.io/blog/putty/)
-   4. [jenkins安裝指令](https://jian-hong-wu.github.io/blog/jenkins/)
-   5. [VScode安裝指令](https://jian-hong-wu.github.io/blog/VScode/)
 
 ### Reference
    1. [如何在 Github Pages 建立靜態網站](https://www.youtube.com/watch?v=bU0f1IvUcZA)
