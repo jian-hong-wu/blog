@@ -1,8 +1,13 @@
+[上一頁](https://jian-hong-wu.github.io/blog/)
 
+sign in github
 
-1. sign in github
-   2. create a new repository
-   3. find "GitHub Pages" in settings
-   4. choose a theme
-   5. edit the file "index.md" to add content
-   6. find the URL in "GitHub Pages" in settings
+create a new repository
+
+find "GitHub Pages" in settings
+
+choose a theme
+
+edit the file "index.md" to add content
+
+find the URL in "GitHub Pages" in settings
