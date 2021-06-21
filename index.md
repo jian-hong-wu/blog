@@ -1,18 +1,7 @@
 #  Hong's Blog
-
+   
+   [How to create a blog like this!](https://jian-hong-wu.github.io/blog/createblog/)
    [testcase](https://jian-hong-wu.github.io/blog/testcase/)
-```markdown
-### How to create a blog like this!
-
-   1. sign in github
-   2. create a new repository
-   3. find "GitHub Pages" in settings
-   4. choose a theme
-   5. edit the file "index.md" to add content
-   6. find the URL in "GitHub Pages" in settings
-    
-```
-
 
 ### I have learned 
    1. [Git GitHub GitLab使用教程](https://www.youtube.com/watch?v=usgghEA_BEk&list=PL5eFspCU9xDe4Gz0LotCdRg5V68AD3icH&index=1)
