@@ -9,7 +9,7 @@
    5. [putty安裝指令](https://jian-hong-wu.github.io/blog/putty/)
    6. [jenkins安裝指令](https://jian-hong-wu.github.io/blog/jenkins/)
    7. [VScode安裝指令](https://jian-hong-wu.github.io/blog/VScode/)
-   8. [testbed-cli.sh 的說明文件](https://jian-hong-wu.github.io/blog#testbed-cli.sh的說明文件)
+   8. [testbed-cli.sh 的說明文件](https://jian-hong-wu.github.io/blog#testbed-clish的說明文件)
 
 ## How to create a blog like this!
 
