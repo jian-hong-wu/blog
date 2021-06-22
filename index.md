@@ -103,7 +103,7 @@ To create Kubernetes master on a server: ./testbed-cli.sh -m k8s_ubuntu create-m
 
 To destroy Kubernetes master on a server: ./testbed-cli.sh -m k8s_ubuntu destroy-master 'k8s-server-name' ~/.password
 
-###參考：
+### 參考：
 
 https://github.com/Azure/sonic-mgmt
 
