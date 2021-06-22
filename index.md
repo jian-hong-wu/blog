@@ -33,7 +33,7 @@
 
 在終端輸入以下指令
 
-docker run -it --name test sonic-mgmt-dev:ec202006 bash
+docker run -it --name test docker-sonic-mgmt bash
 
 cd sonic-mgmt/
 
@@ -45,7 +45,7 @@ cd ../ansible/
 
 vi testbed.csv
 
-./testbed-cli.sh -b VM0200 add-topo 2-7_t0 ~/.password -e ptf_imagetag=ec2020006
+./testbed-cli.sh -b VM0200 add-topo 2-7_t0 ~/.password -e ptf_imagetag=lastest
 
 ansible-playbook -i lab config_sonic_basedon_testbed.yml -l as5812-54x -e testbed_name=2-7_t0 -e deploy=true -e save=true
 
