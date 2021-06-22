@@ -1,3 +1,5 @@
+# jenkins安裝指令
+
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
 先安裝java:
@@ -32,6 +34,6 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 輸入完密碼後即可選擇安裝所需的插件，系統會自動安裝建議的套件
 
-參考
+#### 參考:
 
 https://oranwind.org/-devops-jenkins-yu-centos-ubuntu-an-zhuang-jiao-xue/
