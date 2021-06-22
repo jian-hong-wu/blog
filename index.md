@@ -27,7 +27,7 @@
 
 6. find the URL in "GitHub Pages" in settings
 
-### 參考：
+#### 參考：
 
 如何在 Github Pages 建立靜態網站 (https://www.youtube.com/watch?v=bU0f1IvUcZA)
 
