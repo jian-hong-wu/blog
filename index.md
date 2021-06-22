@@ -103,7 +103,10 @@ To create Kubernetes master on a server: ./testbed-cli.sh -m k8s_ubuntu create-m
 
 To destroy Kubernetes master on a server: ./testbed-cli.sh -m k8s_ubuntu destroy-master 'k8s-server-name' ~/.password
 
-   
+參考：
+
+https://github.com/Azure/sonic-mgmt
+
 ### I have learned 
    1. [Git GitHub GitLab使用教程](https://www.youtube.com/watch?v=usgghEA_BEk&list=PL5eFspCU9xDe4Gz0LotCdRg5V68AD3icH&index=1)
    2. [尚硅谷 Docker教學](https://www.youtube.com/watch?v=37b3cWIIxUg&list=PLmOn9nNkQxJFX0YVLDw5EMUL-4cVzXL33&index=1)
