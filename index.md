@@ -27,7 +27,7 @@
 
 #### 參考：
 
-如何在 Github Pages 建立靜態網站 (https://www.youtube.com/watch?v=bU0f1IvUcZA)
+[如何在 Github Pages 建立靜態網站](https://www.youtube.com/watch?v=bU0f1IvUcZA)
 
 ## testcase
 
@@ -157,7 +157,7 @@ To destroy Kubernetes master on a server: ./testbed-cli.sh -m k8s_ubuntu destroy
 
 #### 參考：
 
-https://github.com/Azure/sonic-mgmt
+[https://github.com/Azure/sonic-mgmt](https://github.com/Azure/sonic-mgmt)
 
 ## I have learned 
    1. [Git GitHub GitLab使用教程](https://www.youtube.com/watch?v=usgghEA_BEk&list=PL5eFspCU9xDe4Gz0LotCdRg5V68AD3icH&index=1)
