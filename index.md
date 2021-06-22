@@ -1,5 +1,18 @@
 #  Hong's Blog
 
+### 目錄
+       
+   1. [How to create a blog like this!](https://jian-hong-wu.github.io/blog/createblog/)
+   2. [testcase](https://jian-hong-wu.github.io/blog/testcase/)
+   3. [常用的docker指令](https://jian-hong-wu.github.io/blog/docker/)
+   4. [常用的shell指令](https://jian-hong-wu.github.io/blog/shell/)
+   5. [putty安裝指令](https://jian-hong-wu.github.io/blog/putty/)
+   6. [jenkins安裝指令](https://jian-hong-wu.github.io/blog/jenkins/)
+   7. [VScode安裝指令](https://jian-hong-wu.github.io/blog/VScode/)
+   8. [testbed-cli.sh 的說明文件](https://jian-hong-wu.github.io/blog/testbed-cli/)
+
+
+
 ### testbed-cli.sh 的說明
 
    testbed-cli. Interface to testbeds
@@ -121,21 +134,6 @@ To create Kubernetes master on a server: ./testbed-cli.sh -m k8s_ubuntu create-m
 To destroy Kubernetes master on a server: ./testbed-cli.sh -m k8s_ubuntu destroy-master 'k8s-server-name' ~/.password
 
    
-### 目錄
-       
-   1. [How to create a blog like this!](https://jian-hong-wu.github.io/blog/createblog/)
-   2. [testcase](https://jian-hong-wu.github.io/blog/testcase/)
-   3. [常用的docker指令](https://jian-hong-wu.github.io/blog/docker/)
-   4. [常用的shell指令](https://jian-hong-wu.github.io/blog/shell/)
-   5. [putty安裝指令](https://jian-hong-wu.github.io/blog/putty/)
-   6. [jenkins安裝指令](https://jian-hong-wu.github.io/blog/jenkins/)
-   7. [VScode安裝指令](https://jian-hong-wu.github.io/blog/VScode/)
-   8. [testbed-cli.sh 的說明文件](https://jian-hong-wu.github.io/blog/testbed-cli/)
-       
-
-
-
-
 ### I have learned 
    1. [Git GitHub GitLab使用教程](https://www.youtube.com/watch?v=usgghEA_BEk&list=PL5eFspCU9xDe4Gz0LotCdRg5V68AD3icH&index=1)
    2. [尚硅谷 Docker教學](https://www.youtube.com/watch?v=37b3cWIIxUg&list=PLmOn9nNkQxJFX0YVLDw5EMUL-4cVzXL33&index=1)
