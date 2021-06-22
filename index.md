@@ -65,7 +65,7 @@ docker rm test
 
 --測試結束
 
-## testbed-cli.sh 的說明文件
+## testbed-cli.sh的說明文件
 
    testbed-cli. Interface to testbeds
 
