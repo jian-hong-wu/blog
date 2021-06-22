@@ -1,3 +1,5 @@
+# VScode安裝指令
+
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
 請透過瀏覽器連到下方網址
@@ -16,8 +18,8 @@ sudo dpkg -i 下載的安裝檔名稱
 
 code
 
+#### 參考：
 
-參考：
 https://learningsky.io/tools-ubuntu-install-visual-studio-code/
 
 
