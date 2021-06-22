@@ -3,7 +3,7 @@
 ## 目錄
        
    1. [How to create a blog like this!](https://jian-hong-wu.github.io/blog/#how-to-create-a-blog-like-this)
-   2. [testcase](https://jian-hong-wu.github.io/blog/#testcase)
+   2. [testcase](https://jian-hong-wu.github.io/blog/testcase/)
    3. [testbed-cli.sh的說明文件](https://jian-hong-wu.github.io/blog#testbed-clish的說明文件)
    4. [常用的docker指令](https://jian-hong-wu.github.io/blog/docker/)
    5. [常用的shell指令](https://jian-hong-wu.github.io/blog/shell/)
