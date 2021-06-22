@@ -1,6 +1,6 @@
 testbed-cli. Interface to testbeds
 
-Usage:
+Usage
 
     ./testbed-cli.sh [options] (start-vms | stop-vms) <server-name> <vault-password-file>
     
@@ -18,7 +18,7 @@ Usage:
     
     ./testbed-cli.sh [options] (create-master | destroy-master) <k8s-server-name> <vault-password-file>
 
-Options:
+Options
 
     -t <tbfile>     : testbed CSV file name (default: 'testbed.csv')
     
