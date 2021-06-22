@@ -19,8 +19,7 @@
 
 Usage:
 
-    ./testbed-cli.sh [options] (start-vms | stop-vms) <server-name> <vault-password-file>
-    
+    ./testbed-cli.sh [options] (start-vms | stop-vms) <server-name> <vault-password-file>    
     ./testbed-cli.sh [options] (start-topo-vms | stop-topo-vms) <topo-name> <vault-password-file>
     
     ./testbed-cli.sh [options] (add-topo | remove-topo | renumber-topo | connect-topo) <topo-name> <vault-password-file>
