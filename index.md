@@ -13,7 +13,7 @@
 
 
 
-### testbed-cli.sh 的說明
+### testbed-cli.sh 的說明文件
 
    testbed-cli. Interface to testbeds
 
