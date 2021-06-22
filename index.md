@@ -7,9 +7,9 @@
    3. [testbed-cli.sh的說明文件](https://jian-hong-wu.github.io/blog#testbed-clish的說明文件)
    4. [常用的docker指令](https://jian-hong-wu.github.io/blog/docker/)
    5. [常用的shell指令](https://jian-hong-wu.github.io/blog/shell/)
-   6. [putty安裝指令](https://jian-hong-wu.github.io/blog/putty/)
-   7. [jenkins安裝指令](https://jian-hong-wu.github.io/blog/jenkins/)
-   8. [VScode安裝指令](https://jian-hong-wu.github.io/blog/VScode/)
+   6. [安裝puttyz的方法](https://jian-hong-wu.github.io/blog#安裝puttyz的方法)
+   7. [jenkins安裝指令](https://jian-hong-wu.github.io/blog#jenkins安裝指令)
+   8. [VScode安裝指令](https://jian-hong-wu.github.io/blog#VScode安裝指令)
 
 
 
@@ -160,7 +160,76 @@ To destroy Kubernetes master on a server: ./testbed-cli.sh -m k8s_ubuntu destroy
 
 #### 參考：
 
-[https://github.com/Azure/sonic-mgmt](https://github.com/Azure/sonic-mgmt)
+https://github.com/Azure/sonic-mgmt
+
+## 安裝puttyz的方法
+
+sudo apt-get install putty
+
+#### 參考:
+
+https://www.itread01.com/p/122712.html
+
+## VScode安裝指令
+
+請透過瀏覽器連到下方網址
+
+https://code.visualstudio.com/download
+
+點選 Debian, Ubuntu
+
+移動路徑到所下載 VS Code 的安裝檔所在位置
+
+在終端機中輸入下方指令
+
+sudo dpkg -i 下載的安裝檔名稱
+
+請在終端機中輸入下方指令
+
+code
+
+#### 參考：
+
+https://learningsky.io/tools-ubuntu-install-visual-studio-code/
+
+## jenkins安裝指令
+
+先安裝java:
+
+sudo apt-get update
+
+sudo apt-get upgrade
+
+sudo apt-get install default-jdk
+
+javac -version   (測試)
+
+安裝jenkin:
+
+wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -  
+
+sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'  
+
+sudo apt-get update
+
+sudo apt-get install jenkins  
+
+執行jenkin:
+
+sudo service jenkins start  
+
+開啟 Jenkins 網頁頁面 http://yourserverIP:8080
+
+出現畫面後需要取得初始的 admin 密碼
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword  
+
+輸入完密碼後即可選擇安裝所需的插件，系統會自動安裝建議的套件
+
+#### 參考:
+
+https://oranwind.org/-devops-jenkins-yu-centos-ubuntu-an-zhuang-jiao-xue/
+
 
 ## I have learned 
    1. [Git GitHub GitLab使用教程](https://www.youtube.com/watch?v=usgghEA_BEk&list=PL5eFspCU9xDe4Gz0LotCdRg5V68AD3icH&index=1)
