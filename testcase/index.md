@@ -18,7 +18,7 @@ ansible-playbook -i lab config_sonic_basedon_testbed.yml -l as5812-54x -e testbe
 
 ansible-playbook -i lab --limit as5812-54x test_sonic.yml -e testbed_name=2-7_t0 -e  testcase_name=syslog -vvvv
 
-cd ../test
+cd ../tests
 
 py.test --inventory=lab --host-pattern=2-7_t0 --module-path ../ansible/library/ --testbed=2-7_t0 --testbed_file=../ansible/testbed.csv ./syslog/test_syslog.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0
 
