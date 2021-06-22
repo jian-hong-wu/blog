@@ -2,7 +2,7 @@
 
 ## 目錄
        
-   1. [How to create a blog like this!](https://jian-hong-wu.github.io/blog/#How)
+   1. [How to create a blog like this!](https://jian-hong-wu.github.io/blog/#how-to-create-a-blog-like-this)
    2. [testcase](https://jian-hong-wu.github.io/blog/testcase/)
    3. [常用的docker指令](https://jian-hong-wu.github.io/blog/docker/)
    4. [常用的shell指令](https://jian-hong-wu.github.io/blog/shell/)
