@@ -4,12 +4,15 @@
        
    1. [How to create a blog like this!](https://jian-hong-wu.github.io/blog/#how-to-create-a-blog-like-this)
    2. [testcase](https://jian-hong-wu.github.io/blog/#testcase)
-   3. [常用的docker指令](https://jian-hong-wu.github.io/blog/docker/)
-   4. [常用的shell指令](https://jian-hong-wu.github.io/blog/shell/)
-   5. [putty安裝指令](https://jian-hong-wu.github.io/blog/putty/)
-   6. [jenkins安裝指令](https://jian-hong-wu.github.io/blog/jenkins/)
-   7. [VScode安裝指令](https://jian-hong-wu.github.io/blog/VScode/)
-   8. [testbed-cli.sh的說明文件](https://jian-hong-wu.github.io/blog#testbed-clish的說明文件)
+   3. [testbed-cli.sh的說明文件](https://jian-hong-wu.github.io/blog#testbed-clish的說明文件)
+   4. [常用的docker指令](https://jian-hong-wu.github.io/blog/docker/)
+   5. [常用的shell指令](https://jian-hong-wu.github.io/blog/shell/)
+   6. [putty安裝指令](https://jian-hong-wu.github.io/blog/putty/)
+   7. [jenkins安裝指令](https://jian-hong-wu.github.io/blog/jenkins/)
+   8. [VScode安裝指令](https://jian-hong-wu.github.io/blog/VScode/)
+
+
+
 
 ## How to create a blog like this!
 
