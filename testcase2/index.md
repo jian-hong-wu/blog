@@ -1,81 +1,141 @@
 
 Sonic 測試的主要步驟:
 
-    1. Sonic 測試主要在 docker-sonic-mgmt container內進行，受首先你要進入 docker-sonic-container內，switch to ansible directory. Once you are in ansible directory, look for testbed.csv file. Testbed.csv file lists all the test cases for test.
+   1. Sonic 測試主要在 docker-sonic-mgmt container內進行，受首先你要進入 docker-sonic-container內，switch to ansible directory. Once you are in ansible directory, look for testbed.csv file. Testbed.csv file lists all the test cases for test.
 
 Once you are in the directory.
-'''
+
     a. Deploy topology
     b. Deploy minigraph
     c. Run test
     d. Collect test results.
-'''
-    2. 下面是會用到的command:
+.
+   2. 下面是會用到的command:
+
 docker run -it –name test sonic-mgmt-dev:ec202006 bash
+
 cd sonic-mgmt/
+
 cd server_config
+
 ./server.sh 2
+
 cd ../ansible/
+
 vi testbed.csv
+
 ./testbed-cli.sh -b VM0200 add-topo 2-7_t0 ~/.password -e ptf_imagetag=ec2020006
+
 ansible-playbook -i lab config_sonic_basedon_testbed.yml -l as5812-54x -e testbed_name=2-7_t0 -e deploy=true -e save=true
+
 ansible-playbook -i lab –limit as5812-54x test_sonic.yml -e testbed_name=2-7_t0 -e testcase_name=syslog -vvvv
+
 cd ../tests
+
 py.test –inventory=lab –host-pattern=2-7_t0 –module-path ../ansible/library/ –testbed=2-7_t0 –testbed_file=../ansible/testbed.csv ./syslog/test_syslog.py –log-level=DEBUG -vvvv –show-capture=stdout –duration=0
+
 cd ../ansible
+
 ./testbed.cli.sh remove-topo 2-7_t0 ~/.password
+
 exit
+
 docker rm test
+
 testbed-cli.sh命令詳解:
+
 testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設定testbed的介面。
-    1. 用例說明:
+
+   1. 用例說明:
+   
 用例一:
-	可用來啟動及停止virtual machine。
-    ./testbed-cli.sh [選項] (start-vms | stop-vms) <server-name> <vault-password-file>
+
+   可用來啟動及停止virtual machine。
+	
+   ./testbed-cli.sh [選項] (start-vms | stop-vms) <server-name> <vault-password-file>
+    
 用例二:
+	
     可用來啟動及停止topology。
+	
     ./testbed-cli.sh [選項] (start-topo-vms | stop-topo-vms) <topo-name> <vault-password-file>
+	
 用例三:
+	
     可用來增加及移除topology。
+	
     ./testbed-cli.sh [選項] (add-topo | remove-topo | renumber-topo | connect-topo) <topo-name> <vault-password-file>
+	
 用例四:
+	
 更新測試topology的狀態。
+	
     ./testbed-cli.sh [選項] refresh-dut <topo-name> <vault-password-file>
+	
 用例五:
+	
 連接到虛擬機，中斷到虛擬機的連接。
+	
     ./testbed-cli.sh [選項] (connect-vms | disconnect-vms) <topo-name> <vault-password-file>
+	
 用例六:
+	
     可用來configure topology。
+	
     ./testbed-cli.sh [選項] config-vm <topo-name> <vm-name> <vault-password-file>
+	
 用例七:
+	
     可用來創建及部件message。
+	
     ./testbed-cli.sh [選項] (gen-mg | deploy-mg | test-mg) <topo-name> <inventory> <vault-password-file>
+	
 用例八:
+	
     可用來創建及destroy k8s server。
+	
     ./testbed-cli.sh [選項] (create-master | destroy-master) <k8s-server-name> <vault-password-file>
 
 2. 選項(Options):
+	
     -t <tbfile>      : testbed CSV file name (default: 'testbed.csv')
+	
     -m <vmfile>    : virtual machine file name (default: 'veos')
+	
     -k <vmtype>    : vm type (veos|ceos) (default: 'veos')
+	
     -n <vm_num>   : vm num (default: 0)
+	
     -b <vmbase>    : Specify the VM Base ID the format is VM0100, VM0201 
+	
                     (default: parsing from testbed.csv)
+	
     -s <msetnumber> : master set identifier on specified <k8s-server-name> 
+	
                     (default: 1)
+	
     -d <dir>         : sonic vm directory (default: /var/ubuntu/sonic-vm)
 
     3. 位置變數(Positional Arguments):
+	
     <server-name>         : Hostname of server on which to start VMs
+	    
     <vault-password-file>    : Path to file containing Ansible Vault password
+	    
     <topo-name>          : Name of the target topology
+	    
     <inventory>           : Name of the Ansible inventory containing the DUT
+	    
     <k8s-server-name>     : Server identifier in form k8s_server_{id}, corresponds
+	    
                           to k8s_ubuntu inventory group name
+	    
     <vmbase>             : 指定虛擬機(VM) base ID and the format is 
+	    
    VM01xx or VM02xx 
-   (xx = 01~63, default: parsing from
-                           testbed.csv)
+	    
+   (xx = 01~63, default: parsing from testbed.csv)
+	    
 Cost of VMs
 0台VM
 4台VMs
@@ -119,15 +179,6 @@ t0-52
 
 
 t0-116
-
-
-
-
-
-
-
-
-
 
 
 
