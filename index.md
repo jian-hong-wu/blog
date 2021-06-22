@@ -2,7 +2,7 @@
 
 ## 目錄
        
-   1. [How to create a blog like this!](https://jian-hong-wu.github.io/blog/createblog/)
+   1. [How to create a blog like this!](https://jian-hong-wu.github.io/blog/#How)
    2. [testcase](https://jian-hong-wu.github.io/blog/testcase/)
    3. [常用的docker指令](https://jian-hong-wu.github.io/blog/docker/)
    4. [常用的shell指令](https://jian-hong-wu.github.io/blog/shell/)
@@ -12,6 +12,24 @@
    8. [testbed-cli.sh 的說明文件](https://jian-hong-wu.github.io/blog/testbed-cli/)
 
 [test](https://jian-hong-wu.github.io/blog/#目錄)
+
+## How to create a blog like this!
+
+1. sign in github
+
+2. create a new repository
+
+3. find "GitHub Pages" in settings
+
+4. choose a theme
+
+5. edit the file "index.md" to add content
+
+6. find the URL in "GitHub Pages" in settings
+
+### 參考：
+
+如何在 Github Pages 建立靜態網站 (https://www.youtube.com/watch?v=bU0f1IvUcZA)
 
 ## testbed-cli.sh 的說明文件
 
