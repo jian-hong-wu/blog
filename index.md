@@ -31,6 +31,42 @@
 
 如何在 Github Pages 建立靜態網站 (https://www.youtube.com/watch?v=bU0f1IvUcZA)
 
+## testcase
+
+在終端輸入以下指令
+
+docker run -it --name test sonic-mgmt-dev:ec202006 bash
+
+cd sonic-mgmt/
+
+cd server_config
+
+./server.sh 2
+
+cd ../ansible/
+
+vi testbed.csv
+
+./testbed-cli.sh -b VM0200 add-topo 2-7_t0 ~/.password -e ptf_imagetag=ec2020006
+
+ansible-playbook -i lab config_sonic_basedon_testbed.yml -l as5812-54x -e testbed_name=2-7_t0 -e deploy=true -e save=true
+
+ansible-playbook -i lab --limit as5812-54x test_sonic.yml -e testbed_name=2-7_t0 -e testcase_name=syslog -vvvv
+
+cd ../tests
+
+py.test --inventory=lab --host-pattern=2-7_t0 --module-path ../ansible/library/ --testbed=2-7_t0 --testbed_file=../ansible/testbed.csv ./syslog/test_syslog.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0
+
+cd ../ansible
+
+./testbed.cli.sh remove-topo 2-7_t0 ~/.password
+
+exit
+
+docker rm test
+
+--測試結束
+
 ## testbed-cli.sh 的說明文件
 
    testbed-cli. Interface to testbeds
