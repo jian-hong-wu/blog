@@ -89,3 +89,6 @@ To destroy Kubernetes master on a server: ./testbed-cli.sh -m k8s_ubuntu destroy
 
 You should define your topology in testbed CSV file
 
+#### 參考：
+
+https://github.com/Azure/sonic-mgmt
