@@ -11,7 +11,7 @@
    7. [VScode安裝指令](https://jian-hong-wu.github.io/blog/VScode/)
    8. [testbed-cli.sh 的說明文件](https://jian-hong-wu.github.io/blog/testbed-cli/)
 
-[test](https://jian-hong-wu.github.io/blog/#Hong's)
+[test](https://jian-hong-wu.github.io/blog/#目錄)
 
 ## testbed-cli.sh 的說明文件
 
