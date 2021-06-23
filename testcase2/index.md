@@ -67,13 +67,13 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
 	
 用例四:
 	
-更新測試topology的狀態。
+    更新測試topology的狀態。
 	
     ./testbed-cli.sh [選項] refresh-dut <topo-name> <vault-password-file>
 	
 用例五:
 	
-連接到虛擬機，中斷到虛擬機的連接。
+    連接到虛擬機，中斷到虛擬機的連接。
 	
     ./testbed-cli.sh [選項] (connect-vms | disconnect-vms) <topo-name> <vault-password-file>
 	
