@@ -45,7 +45,7 @@ docker rm test
 
 testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設定testbed的介面。
 
-   1. 用例說明:
+1. 用例說明:
    
 用例一:
 
@@ -150,6 +150,7 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
 | | | t0-116 | | | | | | 
 | | | | | | | | | 
 {: .tablelines}
+
 
 4. 範例說明:
 
