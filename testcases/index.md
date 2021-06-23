@@ -2,7 +2,7 @@
 
 # testcase
 
-docker run -it - -name test docker-sonic-mgmt bash
+docker run -it --name test docker-sonic-mgmt bash
 
 cd sonic-mgmt/
 
