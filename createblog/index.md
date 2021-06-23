@@ -11,7 +11,13 @@
 4. choose a theme
 
 5. edit the file "index.md" to add content
-6. 
+
+<style>
+.blue {
+  color: blue;
+}
+</style>
+
 Hello, <span class="blue">World</span>
 
 6. find the URL in "GitHub Pages" in settings
