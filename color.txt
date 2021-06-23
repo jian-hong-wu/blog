@@ -1,1 +1,11 @@
+<font color="#f00">Hello</font>,
+
+<style>
+.blue {
+  color: blue;
+}
+</style>
+
+<span class="blue">World</span>
+
 https://htmlcolorcodes.com/color-picker/
