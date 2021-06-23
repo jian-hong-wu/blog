@@ -2,7 +2,7 @@
 
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
-docker run -it --name test sonic-mgmt-dev:ec202006 bash
+docker run -it --name test docker-sonic-mgmt bash
 
 cd sonic-mgmt/
 
