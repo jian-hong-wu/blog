@@ -95,7 +95,7 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
 	
     ./testbed-cli.sh [選項] (create-master | destroy-master) <k8s-server-name> <vault-password-file>
 
-    2. 選項(Options):
+2. 選項(Options):
 	
     -t <tbfile>      : testbed CSV file name (default: 'testbed.csv')
 	
@@ -115,7 +115,7 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
 	
     -d <dir>         : sonic vm directory (default: /var/ubuntu/sonic-vm)
 
-    3. 位置變數(Positional Arguments):
+3. 位置變數(Positional Arguments):
 
     <server-name>         : Hostname of server on which to start VMs
 
@@ -151,9 +151,7 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
 | | | | | | | | | 
 {: .tablelines}
 
-	    
-	    
-    4. 範例說明:
+4. 範例說明:
 
 啟動伺服器上所有的虛擬機:
 
