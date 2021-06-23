@@ -1,6 +1,6 @@
-# VScode安裝指令
-
 [上一頁](https://jian-hong-wu.github.io/blog/)
+
+# VScode安裝指令
 
 請透過瀏覽器連到下方網址
 
