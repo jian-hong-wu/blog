@@ -1,6 +1,6 @@
 ## Sonic 測試的主要步驟:
 
-1. Sonic 測試主要在 docker-sonic-mgmt container內進行，受首先你要進入 docker-sonic-container內，switch to ansible directory. Once you are in ansible directory, look for testbed.csv file. Testbed.csv file lists all the test cases for test.
+1.  Sonic 測試主要在 docker-sonic-mgmt container內進行，受首先你要進入 docker-sonic-container內，switch to ansible directory. Once you are in ansible directory, look for testbed.csv file. Testbed.csv file lists all the test cases for test.
 
 Once you are in the directory.
 
@@ -9,7 +9,7 @@ Once you are in the directory.
     c. Run test
     d. Collect test results.
 
-2. 下面是會用到的command:
+2.  下面是會用到的command:
 
 docker run -it –name test sonic-mgmt-dev:ec202006 bash
 
@@ -45,8 +45,8 @@ docker rm test
 
 testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設定testbed的介面。
 
-1. 用例說明:
-   
+#### 1. 用例說明:
+
 用例一:
 
    可用來啟動及停止virtual machine。
@@ -95,8 +95,8 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
 	
     ./testbed-cli.sh [選項] (create-master | destroy-master) <k8s-server-name> <vault-password-file>
 
-2. 選項(Options):
-	
+#### 2. 選項(Options):
+
     -t <tbfile>      : testbed CSV file name (default: 'testbed.csv')
 	
     -m <vmfile>    : virtual machine file name (default: 'veos')
@@ -115,7 +115,7 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
 	
     -d <dir>         : sonic vm directory (default: /var/ubuntu/sonic-vm)
 
-3. 位置變數(Positional Arguments):
+#### 3. 位置變數(Positional Arguments):
 
     <server-name>         : Hostname of server on which to start VMs
 
@@ -152,7 +152,7 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
 {: .tablelines}
 
 
-4. 範例說明:
+#### 4. 範例說明:
 
 啟動伺服器上所有的虛擬機:
 
