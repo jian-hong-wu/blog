@@ -13,6 +13,8 @@ Once you are in the directory.
 
 #### 2.  下面是會用到的command:
 
+[ Suppose “docker-sonic-mgmt” image has been in docker ]
+
 docker run -it –name test docker-sonic-mgmt bash
 
 cd sonic-mgmt/
