@@ -14,7 +14,7 @@ cd ../ansible/
 
 vi testbed.csv
 
-./testbed-cli.sh -b VM0200 add-topo 2-7_t0 ~/.password -e ptf_imagetag=ec2020006
+./testbed-cli.sh -b VM0200 add-topo 2-7_t0 ~/.password -e ptf_imagetag=lastest
 
 ![圖(一)](https://jian-hong-wu.github.io/blog/pic/1.jpg)
 
