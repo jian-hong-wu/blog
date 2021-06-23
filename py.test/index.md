@@ -10,21 +10,34 @@ positional arguments:
 
 general:
 
-  -k EXPRESSION         only run tests which match the given substring expression. An expression is a python evaluatable expression where all names are substring-matched against test names and their parent classes. Example: -k 'test_method or test_other' matches all test functions and classes whose name contains 'test_method' or 'test_other', while -k 'not test_method' matches those that don't contain 'test_method' in their names. -k 'not test_method and not test_other' will eliminate the matches. Additionally keywords are matched to classes and functions containing extra names in their 'extra_keyword_matches' set, as well as functions which have names assigned directly to them.
-                        
-  -m MARKEXPR           only run tests matching given mark expression. example: -m 'mark1 and not mark2'.
-                        
-  --markers             show markers (builtin, plugin and per-project ones).
+  -k EXPRESSION         
   
-  -x, --exitfirst       exit instantly on first error or failed test.
+  only run tests which match the given substring expression. An expression is a python evaluatable expression where all names are substring-matched against test names and their parent classes. Example: -k 'test_method or test_other' matches all test functions and classes whose name contains 'test_method' or 'test_other', while -k 'not test_method' matches those that don't contain 'test_method' in their names. -k 'not test_method and not test_other' will eliminate the matches. Additionally keywords are matched to classes and functions containing extra names in their 'extra_keyword_matches' set, as well as functions which have names assigned directly to them.
+                        
+  -m MARKEXPR           
   
-  --maxfail=num         exit after first num failures or errors.
+  only run tests matching given mark expression. example: -m 'mark1 and not mark2'.
+                        
+  --markers             
+  
+  show markers (builtin, plugin and per-project ones).
+  
+  -x, --exitfirst       
+  
+  exit instantly on first error or failed test.
+  
+  --maxfail=num         
+  
+  exit after first num failures or errors.
   
   --strict-markers, --strict
-                        markers not registered in the `markers` section of the
-                        configuration file raise errors.
-  -c file               load configuration from `file` instead of trying to
-                        locate one of the implicit configuration files.
+                        
+  markers not registered in the `markers` section of the configuration file raise errors.
+  
+  -c file               
+  
+  load configuration from `file` instead of trying to locate one of the implicit configuration files.
+  
   --continue-on-collection-errors
                         Force test execution even if collection errors occur.
   --rootdir=ROOTDIR     Define root directory for tests. Can be relative path:
