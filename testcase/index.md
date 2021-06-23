@@ -172,8 +172,7 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
 
 重新啟動伺服器上部份的虛擬機(VMs):
 
-    ./testbed-cli.sh start-vms server-name vault-password-file 
-    -e respin_vms=[vm_list]
+    ./testbed-cli.sh start-vms server-name vault-password-file -e respin_vms=[vm_list]
     // vm_list is separated by comma and shouldn't have space in the list.
     // e.g., respin_vms=[VM0310,VM0330]
 
