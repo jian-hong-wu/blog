@@ -17,6 +17,12 @@ Once you are in the directory.
 
 docker run -it –name test docker-sonic-mgmt bash
 
+[ in the host ]
+
+(if /home/$USER/.password doesn’t exist, generate .password with any strings)
+
+sudo pip install natsort
+
 cd sonic-mgmt/
 
 cd server_config
@@ -26,6 +32,8 @@ cd server_config
 cd ../ansible/
 
 vi testbed.csv
+
+(modify this file to fit your topology)
 
 ./testbed-cli.sh -b VM0200 add-topo 2-7_t0 ~/.password -e ptf_imagetag=lastest
 
