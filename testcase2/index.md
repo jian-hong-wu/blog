@@ -13,7 +13,7 @@ Once you are in the directory.
 
 #### 2.  下面是會用到的command:
 
-docker run -it –name test sonic-mgmt-dev:ec202006 bash
+docker run -it –name test docker-sonic-mgmt bash
 
 cd sonic-mgmt/
 
@@ -25,7 +25,7 @@ cd ../ansible/
 
 vi testbed.csv
 
-./testbed-cli.sh -b VM0200 add-topo 2-7_t0 ~/.password -e ptf_imagetag=ec2020006
+./testbed-cli.sh -b VM0200 add-topo 2-7_t0 ~/.password -e ptf_imagetag=lastest
 
 ![圖(一)](https://jian-hong-wu.github.io/blog/pic/1.jpg)
 
@@ -246,4 +246,3 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
     ./testbed-cli.sh -m k8s_ubuntu destroy-master 'k8s-server-name' ~/.password
 
 你應當在你的testbed CSV file 裏面定義你的topology。
-
