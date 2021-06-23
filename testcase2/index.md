@@ -47,11 +47,12 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
 
 #### 1. 用例說明:
 
+
 用例一:
 	
-   可用來啟動及停止virtual machine。
+    可用來啟動及停止virtual machine。
 	
-   ./testbed-cli.sh [選項] (start-vms | stop-vms) <server-name> <vault-password-file>
+    ./testbed-cli.sh [選項] (start-vms | stop-vms) <server-name> <vault-password-file>
     
 用例二:
 	
