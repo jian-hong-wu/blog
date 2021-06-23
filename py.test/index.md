@@ -435,28 +435,53 @@ default value for --log-date-format
   enable log display during test run (also known as "live logging").
   
   log_cli_level (string):
-                        default value for --log-cli-level
+  
+default value for --log-cli-level
+
   log_cli_format (string):
-                        default value for --log-cli-format
+  
+default value for --log-cli-format
+
   log_cli_date_format (string):
-                        default value for --log-cli-date-format
-  log_file (string):    default value for --log-file
+  
+default value for --log-cli-date-format
+
+  log_file (string):    
+  
+  default value for --log-file
+  
   log_file_level (string):
-                        default value for --log-file-level
+  
+default value for --log-file-level
+
   log_file_format (string):
-                        default value for --log-file-format
+  
+default value for --log-file-format
+
   log_file_date_format (string):
-                        default value for --log-file-date-format
-  addopts (args):       extra command line options
-  minversion (string):  minimally required pytest version
+  
+default value for --log-file-date-format
+
+  addopts (args):       
+  
+  extra command line options
+  
+  minversion (string):  
+  
+  minimally required pytest version
 
 environment variables:
+
   PYTEST_ADDOPTS           extra command line options
+  
   PYTEST_PLUGINS           comma-separated plugins to load during startup
+  
   PYTEST_DISABLE_PLUGIN_AUTOLOAD set to disable plugin auto-loading
+  
   PYTEST_DEBUG             set to enable debug tracing of pytest's internals
 
-
 to see available markers type: pytest --markers
+
 to see available fixtures type: pytest --fixtures
+
 (shown according to specified file_or_dir or current dir if not specified; fixtures with leading '_' are only shown with the '-v' option
