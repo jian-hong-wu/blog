@@ -1,6 +1,6 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
-# How to create a blog like this!
+# <font color="#0064FF">How to create a blog like this!</font>
 
 1. sign in github
 
