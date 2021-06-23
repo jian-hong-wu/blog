@@ -12,7 +12,7 @@
 
 5. edit the file "index.md" to add content
 
-Hello, <span class="blue">World</span>
+Hello, <span class="blue">world</span>
 
 6. find the URL in "GitHub Pages" in settings
 
