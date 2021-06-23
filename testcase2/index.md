@@ -136,6 +136,7 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
 	    
    (xx = 01~63, default: parsing from testbed.csv)
 	    
+	    
 | Cost of VMs | 0台VM | 4台VMs | 6台VMs | 8台VMs | 24台VMs | 32台VMs | 64台VMs |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Topologies | ptf32 | t0 | t0-16 | t0-56 | t1-lag | t1 | t1-64 |
@@ -145,8 +146,11 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
 | | | t0-116 | | | | | | 
 | | | | | | | | | 
 
+	    
     4. 範例說明:
+	    
 啟動伺服器上所有的虛擬機:
+	    
     ./testbed-cli.sh start-vms 'server-name' ~/.password
 重新啟動伺服器上部份的虛擬機(VMs):
     ./testbed-cli.sh start-vms server-name vault-password-file 
