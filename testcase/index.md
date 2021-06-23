@@ -1,5 +1,3 @@
-title: Hong's Blog
-
 # testcase
 
 [上一頁](https://jian-hong-wu.github.io/blog/)
