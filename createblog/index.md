@@ -1,6 +1,6 @@
-# How to create a blog like this!
-
 [上一頁](https://jian-hong-wu.github.io/blog/)
+
+# How to create a blog like this!
 
 1. sign in github
 
