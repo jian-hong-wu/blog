@@ -1,6 +1,6 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
-## <font color="#00DFFF">Sonic 測試的主要步驟:</font>
+## <font color="#0091FF">Sonic 測試的主要步驟:</font>
 
 #### 1.  Sonic 測試主要在 docker-sonic-mgmt container內進行，首先你要進入 docker-sonic-container內，switch to ansible directory. Once you are in ansible directory, look for testbed.csv file. Testbed.csv file lists all the test cases for test.
 
@@ -52,7 +52,7 @@ exit
 
 docker rm test
 
-## <font color="#00DFFF">testbed-cli.sh命令詳解:</font>
+## <font color="#0091FF">testbed-cli.sh命令詳解:</font>
 
 testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設定testbed的介面。
 
