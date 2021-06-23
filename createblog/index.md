@@ -20,7 +20,7 @@
 
 Hello, <span class="blue">world</span>
 
-H<font color="#f00">e</font>llo, World
+H<font color="#859B81">e</font>llo, World
 
 6. find the URL in "GitHub Pages" in settings
 
