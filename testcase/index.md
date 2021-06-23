@@ -19,7 +19,7 @@ docker run -it –name test docker-sonic-mgmt bash
 
 [ in the host ]
 
-<text color="red">123</text>
+<text color="blue">123</text>
 
 (if /home/$USER/.password doesn’t exist, generate .password with any strings)
 
