@@ -12,15 +12,19 @@ general:
 
   -k EXPRESSION
 
-    only run tests which match the given substring expression. An expression is a python evaluatable expression where all names are substring-matched against test names and their parent classes. Example: -k 'test_method or test_other' matches all test functions and classes whose name contains 'test_method' or 'test_other', while -k 'not test_method' matches those that don't contain 'test_method' in their names. -k 'not test_method and not test_other' will eliminate the matches. Additionally keywords are matched to classes and functions containing extra names in their 'extra_keyword_matches' set, as well as functions which have names assigned directly to them.
+  only run tests which match the given substring expression. An expression is a python evaluatable expression where all names are substring-matched against test names and their parent classes. Example: -k 'test_method or test_other' matches all test functions and classes whose name contains 'test_method' or 'test_other', while -k 'not test_method' matches those that don't contain 'test_method' in their names. -k 'not test_method and not test_other' will eliminate the matches. Additionally keywords are matched to classes and functions containing extra names in their 'extra_keyword_matches' set, as well as functions which have names assigned directly to them.
                         
   -m MARKEXPR
   
-    only run tests matching given mark expression. example: -m 'mark1 and not mark2'.
+  only run tests matching given mark expression. example: -m 'mark1 and not mark2'.
                         
-  --markers             show markers (builtin, plugin and per-project ones).
+  --markers             
   
-  -x, --exitfirst       exit instantly on first error or failed test.
+  show markers (builtin, plugin and per-project ones).
+  
+  -x, --exitfirst       
+  
+  exit instantly on first error or failed test.
   
   --maxfail=num         exit after first num failures or errors.
   
