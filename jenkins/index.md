@@ -1,6 +1,6 @@
-# jenkins安裝指令
-
 [上一頁](https://jian-hong-wu.github.io/blog/)
+
+# jenkins安裝指令
 
 先安裝java:
 
