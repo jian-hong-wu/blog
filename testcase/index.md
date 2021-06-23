@@ -33,13 +33,13 @@ ansible-playbook -i lab config_sonic_basedon_testbed.yml -l as5812-54x -e testbe
 
 ![圖(二)](https://jian-hong-wu.github.io/blog/pic/2.jpg)
 
-ansible-playbook -i lab –limit as5812-54x test_sonic.yml -e testbed_name=2-7_t0 -e testcase_name=syslog -vvvv
+ansible-playbook -i lab --limit as5812-54x test_sonic.yml -e testbed_name=2-7_t0 -e testcase_name=syslog -vvvv
 
 ![圖(三)](https://jian-hong-wu.github.io/blog/pic/3.jpg)
 
 cd ../tests
 
-py.test –inventory=lab –host-pattern=2-7_t0 –module-path ../ansible/library/ –testbed=2-7_t0 –testbed_file=../ansible/testbed.csv ./syslog/test_syslog.py –log-level=DEBUG -vvvv –show-capture=stdout –duration=0
+py.test --inventory=lab --host-pattern=2-7_t0 --module-path ../ansible/library/ --testbed=2-7_t0 –testbed_file=../ansible/testbed.csv ./syslog/test_syslog.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0
 
 ![圖(四)](https://jian-hong-wu.github.io/blog/pic/4.jpg)
 ![圖(五)](https://jian-hong-wu.github.io/blog/pic/5.jpg)
