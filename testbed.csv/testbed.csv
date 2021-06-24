@@ -77,9 +77,9 @@
 2-9_t1-8vm,vms2-9,t1-8vm,docker-ptf,ptf2-9,10.250.128.197/16,FC00:2::10:250:128:197/64,server_1,VM0200,as7726-32x-2,Tests vms
 2-9_t1-lag,vms2-9,t1-lag,docker-ptf,ptf2-9,10.250.128.197/16,FC00:2::10:250:128:197/64,server_1,VM0200,as7726-32x-2,Tests vms
 2-9_t1-8vm-lag,vms2-9,t1-8vm-lag,docker-ptf,ptf2-9,10.250.128.197/16,FC00:2::10:250:128:197/64,server_1,VM0200,as7726-32x-2,Tests vms
-2-9_t0-mclag,vms2-9,t0-mclag,docker-ptf,ptf2-9,10.250.128.197/16,FC00:2::10:250:128:197/64,server_1,VM0200,as7726-32x-2,Tests vms,as7726-32x-3
+2-9_t0-mclag,vms2-9,t0-mclag,docker-ptf,ptf2-9,10.250.128.197/16,FC00:2::10:250:128:197/64,server_1,VM0200,as7726-32x-2,Tests vms-as7726-32x-3
 2-9_t0-mclag-dut2,vms2-9,t0-mclag,docker-ptf,ptf2-9,10.250.128.197/16,FC00:2::10:250:128:197/64,server_1,VM0200,as7726-32x-3,Tests vms
-2-9_t0-mclag-16,vms2-9,t0-mclag-16,docker-ptf,ptf2-9,10.250.128.197/16,FC00:2::10:250:128:197/64,server_1,VM0200,as7726-32x-2,Tests vms,as7726-32x-3
+2-9_t0-mclag-16,vms2-9,t0-mclag-16,docker-ptf,ptf2-9,10.250.128.197/16,FC00:2::10:250:128:197/64,server_1,VM0200,as7726-32x-2,Tests vms-as7726-32x-3
 2-9_t0-mclag-16-dut2,vms2-9,t0-mclag-16,docker-ptf,ptf2-9,10.250.128.197/16,FC00:2::10:250:128:197/64,server_1,VM0200,as7726-32x-3,Tests vms
 ,,,,,,,,,,
 2-10_ptf32,ptf2-10,ptf32,docker-ptf,ptf2-10,10.250.128.183/16,FC00:2::10:250:128:183/64,server_1,,as7816-64x-3,Tests ptf
@@ -107,9 +107,9 @@
 2-12_t1-8vm,vms2-12,t1-8vm,docker-ptf,ptf2-12,10.250.128.181/16,FC00:2::10:250:128:181/64,server_1,VM0232,as7726-32x-3,Tests vms
 2-12_t1-lag,vms2-12,t1-lag,docker-ptf,ptf2-12,10.250.128.181/16,FC00:2::10:250:128:181/64,server_1,VM0232,as7726-32x-3,Tests vms
 2-12_t1-8vm-lag,vms2-12,t1-8vm-lag,docker-ptf,ptf2-12,10.250.128.181/16,FC00:2::10:250:128:181/64,server_1,VM0232,as7726-32x-3,Tests vms
-2-12_t0-mclag,vms2-12,t0-mclag,docker-ptf,ptf2-12,10.250.128.181/16,FC00:2::10:250:128:181/64,server_1,VM0232,as7726-32x-3,Tests vms,as7726-32x-1
+2-12_t0-mclag,vms2-12,t0-mclag,docker-ptf,ptf2-12,10.250.128.181/16,FC00:2::10:250:128:181/64,server_1,VM0232,as7726-32x-3,Tests vms-as7726-32x-1
 2-12_t0-mclag-dut2,vms2-12,t0-mclag,docker-ptf,ptf2-12,10.250.128.181/16,FC00:2::10:250:128:181/64,server_1,VM0232,as7726-32x-1,Tests vms
-2-12_t0-mclag-16,vms2-12,t0-mclag-16,docker-ptf,ptf2-12,10.250.128.181/16,FC00:2::10:250:128:181/64,server_1,VM0232,as7726-32x-3,Tests vms,as7726-32x-1
+2-12_t0-mclag-16,vms2-12,t0-mclag-16,docker-ptf,ptf2-12,10.250.128.181/16,FC00:2::10:250:128:181/64,server_1,VM0232,as7726-32x-3,Tests vms-as7726-32x-1
 2-12_t0-mclag-16-dut2,vms2-12,t0-mclag-16,docker-ptf,ptf2-12,10.250.128.181/16,FC00:2::10:250:128:181/64,server_1,VM0232,as7726-32x-1,Tests vms
 ,,,,,,,,,,
 2-13_ptf32,ptf2-13,ptf32,docker-ptf,ptf2-13,10.250.128.185/16,FC00:2::10:250:128:185/64,server_1,,as5835-54x-3,Tests ptf
