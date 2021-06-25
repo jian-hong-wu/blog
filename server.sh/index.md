@@ -51,7 +51,7 @@ copy_file() {
    
    cp ${SRC_SERVER_PATH}/ansible/roles/vm_set/tasks/docker.yml ${DST_PATH}/ansible/roles/vm_set/tasks/docker.yml
     
-   # for temporarily let xxx-back back to ovs-bridge
+   /# for temporarily let xxx-back back to ovs-bridge
    
    cp ${SRC_SERVER_PATH}/ansible/roles/vm_set/tasks/start.yml ${DST_PATH}/ansible/roles/vm_set/tasks/start.yml
    
@@ -71,7 +71,7 @@ copy_file() {
    
    cp ${SRC_SERVER_PATH}/ansible/testcase-cli.sh ${DST_PATH}/ansible/testcase-cli.sh
 
-   # copy ssh config for fanout switch
+   /# copy ssh config for fanout switch
     
    mv ${HOME}/.ssh/config ${HOME}/.ssh/config.bak
     
