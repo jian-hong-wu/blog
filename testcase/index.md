@@ -25,7 +25,7 @@ cd ../ansible/
 
 vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/testbed.csv/)
 
-./testbed-cli.sh -b VM0200 [add-topo](https://jian-hong-wu.github.io/blog/testcase/addtopo/) 2-7_t0 ~/.password -e ptf_imagetag=lastest
+./[testbed-cli.sh](https://github.com/Azure/sonic-mgmt/blob/master/ansible/testbed-cli.sh) -b VM0200 [add-topo](https://jian-hong-wu.github.io/blog/testcase/addtopo/) 2-7_t0 ~/.password -e ptf_imagetag=lastest
 
 ![1-1](https://jian-hong-wu.github.io/blog/testcase/1-1.png)
 ![1-2](https://jian-hong-wu.github.io/blog/testcase/1-2.png)
