@@ -54,7 +54,7 @@ docker run -it -p 8888:8080 "container ID"
 
 docker run -it -P 'container ID"
 
-docker commit -m="信息" -a="作者" "container ID" "container's name"
+docker commit -m="信息" -a="作者" "舊container ID" "新container's name" ##從舊container建立新image
 
 docker run -it -v "path1": "path2" "image"
 
