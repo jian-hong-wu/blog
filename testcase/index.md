@@ -27,31 +27,31 @@ vi testbed.csv
 
 ./testbed-cli.sh -b VM0200 add-topo 2-7_t0 ~/.password -e ptf_imagetag=lastest
 
-![1-1](https://jian-hong-wu.github.io/blog/testcase/1-1.jpg)
-![1-2](https://jian-hong-wu.github.io/blog/testcase/1-2.jpg)
-![1-3](https://jian-hong-wu.github.io/blog/testcase/1-3.jpg)
-![1-4](https://jian-hong-wu.github.io/blog/testcase/1-4.jpg)
-![1-5](https://jian-hong-wu.github.io/blog/testcase/1-5.jpg)
-![1-6](https://jian-hong-wu.github.io/blog/testcase/1-6.jpg)
+![1-1](https://jian-hong-wu.github.io/blog/testcase/1-1.png)
+![1-2](https://jian-hong-wu.github.io/blog/testcase/1-2.png)
+![1-3](https://jian-hong-wu.github.io/blog/testcase/1-3.png)
+![1-4](https://jian-hong-wu.github.io/blog/testcase/1-4.png)
+![1-5](https://jian-hong-wu.github.io/blog/testcase/1-5.png)
+![1-6](https://jian-hong-wu.github.io/blog/testcase/1-6.png)
 
 ansible-playbook -i lab config_sonic_basedon_testbed.yml -l as5812-54x -e testbed_name=2-7_t0 -e deploy=true -e save=true
 
-![2-1](https://jian-hong-wu.github.io/blog/testcase/2-1.jpg)
-![2-2](https://jian-hong-wu.github.io/blog/testcase/2-2.jpg)
+![2-1](https://jian-hong-wu.github.io/blog/testcase/2-1.png)
+![2-2](https://jian-hong-wu.github.io/blog/testcase/2-2.png)
 
 ansible-playbook -i lab --limit as5812-54x test_sonic.yml -e testbed_name=2-7_t0 -e testcase_name=syslog -vvvv
 
-![3-1](https://jian-hong-wu.github.io/blog/testcase/3-1.jpg)
-![3-2](https://jian-hong-wu.github.io/blog/testcase/3-2.jpg)
-![3-3](https://jian-hong-wu.github.io/blog/testcase/3-3.jpg)
+![3-1](https://jian-hong-wu.github.io/blog/testcase/3-1.png)
+![3-2](https://jian-hong-wu.github.io/blog/testcase/3-2.png)
+![3-3](https://jian-hong-wu.github.io/blog/testcase/3-3.png)
 
 cd ../tests
 
 py.test --inventory=lab --host-pattern=2-7_t0 --module-path ../ansible/library/ --testbed=2-7_t0 --testbed_file=../ansible/testbed.csv ./syslog/test_syslog.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0
 
-![4-1](https://jian-hong-wu.github.io/blog/testcase/4-1.jpg)
-![4-2](https://jian-hong-wu.github.io/blog/testcase/4-2.jpg)
-![4-3](https://jian-hong-wu.github.io/blog/testcase/4-3.jpg)
+![4-1](https://jian-hong-wu.github.io/blog/testcase/4-1.png)
+![4-2](https://jian-hong-wu.github.io/blog/testcase/4-2.png)
+![4-3](https://jian-hong-wu.github.io/blog/testcase/4-3.png)
 
 cd ../ansible
 
