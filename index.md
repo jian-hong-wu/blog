@@ -4,7 +4,7 @@
        
    1. [How to create a blog like this!](https://jian-hong-wu.github.io/blog/createblog/)
    2. [testcase](https://jian-hong-wu.github.io/blog/testcase/)
-   3. [testbed.csv](https://jian-hong-wu.github.io/blog/testbed.csv/)
+   3. [testbed.csv](https://jian-hong-wu.github.io/blog/testbed.csv/testbed.csv)
    4. [pytest.org](https://jian-hong-wu.github.io/blog/pytest.org/)
    5. [pytest.run](https://jian-hong-wu.github.io/blog/pytest.run/)
    6. [py.test的說明文件](https://jian-hong-wu.github.io/blog/py.test/)
