@@ -55,7 +55,7 @@ py.test --inventory=lab --host-pattern=2-7_t0 --module-path ../ansible/library/ 
 
 cd ../ansible
 
-./testbed.cli.sh remove-topo 2-7_t0 ~/.password
+./testbed-cli.sh remove-topo 2-7_t0 ~/.password
 
 exit
 
