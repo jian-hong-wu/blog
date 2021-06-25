@@ -1,3 +1,8 @@
+[上一頁](https://jian-hong-wu.github.io/blog/)
+
+![1-1](https://jian-hong-wu.github.io/blog/server.sh/1-1.png)
+![1-2](https://jian-hong-wu.github.io/blog/server.sh/1-2.png)
+
 #/bin/bash
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
