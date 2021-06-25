@@ -23,7 +23,7 @@ cd server_config
 
 cd ../ansible/
 
-vi testbed.csv
+vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/testbed.csv/)
 
 ./testbed-cli.sh -b VM0200 [add-topo](https://jian-hong-wu.github.io/blog/testcase/addtopo/) 2-7_t0 ~/.password -e ptf_imagetag=lastest
 
