@@ -13,13 +13,17 @@ Once you are in the directory.
 
 #### 2.  下面是會用到的command:
 
-//使用名為 docker-sonic-mgmt 的 image 創建一個 container，並命名為 test。
+//查看存在的 images
+
+docker image ls
 
 ![image](https://jian-hong-wu.github.io/blog/testcase/image.png)
 
+//使用名為 docker-sonic-mgmt 的 image 創建一個 container 命名為 test，並執行 bash
+
 docker run -it --name test docker-sonic-mgmt bash
 
-//進入資料夾 sonic-mgmt
+//在 container 裡進入資料夾 sonic-mgmt
 
 cd sonic-mgmt/
 
@@ -35,9 +39,11 @@ cd server_config
 
 cd ../ansible/
 
-//查看 testbed.csv，決定要測試的 topology
+//查看檔案 testbed.csv，並決定要測試的 topology
 
 vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/testbed.csv/)
+
+//新增一個 topology，名稱為 2-7_t0
 
 ./[testbed-cli.sh](https://github.com/Azure/sonic-mgmt/blob/master/ansible/testbed-cli.sh) -b VM0200 [add-topo](https://jian-hong-wu.github.io/blog/testcase/addtopo/) 2-7_t0 ~/.password -e ptf_imagetag=lastest
 
