@@ -54,6 +54,8 @@ vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/
 ![1-5](https://jian-hong-wu.github.io/blog/testcase/1-5.png)
 ![1-6](https://jian-hong-wu.github.io/blog/testcase/1-6.png)
 
+//設定 inventory = lab，
+
 [ansible-playbook](https://jian-hong-wu.github.io/blog/testcase/playbook/) -i lab config_sonic_basedon_testbed.yml -l as5812-54x -e testbed_name=2-7_t0 -e deploy=true -e save=true
 
 ![2-1](https://jian-hong-wu.github.io/blog/testcase/2-1.png)
