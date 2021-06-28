@@ -25,3 +25,4 @@
    4. [Docker教學 - 入門介紹](https://www.youtube.com/watch?v=pa1Zao1Hy2c&list=PLVVMQF8vWNCJnlO0Y34AE_1AgCapldp38)
    5. [Ubuntu 入門](https://www.youtube.com/watch?v=u6-IMozWQG0&list=PLkmkNssEXKuxfpeezLrnmHsUoJRJzWVui&index=1)
    6. [Jenkins 教學](https://www.youtube.com/watch?v=SbMabIXQd_A&list=PLmOn9nNkQxJE_3wrOfHdL1dWRY6CCHBnh)
+   7. [ansible 教學](https://www.youtube.com/watch?v=4lIi8d6m27c&list=PLOfJyn_hHwP_ATbd7GkDobQUiA2i7jLhN&index=1)
