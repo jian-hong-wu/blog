@@ -13,15 +13,27 @@ Once you are in the directory.
 
 #### 2.  下面是會用到的command:
 
+//使用名為 docker-sonic-mgmt 的 image 創建一個 container，並命名為 test。
+
 docker run -it --name test docker-sonic-mgmt bash
+
+//進入資料夾 sonic-mgmt
 
 cd sonic-mgmt/
 
+//進入資料夾 server_config
+
 cd server_config
+
+//執行 server.sh
 
 ./server.sh 2
 
+//返回上一層並進入資料夾 ansible
+
 cd ../ansible/
+
+//查看 testbed.csv，決定要測試的 topology
 
 vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/testbed.csv/)
 
