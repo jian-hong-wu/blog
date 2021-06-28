@@ -1,5 +1,7 @@
 [上一頁](https://jian-hong-wu.github.io/blog/testcase/)
 
+![addtopo](https://jian-hong-wu.github.io/blog/testcase/addtopo/addtopo.png)
+
 function add_topo
 
 {
