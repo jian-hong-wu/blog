@@ -1,3 +1,5 @@
+## color:
+
 <font color="#f00">Hello</font>,
 
 <style>
@@ -9,3 +11,12 @@
 <span class="blue">World</span>
 
 https://htmlcolorcodes.com/color-picker/
+
+## size
+
+![指定像素](https://bobcn.github.io//image/test.jpg?200x200)
+![指定像素](https://bobcn.github.io//image/test.jpg?100x)
+![指定像素](https://bobcn.github.io//image/test.jpg?x300)
+![指定像素](https://bobcn.github.io//image/test.jpg?80)
+
+https://www.dazhuanlan.com/2019/10/25/5db2e04454d89/
