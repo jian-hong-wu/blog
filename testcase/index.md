@@ -43,7 +43,7 @@ cd ../ansible/
 
 vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/testbed.csv/)
 
-//新增一個 topology，名稱為 2-7_t0
+//新增一個 topology，名稱為 2-7_t0，設定密碼 ~/.password，設定額外參數 ptf_imagetag=lastest 給 ansible-playbook 使用
 
 ./[testbed-cli.sh](https://github.com/Azure/sonic-mgmt/blob/master/ansible/testbed-cli.sh) -b VM0200 [add-topo](https://jian-hong-wu.github.io/blog/testcase/addtopo/) 2-7_t0 ~/.password -e ptf_imagetag=lastest
 
