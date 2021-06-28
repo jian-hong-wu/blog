@@ -14,7 +14,9 @@ Once you are in the directory.
 #### 2.  下面是會用到的command:
 
 //使用名為 docker-sonic-mgmt 的 image 創建一個 container，並命名為 test。
-[image](https://jian-hong-wu.github.io/blog/testcase/dockerimage.png)
+
+![image](https://jian-hong-wu.github.io/blog/testcase/dockerimage.png)
+
 docker run -it --name test docker-sonic-mgmt bash
 
 //進入資料夾 sonic-mgmt
