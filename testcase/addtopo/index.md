@@ -24,7 +24,7 @@ function add_topo
       
  fi
 
- ANSIBLE_SCP_IF_SSH=y ansible-playbook -i $vmfile testbed_add_vm_topology.yml --vault-password-file="${passwd}" -l "$server" \
+ ANSIBLE_SCP_IF_SSH=y [ansible-playbook](https://jian-hong-wu.github.io/blog/testcase/playbook/) -i $vmfile testbed_add_vm_topology.yml --vault-password-file="${passwd}" -l "$server" \
  
    -e topo_name="$topo_name" -e duts_name="$duts" -e VM_base="$vm_base" \
         
