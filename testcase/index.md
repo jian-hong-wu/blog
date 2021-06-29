@@ -1,5 +1,25 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
+## <font color="#0091FF">為 Sonic 測試設置環境:</font>
+
+在 Sonic 測試開始前，下列項目應於伺服器端設置完成：
+
+1.  支援 Python 2.7 (Ansible 現在只支援 Python 2.7 )
+
+2.  ~/sonic-mgmt
+
+  可使用下列指令下載
+
+  $ git clone https://github.com/Azure/sonic-mgmt
+
+3.  ~/veos-vm/imagese
+
+  這裡有兩個exit檔案 : Aboot-veos-serial-8.0.0.iso and vEOS-lab-4.20.15M.vmdk
+
+  [可點選從此處下載](https://www.arista.com/en/support/software-download)
+
+4.  Docker is activated with “sonic-mgmt-dev” and “docker-ptf” images inside.
+
 ## <font color="#0091FF">Sonic 測試的主要步驟:</font>
 
 #### 1.  Sonic 測試主要在 docker-sonic-mgmt container內進行，首先你要進入 docker-sonic-container內，switch to ansible directory. Once you are in ansible directory, look for testbed.csv file. Testbed.csv file lists all the test cases for test.
@@ -19,9 +39,9 @@ docker image ls
 
 ![image](https://jian-hong-wu.github.io/blog/testcase/image.png)
 
-//使用名為 docker-sonic-mgmt 的 image 創建一個 container 命名為 test，並執行 bash
+//在 server 的環境, 建立一個名為 WORK 的 container
 
-docker run -it --name test docker-sonic-mgmt bash
+docker run --name WORK -v $PWD:/data -it sonic-mgmt-dev
 
 //在 container 裡進入資料夾 sonic-mgmt
 
@@ -99,7 +119,7 @@ exit
 
 //刪除 container test
 
-docker rm test
+docker rm WORK
 
 ## <font color="#0091FF">testbed-cli.sh命令詳解:</font>
 
