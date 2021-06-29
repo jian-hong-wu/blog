@@ -49,7 +49,7 @@
 
 7.  Setup VMs on the Server
 
-  a. 啟動 virtual machine
+    a. 啟動 virtual machine
     ```
     # /data/sonic-mgmt/ansible
     ./testbed-cli.sh start-vms server_1 password.txt
@@ -59,7 +59,7 @@
     echo "" > ./password.txt
     ```
 
-  b. 檢查所有 VM 是否已啟動並正在運行
+    b. 檢查所有 VM 是否已啟動並正在運行
     ```
     ansible -m ping -i veos server_1
     ```
