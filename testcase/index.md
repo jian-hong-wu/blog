@@ -21,9 +21,9 @@
 #### 1.  Sonic 測試主要在 docker-sonic-mgmt container內進行，首先你要進入 docker-sonic-container內，switch to ansible directory. Once you are in ansible directory, look for testbed.csv file. Testbed.csv file lists all the test cases for test.
 
 Once you are in the directory.  
-    a. Deploy topology
-    b. Deploy minigraph
-    c. Run test
+    a. Deploy topology  
+    b. Deploy minigraph  
+    c. Run test  
     d. Collect test results.
 
 #### 2.  下面是會用到的command:
