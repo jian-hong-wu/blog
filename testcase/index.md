@@ -22,8 +22,8 @@
     
 6.  Prepare Testbed Configuration  
     進入 docker container 後，要修改 testbed configuration files 以反映實驗室設置。  
---  Update the server management IP in ansible/veos.  
---  Update the testbed server credentials in ansible/group_vars/vm_host/creds.yml.  
+- Update the server management IP in ansible/veos.  
+- Update the testbed server credentials in ansible/group_vars/vm_host/creds.yml.  
     
 ## <font color="#0091FF">Sonic 測試的主要步驟:</font>
 
