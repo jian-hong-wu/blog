@@ -56,7 +56,7 @@ vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/
 ![1-6](https://jian-hong-wu.github.io/blog/testcase/1-6.png)
 
 #### b. deploy minigraph
-//設定 inventory = lab， 指定測試機台 as5812-54x，名稱為 2-7_t0，產生並部署 minigraph
+//設定 inventory = lab， 指定目標為 as5812-54x，名稱為 2-7_t0，將新生成的 minigraph 保存並部署到目標 DUT
 
 [ansible-playbook](https://jian-hong-wu.github.io/blog/testcase/playbook/) -i lab [config_sonic_basedon_testbed.yml](https://jian-hong-wu.github.io/blog/testcase/config_sonic_basedon_testbed/) -l as5812-54x -e testbed_name=2-7_t0 -e deploy=true -e save=true
 
