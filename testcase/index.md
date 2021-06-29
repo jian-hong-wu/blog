@@ -6,11 +6,9 @@
 
 1.  支援 Python 2.7 (Ansible 現在只支援 Python 2.7 )
 
-2.  ~/sonic-mgmt
-
-  可使用下列指令下載
-
-  $ git clone https://github.com/Azure/sonic-mgmt
+2.  ~/sonic-mgmt  
+    可使用下列指令下載  
+    $ git clone https://github.com/Azure/sonic-mgmt
 
 3.  ~/veos-vm/imagese
 
