@@ -66,7 +66,7 @@ vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/
 #### c. run test
 //testcase 檔案位於 ~/sonic-mgmt/ansible/roles/test/vars/testcases.yml，選擇執行 testcase 中的 syslog
 
-ansible-playbook -i lab --limit as5812-54x [test_sonic.yml](https://jian-hong-wu.github.io/blog/testcase/sonic_test/) -e testbed_name=2-7_t0 -e testcase_name=syslog -vvvv
+ansible-playbook -i lab --limit as5812-54x [test_sonic.yml](https://jian-hong-wu.github.io/blog/testcase/test_sonic/) -e testbed_name=2-7_t0 -e testcase_name=syslog -vvvv
 
 ![3-1](https://jian-hong-wu.github.io/blog/testcase/3-1.png)
 ![3-2](https://jian-hong-wu.github.io/blog/testcase/3-2.png)
