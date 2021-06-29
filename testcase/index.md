@@ -22,9 +22,51 @@
     
 6.  Prepare Testbed Configuration  
     進入 docker container 後，要修改 testbed configuration files 以反映實驗室設置。  
-- Update the server management IP in ansible/veos.  
-- Update the testbed server credentials in ansible/group_vars/vm_host/creds.yml.  
-    
+
+    - Update the server management IP in [`ansible/veos`](/ansible/veos).
+
+    - Update the testbed server credentials in [`ansible/group_vars/vm_host/creds.yml`](/ansible/group_vars/vm_host/creds.yml).
+
+    - Update the server network configuration for the VM and PTF management interfaces in [`ansible/host_vars/STR-ACS-SERV-01.yml`](/ansible/host_vars/STR-ACS-SERV-01.yml).
+        - `external_port`: server trunk port name (connected to the fanout switch)
+        - `mgmt_gw`: ip of the gateway for the VM management interfaces
+        - `mgmt_prefixlen`: prefixlen for the management interfaces
+
+Check that ansible can reach this host:  
+    ansible -m ping -i veos vm_host_1
+	
+   - Update /ansible/group_vars/vm_host/main.yml with the location of the veos files or veos file name if you downloaded a diferent version
+   - Update the VM IP addresses in the [`ansible/veos`](/ansible/veos) inventory file. These IP addresses should be in the management subnet defined above.
+
+   - Update the VM credentials in `ansible/group_vars/eos/creds.yml`.
+   ```
+   cat <<EOT >> /data/sonic-mgmt/ansible/group_vars/eos/creds.yml
+   ---
+   ansible_password: '123456'
+   ansible_user: admin
+   EOT
+   ```
+
+   - Update the docker registry information in [`vars/docker_registry.yml`](/ansible/vars/docker_registry.yml).
+
+7.  Setup VMs on the Server
+
+  a. Start the VMs:
+    ```
+    # /data/sonic-mgmt/ansible
+    ./testbed-cli.sh start-vms server_1 password.txt
+    ```
+    Please note: `password.txt` is the ansible vault password file name/path. Ansible allows users to use `ansible-vault` to encrypt password files. By default, this shell script **requires** a password file. If you are not using `ansible-vault`, just create an empty file and pass the file name to the command line. **The file name and location is created and maintained by the user.**
+    ```
+    echo "" > ./password.txt
+    ```
+
+  b. Check that all the VMs are up and running:
+    ```
+    ansible -m ping -i veos server_1
+    ```
+
+
 ## <font color="#0091FF">Sonic 測試的主要步驟:</font>
 
 #### 1.  Sonic 測試主要在 docker-sonic-mgmt container內進行，首先你要進入 docker-sonic-container內，switch to ansible directory. Once you are in ansible directory, look for testbed.csv file. Testbed.csv file lists all the test cases for test.
