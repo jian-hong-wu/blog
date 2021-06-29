@@ -16,7 +16,7 @@ vi testbed.csv
 
 ./testbed-cli.sh -b VM0200 add-topo 2-7_t0 ~/.password -e ptf_imagetag=lastest
 
-[圖(一)](https://jian-hong-wu.github.io/blog/pic/1.jpg)
+![圖(一)](https://jian-hong-wu.github.io/blog/pic/1.jpg)
 
 ansible-playbook -i lab config_sonic_basedon_testbed.yml -l as5812-54x -e testbed_name=2-7_t0 -e deploy=true -e save=true
 
