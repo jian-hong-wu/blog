@@ -56,7 +56,7 @@ vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/
 ![1-6](https://jian-hong-wu.github.io/blog/testcase/1-6.png)
 
 #### b. deploy minigraph
-//設定 inventory = lab，指定測試機台 as5812-54x，
+//設定 inventory = lab， 指定測試機台 as5812-54x，名稱為 2-7_t0，產生並部署 minigraph
 
 [ansible-playbook](https://jian-hong-wu.github.io/blog/testcase/playbook/) -i lab [config_sonic_basedon_testbed.yml](https://jian-hong-wu.github.io/blog/testcase/config_sonic_basedon_testbed/) -l as5812-54x -e testbed_name=2-7_t0 -e deploy=true -e save=true
 
@@ -64,13 +64,19 @@ vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/
 ![2-2](https://jian-hong-wu.github.io/blog/testcase/2-2.png)
 
 #### c. run test
+//選擇執行 testcase 中的 syslog
+
 ansible-playbook -i lab --limit as5812-54x test_sonic.yml -e testbed_name=2-7_t0 -e testcase_name=syslog -vvvv
 
 ![3-1](https://jian-hong-wu.github.io/blog/testcase/3-1.png)
 ![3-2](https://jian-hong-wu.github.io/blog/testcase/3-2.png)
 ![3-3](https://jian-hong-wu.github.io/blog/testcase/3-3.png)
 
+//返回上一層並進入資料夾 tsets
+
 cd ../tests
+
+//用 py .test 執行測試 test_syslog.py 
 
 py.test --inventory=lab --host-pattern=2-7_t0 --module-path ../ansible/library/ --testbed=2-7_t0 --testbed_file=../ansible/testbed.csv ./syslog/test_syslog.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0
 
@@ -79,11 +85,19 @@ py.test --inventory=lab --host-pattern=2-7_t0 --module-path ../ansible/library/ 
 ![4-3](https://jian-hong-wu.github.io/blog/testcase/4-3.png)
 
 #### d. remove topology
+//返回上一層並進入資料夾 ansible
+
 cd ../ansible
+
+//移除 topology 2-7_t0
 
 ./testbed-cli.sh remove-topo 2-7_t0 ~/.password
 
+//離開
+
 exit
+
+//刪除 container test
 
 docker rm test
 
