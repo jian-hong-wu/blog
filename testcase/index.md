@@ -63,7 +63,8 @@
     ```
     ansible -m ping -i veos server_1
     ```
-
+    
+8.  更新 testbed.csv。至少應該更新 PTF 管理界面設置。
 
 ## <font color="#0091FF">Sonic 測試的主要步驟:</font>
 
