@@ -44,7 +44,7 @@ cd ../ansible/
 vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/testbed.csv/)
 
 #### a. deploy topology
-//新增一個 topology，vmbase 為 VM0200，名稱為 2-7_t0，設定密碼 ~/.password，使用帶有 lastest 標籤的 PTF 鏡像創建 PTF 容器
+//新增一個 topology，vmbase 為 VM0200，名稱為 2-7_t0，設定密碼 ~/.password，使用帶有 lastest 標籤的 PTF image 創建 PTF container
 
 ./[testbed-cli.sh](https://github.com/Azure/sonic-mgmt/blob/master/ansible/testbed-cli.sh) -b VM0200 [add-topo](https://jian-hong-wu.github.io/blog/testcase/addtopo/) 2-7_t0 ~/.password -e ptf_imagetag=lastest
 
