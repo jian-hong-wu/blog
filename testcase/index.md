@@ -16,6 +16,15 @@
 
 4.  Docker is activated with “sonic-mgmt-dev” and “docker-ptf” images inside.
 
+5.  在 server 的環境, 建立一個名為 WORK 的 container  
+    $ cd ~  
+    $ docker run --name WORK -v $PWD:/data -it sonic-mgmt-dev  
+    
+6.  Prepare Testbed Configuration  
+    進入 docker container 後，要修改 testbed configuration files 以反映實驗室設置。  
+--  Update the server management IP in ansible/veos.  
+--  Update the testbed server credentials in ansible/group_vars/vm_host/creds.yml.  
+    
 ## <font color="#0091FF">Sonic 測試的主要步驟:</font>
 
 #### 1.  Sonic 測試主要在 docker-sonic-mgmt container內進行，首先你要進入 docker-sonic-container內，switch to ansible directory. Once you are in ansible directory, look for testbed.csv file. Testbed.csv file lists all the test cases for test.
