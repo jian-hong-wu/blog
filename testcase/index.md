@@ -21,7 +21,7 @@
     $ docker run --name WORK -v $PWD:/data -it sonic-mgmt-dev  
     
 6.  Prepare Testbed Configuration  
-    進入 docker container 後，要修改 testbed configuration files 以反映實驗室設置。  
+    進入 docker container 後，要修改 testbed configuration files 以反映 lab setup。  
 
     - Update the server management IP in [`ansible/veos`](/ansible/veos).
 
@@ -54,7 +54,7 @@
     # /data/sonic-mgmt/ansible
     ./testbed-cli.sh start-vms server_1 password.txt
     ```
-    請注意：`password.txt` 是 ansible Vault 密碼文件名/路徑。 Ansible 允許用戶使用 `ansible-vault` 來加密密碼文件。默認情況下，此 shell 腳本**需要**密碼文件。如果您不使用 `ansible-vault`，只需創建一個空文件並將文件名傳遞給命令行。 **文件名和位置由用戶創建和維護。**
+    請注意： password.txt 是 ansible Vault 密碼文件名/路徑。 Ansible 允許用戶使用 ansible-vault 來加密密碼文件。默認情況下，此 shell 腳本需要密碼文件。如果您不使用 ansible-vault ，只需創建一個空文件並將文件名傳遞給命令行。 文件名和位置由用戶創建和維護。
     ```
     echo "" > ./password.txt
     ```
