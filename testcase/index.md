@@ -33,8 +33,8 @@ docker image ls
 
 ![image](https://jian-hong-wu.github.io/blog/testcase/image.png)
 
-//在 server 的環境, 建立一個名為 WORK 的 container  
-docker run --name WORK -v $PWD:/data -it sonic-mgmt-dev
+//在 server 的環境, 建立一個名為 mgmt 的 container  
+docker run -it --name mgmt sonic-mgmt-dev bash
 
 //在 container 裡進入資料夾 sonic-mgmt  
 cd sonic-mgmt/
@@ -98,7 +98,7 @@ cd ../ansible
 exit
 
 //刪除 container test  
-docker rm WORK
+docker rm mgmt
 
 ## <font color="#0091FF">testbed-cli.sh命令詳解:</font>
 
