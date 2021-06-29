@@ -31,7 +31,7 @@ cd sonic-mgmt/
 
 cd server_config
 
-//執行 server.sh
+//選擇server 2
 
 ./server.sh 2
 
