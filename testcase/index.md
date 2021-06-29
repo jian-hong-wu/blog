@@ -32,12 +32,11 @@
         - `mgmt_gw`: ip of the gateway for the VM management interfaces
         - `mgmt_prefixlen`: prefixlen for the management interfaces
 
-Check that ansible can reach this host:  
+    以下列指令檢查 ansible 是否可以訪問此主機  
     ansible -m ping -i veos vm_host_1
-	
+
    - Update /ansible/group_vars/vm_host/main.yml with the location of the veos files or veos file name if you downloaded a diferent version
    - Update the VM IP addresses in the [`ansible/veos`](/ansible/veos) inventory file. These IP addresses should be in the management subnet defined above.
-
    - Update the VM credentials in `ansible/group_vars/eos/creds.yml`.
    ```
    cat <<EOT >> /data/sonic-mgmt/ansible/group_vars/eos/creds.yml
@@ -46,22 +45,21 @@ Check that ansible can reach this host:
    ansible_user: admin
    EOT
    ```
-
    - Update the docker registry information in [`vars/docker_registry.yml`](/ansible/vars/docker_registry.yml).
 
 7.  Setup VMs on the Server
 
-  a. Start the VMs:
+  a. 啟動 virtual machine
     ```
     # /data/sonic-mgmt/ansible
     ./testbed-cli.sh start-vms server_1 password.txt
     ```
-    Please note: `password.txt` is the ansible vault password file name/path. Ansible allows users to use `ansible-vault` to encrypt password files. By default, this shell script **requires** a password file. If you are not using `ansible-vault`, just create an empty file and pass the file name to the command line. **The file name and location is created and maintained by the user.**
+    請注意：`password.txt` 是 ansible Vault 密碼文件名/路徑。 Ansible 允許用戶使用 `ansible-vault` 來加密密碼文件。默認情況下，此 shell 腳本**需要**密碼文件。如果您不使用 `ansible-vault`，只需創建一個空文件並將文件名傳遞給命令行。 **文件名和位置由用戶創建和維護。**
     ```
     echo "" > ./password.txt
     ```
 
-  b. Check that all the VMs are up and running:
+  b. 檢查所有 VM 是否已啟動並正在運行
     ```
     ansible -m ping -i veos server_1
     ```
