@@ -14,7 +14,7 @@
 
 3.  ~/veos-vm/imagese
 
-  這裡有兩個exit檔案 : Aboot-veos-serial-8.0.0.iso and vEOS-lab-4.20.15M.vmdk
+  這裡有兩個檔案 : Aboot-veos-serial-8.0.0.iso and vEOS-lab-4.20.15M.vmdk
 
   [可點選從此處下載](https://www.arista.com/en/support/software-download)
 
