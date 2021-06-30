@@ -26,9 +26,9 @@
     Update the server management IP in [`ansible/veos`](/ansible/veos).  
     Update the testbed server credentials in [`ansible/group_vars/vm_host/creds.yml`](/ansible/group_vars/vm_host/creds.yml).  
     Update the server network configuration for the VM and PTF management interfaces in [`ansible/host_vars/STR-ACS-SERV-01.yml`](/ansible/host_vars/STR-ACS-SERV-01.yml).  
-         external_port: server trunk port name (connected to the fanout switch)  
-         mgmt_gw: ip of the gateway for the VM management interfaces  
-         mgmt_prefixlen: prefixlen for the management interfaces
+      -  external_port: server trunk port name (connected to the fanout switch)  
+      -  mgmt_gw: ip of the gateway for the VM management interfaces  
+      -  mgmt_prefixlen: prefixlen for the management interfaces
 
     以下列指令檢查 ansible 是否可以訪問此主機  
     ansible -m ping -i veos vm_host_1
