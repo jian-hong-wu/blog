@@ -23,19 +23,19 @@
 6.  Prepare Testbed Configuration  
     進入 docker container 後，要修改 testbed configuration files 以反映 lab setup。  
 
-   -  Update the server management IP in [`ansible/veos`](/ansible/veos).
-   -  Update the testbed server credentials in [`ansible/group_vars/vm_host/creds.yml`](/ansible/group_vars/vm_host/creds.yml).
-   -  Update the server network configuration for the VM and PTF management interfaces in [`ansible/host_vars/STR-ACS-SERV-01.yml`](/ansible/host_vars/STR-ACS-SERV-01.yml).
-       -  external_port: server trunk port name (connected to the fanout switch)
-       -  mgmt_gw: ip of the gateway for the VM management interfaces
-       -  mgmt_prefixlen: prefixlen for the management interfaces
+    Update the server management IP in [`ansible/veos`](/ansible/veos).  
+    Update the testbed server credentials in [`ansible/group_vars/vm_host/creds.yml`](/ansible/group_vars/vm_host/creds.yml).  
+    Update the server network configuration for the VM and PTF management interfaces in [`ansible/host_vars/STR-ACS-SERV-01.yml`](/ansible/host_vars/STR-ACS-SERV-01.yml).  
+         external_port: server trunk port name (connected to the fanout switch)  
+         mgmt_gw: ip of the gateway for the VM management interfaces  
+         mgmt_prefixlen: prefixlen for the management interfaces
 
     以下列指令檢查 ansible 是否可以訪問此主機  
     ansible -m ping -i veos vm_host_1
 
-   -  Update /ansible/group_vars/vm_host/main.yml with the location of the veos files or veos file name if you downloaded a diferent version
-   -  Update the VM IP addresses in the [`ansible/veos`](/ansible/veos) inventory file. These IP addresses should be in the management subnet defined above.
-   -  Update the VM credentials in `ansible/group_vars/eos/creds.yml`.
+    Update /ansible/group_vars/vm_host/main.yml with the location of the veos files or veos file name if you downloaded a diferent version  
+    Update the VM IP addresses in the [`ansible/veos`](/ansible/veos) inventory file. These IP addresses should be in the management subnet defined above.  
+    Update the VM credentials in `ansible/group_vars/eos/creds.yml`.
     ```
     cat <<EOT >> /data/sonic-mgmt/ansible/group_vars/eos/creds.yml
     ---
@@ -43,7 +43,7 @@
     ansible_user: admin
     EOT
     ```
-   -  Update the docker registry information in [`vars/docker_registry.yml`](/ansible/vars/docker_registry.yml).
+    Update the docker registry information in [`vars/docker_registry.yml`](/ansible/vars/docker_registry.yml).
 
 7.  Setup VMs on the Server
 
