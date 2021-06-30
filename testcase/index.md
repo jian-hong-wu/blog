@@ -26,9 +26,9 @@
     - Update the server management IP in [`ansible/veos`](/ansible/veos).
     - Update the testbed server credentials in [`ansible/group_vars/vm_host/creds.yml`](/ansible/group_vars/vm_host/creds.yml).
     - Update the server network configuration for the VM and PTF management interfaces in [`ansible/host_vars/STR-ACS-SERV-01.yml`](/ansible/host_vars/STR-ACS-SERV-01.yml).
-        - `external_port`: server trunk port name (connected to the fanout switch)
-        - `mgmt_gw`: ip of the gateway for the VM management interfaces
-        - `mgmt_prefixlen`: prefixlen for the management interfaces
+        - external_port: server trunk port name (connected to the fanout switch)
+        - mgmt_gw: ip of the gateway for the VM management interfaces
+        - mgmt_prefixlen: prefixlen for the management interfaces
 
     以下列指令檢查 ansible 是否可以訪問此主機  
     ansible -m ping -i veos vm_host_1
@@ -63,6 +63,27 @@
     ```
     
 8.  更新 testbed.csv。至少應該更新 PTF 管理界面設置。
+
+## Topology 與對應的 IP address
+
+1. In server
+- Br107 <-> enx000ec6a96640 (192.168.40.25)
+- Br1 <-> enx00e04c680215 (10.250.1.44)
+- NIC#3 <-> ens2f0np0
+ 
+2. VMs  
+VM0100 : 10.250.1.100  
+….  
+VM0167 : 10.250.1.167
+
+3. In Root Fanout  
+10.250.1.2
+ 
+4. In Leaf Fanout  
+10.250.1.3
+ 
+5. In DUT  
+10.250.1.4
 
 ## <font color="#0091FF">Sonic 測試的主要步驟:</font>
 
