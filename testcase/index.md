@@ -271,22 +271,30 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
     ./testbed-cli.sh stop-vms 'server-name' ~/.password  
 停止VMs for specified topology on server:  
     ./testbed-cli.sh stop-topo-vms 'topo-name' ~/.password  
+	    
 佈建a topology on a server:  
     ./testbed-cli.sh add-topo 'topo-name' ~/.password  
     Optional argument for add-topo:  
       -e ptf_imagetag=<tag> # Use PTF image with specified tag for creating PTF # container  
+	    
 移除a topology on a server:  
     ./testbed-cli.sh remove-topo 'topo-name' ~/.password  
+	    
 重新排序a topology on a server:  
     ./testbed-cli.sh renumber-topo 'topo-name' ~/.password  
+	    
 連接到a topology:  
     ./testbed-cli.sh connect-topo 'topo-name' ~/.password  
+	    
 刷新DUT in a topology:  
     ./testbed-cli.sh refresh-dut 'topo-name' ~/.password  
+	    
 配置a VM on a server:  
     ./testbed-cli.sh config-vm 'topo-name' 'vm-name' ~/.password  
+	    
 創建minigraph for DUT in a topology:  
     ./testbed-cli.sh gen-mg 'topo-name' 'inventory' ~/.password  
+	    
 佈建minigraph to DUT in a topology:  
     ./testbed-cli.sh deploy-mg 'topo-name' 'inventory' ~/.password  
       gen-mg, deploy-mg, test-mg supports enabling/disabling data ACL   
@@ -294,8 +302,11 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
         -e enable_data_plane_acl=true  
         -e enable_data_plane_acl=false  
         by default, data acl is enabled  
+	    
 創建伺服器上的Kubernetes master:  
     ./testbed-cli.sh -m k8s_ubuntu create-master 'k8s-server-name'  ~/.password  
+	    
 銷毀伺服器上的Kubernetes master:  
     ./testbed-cli.sh -m k8s_ubuntu destroy-master 'k8s-server-name' ~/.password  
+	    
 你應當在你的testbed CSV file 裏面定義你的topology。  
