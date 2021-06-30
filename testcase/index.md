@@ -21,7 +21,7 @@
     $ cd ~  
     $ docker run --name WORK -v $PWD:/data -it sonic-mgmt-dev  
     
-    NOTE : 從這裡開始所有步驟都在 container `sonic-mgmt-dev` 中執行
+    *NOTE : 從這裡開始所有步驟都在 container `sonic-mgmt-dev` 中執行*
 
 6.  Prepare Testbed Configuration  
     進入 docker container 後，要修改 testbed configuration files 以反映 lab setup。  
