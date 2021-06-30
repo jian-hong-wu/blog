@@ -274,6 +274,7 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
     ./testbed-cli.sh add-topo 'topo-name' ~/.password  
     Optional argument for add-topo:  
       -e ptf_imagetag=<tag> // Use PTF image with specified tag for creating PTF container  
+	    
 移除a topology on a server:  
     ./testbed-cli.sh remove-topo 'topo-name' ~/.password  
 重新排序a topology on a server:  
