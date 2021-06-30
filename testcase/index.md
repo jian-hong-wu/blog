@@ -262,7 +262,6 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
 啟動後暫停部份的虛擬機(VMs):  
     ./testbed-cli.sh start-vms server-name vault-password-file -e batch_size=2   
     -e interval=60  
-
 開啟虛擬機(VMs)的自動重啟功能:  
     ./testbed-cli.sh start-vms server-name vault-password-file -e autostart=yes  
 啟動VMs for specified topology on server:  
@@ -270,13 +269,11 @@ testbed-cli.sh是用來設定testbed的configuration用的。testbed-cli.sh設�
 停止all VMs on a server:  
     ./testbed-cli.sh stop-vms 'server-name' ~/.password  
 停止VMs for specified topology on server:  
-    ./testbed-cli.sh stop-topo-vms 'topo-name' ~/.password  
-	    
+    ./testbed-cli.sh stop-topo-vms 'topo-name' ~/.password  	    
 佈建a topology on a server:  
     ./testbed-cli.sh add-topo 'topo-name' ~/.password  
     Optional argument for add-topo:  
-      -e ptf_imagetag=<tag> # Use PTF image with specified tag for creating PTF # container  
-	    
+      -e ptf_imagetag=<tag> // Use PTF image with specified tag for creating PTF container  
 移除a topology on a server:  
     ./testbed-cli.sh remove-topo 'topo-name' ~/.password  
 	    
