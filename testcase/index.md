@@ -23,11 +23,9 @@
 6.  Prepare Testbed Configuration  
     進入 docker container 後，要修改 testbed configuration files 以反映 lab setup。  
 
-    - Update the server management IP in [`ansible/veos`](/ansible/veos).
-
-    - Update the testbed server credentials in [`ansible/group_vars/vm_host/creds.yml`](/ansible/group_vars/vm_host/creds.yml).
-
-    - Update the server network configuration for the VM and PTF management interfaces in [`ansible/host_vars/STR-ACS-SERV-01.yml`](/ansible/host_vars/STR-ACS-SERV-01.yml).
+   - Update the server management IP in [`ansible/veos`](/ansible/veos).
+   - Update the testbed server credentials in [`ansible/group_vars/vm_host/creds.yml`](/ansible/group_vars/vm_host/creds.yml).
+   - Update the server network configuration for the VM and PTF management interfaces in [`ansible/host_vars/STR-ACS-SERV-01.yml`](/ansible/host_vars/STR-ACS-SERV-01.yml).
         - `external_port`: server trunk port name (connected to the fanout switch)
         - `mgmt_gw`: ip of the gateway for the VM management interfaces
         - `mgmt_prefixlen`: prefixlen for the management interfaces
