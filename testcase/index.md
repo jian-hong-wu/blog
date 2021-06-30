@@ -14,13 +14,15 @@
     這裡有兩個檔案 : Aboot-veos-serial-8.0.0.iso and vEOS-lab-4.20.15M.vmdk  
     [可點選從此處下載](https://www.arista.com/en/support/software-download)
 
-4.  檢查 `sonic-mgmt-dev` and `docker-ptf`被下載到 docker 裡面了，可以使用指令 docker images 確認  
+4.  檢查 `sonic-mgmt-dev` and `docker-ptf`是否被下載到 docker 裡面了，可以使用指令 docker images 確認  
 ![image001](https://jian-hong-wu.github.io/blog/testcase/image001.png)  
 
 5.  在 server 的環境, 建立一個名為 WORK 的 container  
     $ cd ~  
     $ docker run --name WORK -v $PWD:/data -it sonic-mgmt-dev  
     
+#### NOTE : 從這裡開始所有步驟都在 container `sonic-mgmt-dev` 中執行
+
 6.  Prepare Testbed Configuration  
     進入 docker container 後，要修改 testbed configuration files 以反映 lab setup。  
 
