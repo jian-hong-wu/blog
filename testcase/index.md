@@ -14,7 +14,8 @@
     這裡有兩個檔案 : Aboot-veos-serial-8.0.0.iso and vEOS-lab-4.20.15M.vmdk  
     [可點選從此處下載](https://www.arista.com/en/support/software-download)
 
-4.  Docker is activated with “sonic-mgmt-dev” and “docker-ptf” images inside.
+4.  檢查 `sonic-mgmt-dev` and `docker-ptf`被下載到 docker 裡面了，可以使用指令 docker images 確認
+![image001](https://github.com/jian-hong-wu/blog/blob/testcase/image001.png)  
 
 5.  在 server 的環境, 建立一個名為 WORK 的 container  
     $ cd ~  
