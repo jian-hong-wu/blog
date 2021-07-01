@@ -1,6 +1,6 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
-## <font color="#0091FF">建立 VMs:</font>
+## 建立 VMs
 
 在 192.168.40.25 這台 server 上 :  
 [ sonic-mgmt ]  
