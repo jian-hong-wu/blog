@@ -21,13 +21,13 @@ In /home/jlo/sonic/src/202012_latest, type :
 [ Create VMs ]  
 
 (in the container)  
-# cd /data/sonic-mgmt/ansible  
-# ./testbed-cli.sh start-vms server_1 password.txt
+/# cd /data/sonic-mgmt/ansible  
+/# ./testbed-cli.sh start-vms server_1 password.txt
 
 [ Ping VMs ]  
 
 (in the container)  
-# ansible -m ping -i veos server_1
+/# ansible -m ping -i veos server_1
 
 (In the server)   10.250.1.100 ~ 10.250.1.167  
 $ ping 10.250.1.100
@@ -37,5 +37,5 @@ $ ping 10.250.1.100
 [ Stop VMs ]  
 
 (in the container)  
-# ./testbed-cli.sh stop-vms server_1 ~/.password  
+/# ./testbed-cli.sh stop-vms server_1 ~/.password  
 (those interfaces “br-VM01xx-x” still exist and need extra commands to remove)
