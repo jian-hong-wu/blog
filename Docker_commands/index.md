@@ -3,8 +3,8 @@
 Docker 可以想像成一顆硬碟  
 image 可以想像成某個 file system 的映像檔案  
 container 可以想像成就是把某個 image 打開, 並且可以讓你操作的 virtual machine, 可能在 stop 或 running 狀態  
-         所以在 container 上面 local 的修改, 不會影響到其它人或是其它 image  
-         要在 container 內修改 mapping 到 server的目錄或檔案, 要加 “sudo”  
+所以在 container 上面 local 的修改, 不會影響到其它人或是其它 image  
+要在 container 內修改 mapping 到 server的目錄或檔案, 要加 “sudo”  
  
 [ Docker commands – image related ]  
 <p>$ docker build .&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;建立一個 image (細節請自行查閱)  </p>
@@ -13,13 +13,18 @@ container 可以想像成就是把某個 image 打開, 並且可以讓你操作�
 <p>$ docker load < xxxx.gz >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;載入 image 到 docker 內</p>
  
 [ Docker commands – container related ]  
-<p>$ docker ps -a&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;查看目前有多少個 containers</p>
-<p>$ docker rm -f < container name or ID >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;刪除 container</p>
-<p>$ docker run --name < container name > -v $PWD:/data -it < image name >&emsp;&emsp;建立一個 container, 並把目前目錄 map 到 container 的 /data 下</p>
-<p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;若沒有給定 container name, 系統會自動給定一個字串  xxxxxx_xxxxxxx</p>
-<p>$ docker exec -it < container name > bash&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;要求 container 執行 “bash” command (container 已在 running 狀態)</p>
-<p>$ docker start < container name >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;把在 stop 狀態的 container呼叫起來</p>
+查看目前有多少個 containers  
+$ docker ps -a  
 
-&emsp abc
+刪除 container  
+$ docker rm -f < container name or ID >
 
- <p> &emsp;&emsp;&emsp;&emsp;</p>
+建立一個 container, 並把目前目錄 map 到 container 的 /data 下  
+若沒有給定 container name, 系統會自動給定一個字串  xxxxxx_xxxxxxx  
+$ docker run --name < container name > -v $PWD:/data -it < image name >
+
+要求 container 執行 “bash” command (container 已在 running 狀態)  
+$ docker exec -it < container name > bash
+
+把在 stop 狀態的 container呼叫起來  
+$ docker start < container name >
