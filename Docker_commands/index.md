@@ -12,7 +12,8 @@ container 可以想像成就是把某個 image 打開, 並且可以讓你操作�
 <p>$ docker rm < image name or ID >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;移除 docker 內的某個 image</p>
 <p>$ docker load < xxxx.gz >&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;載入 image 到 docker 內</p>
  
-[ Docker commands – container related ]  
+[ Docker commands – container related ]
+ 
 查看目前有多少個 containers  
 $ docker ps -a  
 
