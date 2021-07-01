@@ -19,13 +19,11 @@ In /home/jlo/sonic/src/202012_latest, type :
 (3)   進入 container 以後, server 上的目錄 /home/jlo, 會被 mapping 到 container 的 /data
 
 [ Create VMs ]  
-
 (in the container)  
 /# cd /data/sonic-mgmt/ansible  
 /# ./testbed-cli.sh start-vms server_1 password.txt
 
 [ Ping VMs ]  
-
 (in the container)  
 /# ansible -m ping -i veos server_1
 
@@ -35,7 +33,6 @@ $ ping 10.250.1.100
  
 
 [ Stop VMs ]  
-
 (in the container)  
 /# ./testbed-cli.sh stop-vms server_1 ~/.password  
 (those interfaces “br-VM01xx-x” still exist and need extra commands to remove)
