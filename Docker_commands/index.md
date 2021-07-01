@@ -7,7 +7,7 @@ container 可以想像成就是把某個 image 打開, 並且可以讓你操作�
          要在 container 內修改 mapping 到 server的目錄或檔案, 要加 “sudo”  
  
 [ Docker commands – image related ]  
- <p>$ docker build .; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;建立一個 image (細節請自行查閱)  </p>
+ <p>$ docker build . &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;建立一個 image (細節請自行查閱)  </p>
  <p>$ docker images  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  查看目前 docker 存了多少 images  </p>
  <p>$ docker rm <image name or ID> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  移除 docker 內的某個 image  </p>
  <p>$ docker load < xxxx.gz > &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  載入 image 到 docker 內  </p>
