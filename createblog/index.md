@@ -12,16 +12,6 @@
 
 5. edit the file "index.md" to add content
 
-<font color="#f00">Hello</font>,
-
-<style>
-.blue {
-  color: blue;
-}
-</style>
-
-<span class="blue">World</span>
-
 6. find the URL in "GitHub Pages" in settings
 
 #### 參考：
