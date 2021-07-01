@@ -38,6 +38,7 @@ $ ping 10.250.1.100
 (those interfaces “br-VM01xx-x” still exist and need extra commands to remove)
 
 ---
+![image002](https://jian-hong-wu.github.io/blog/VMs/image002.png)
 
 [ Root Cause ]
 當我們在嘗試建立 VM 時, 下指令 “./testbed-cli.sh start-vms server_1 password.txt”  
