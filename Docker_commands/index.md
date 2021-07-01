@@ -19,3 +19,5 @@ $ docker run --name <container name> -v $PWD:/data -it <image name>      建立�
                                                                                                                                 若沒有給定 container name, 系統會自動給定一個字串  xxxxxx_xxxxxxx  
 $ docker exec -it <container name> bash                                  要求 container 執行 “bash” command (container 已在 running 狀態)  
 $ docker start <container name>                                          把在 stop 狀態的 container呼叫起來
+
+ abc /   abcd
