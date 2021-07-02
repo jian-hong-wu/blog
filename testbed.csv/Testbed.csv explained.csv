@@ -1,12 +1,12 @@
 # index,name,description,samle data
 1,conf-name,configuratoin name是拓樸的名字，標示拓樸關鍵字,"2-7_t0 , 2-8_t0"
 2,group-name,group name是internal name，表示用vm還是ptf還是其他的,"vms2-7 , vms2-8"
-3,topo,topo是指定部署的拓樸,t0
+3,topo,topo是指定部署的拓樸,"t1,t1-8vm,t1-lag,t1-8vm-lag,t1-64-lag,t0,t0-16,t0-56,t0-52,ptf32,ptf64,t0-64,t0-64-32,t0-116,t0-mclag,t0-mclag-16"
 4,ptf_image_name,指定ptf docker類型,docker-ptf
 5,ptf,python test frame,"ptf2-7 , ptf2-8"
 6,ptf_ip,指定容器的管理IP,10.250.128.192/16
 7,ptf_ipv6,pytest frame Internet Protocol version 6,FC00:2::10:250:128:192/64
-8,server,指定servre名稱，與ansible/veos中定義的server名稱匹配,server_1
+8,server,指定servre名稱，與ansible/veos中定義的server名稱匹配,"server_1 , servre_2"
 9,vm_base,指定vm編號,"VM0200 , VM0232"
 10,dut,指定連接到測試平台的DUT名稱,"as5812-54x , as7926"
 11,comment,註釋字段,Tests vms
