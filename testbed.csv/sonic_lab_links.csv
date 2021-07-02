@@ -1289,3 +1289,4 @@ as5835-54t-2,Ethernet60,str-aos7710-59,Ethernet 1/30,100000,3142,Access
 as5835-54t-2,Ethernet64,str-aos7710-59,Ethernet 1/31,100000,3143,Access
 as5835-54t-2,Ethernet68,str-aos7710-59,Ethernet 1/32,100000,3144,Access
 str-aos7710-54,Ethernet 1/29,str-as5812-54t-02,Ethernet 1/49,40000,3091-3144,Trunk
+str-aos7710-54,Ethernet 1/31,str-aos7710-59,Ethernet 1/19,100000,3037-3144,Trunk
