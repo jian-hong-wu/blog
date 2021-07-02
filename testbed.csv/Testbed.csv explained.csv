@@ -7,6 +7,6 @@
 6,ptf_ip,pytest frame ip,10.250.128.192/16
 7,ptf_ipv6,pytest frame Internet Protocol version 6,FC00:2::10:250:128:192/64
 8,server,server,server_1
-9,vm_base,,"VM0200,VM0232"
-10,dut,,"as5812-54x,as7926"
-11,comment,,Tests vms
+9,vm_base,virtual machine base,"VM0200,VM0232"
+10,dut,device under test,"as5812-54x,as7926"
+11,comment,comment,Tests vms
