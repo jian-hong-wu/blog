@@ -1,2 +1,12 @@
 # index,name,description,samle data
-1,config name,"configuratoin name , means ptf1-m , please refer to web link : https://github.com/Azure/aa","ptf-1 ,\n ptf-2" vbcrlf "vbcrlf" 2
+1,conf-name,"configuratoin name , means ptf1-m , please refer to web link : https://github.com/Azure/aa","ptf-1 ,\n ptf-2"
+2,group name,,
+3,topo,,
+4,ptf_image_name,,
+5,ptf,,
+6,ptf_ip,,
+7,ptf_ipv6,,
+8,server,,
+9,vm_base,,
+10,dut,,
+11,comment,,
