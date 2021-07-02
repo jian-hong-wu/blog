@@ -1,12 +1,12 @@
 # index,name,description,samle data
-1,conf-name,"configuratoin name , means ptf1-m , please refer to web link : https://github.com/Azure/aa","ptf-1 ,\n ptf-2"
-2,group name,,
-3,topo,,
-4,ptf_image_name,,
-5,ptf,,
-6,ptf_ip,,
-7,ptf_ipv6,,
-8,server,,
-9,vm_base,,
-10,dut,,
-11,comment,,
+1,conf-name,configuratoin name,"2-7_t0 , 2-8_t1"
+2,group name,,"vms2-7,vms2-8"
+3,topo,,"t0,t1"
+4,ptf_image_name,,"docker-ptf"
+5,ptf,,"ptf2-7 , ptf2-8"
+6,ptf_ip,,"10.250.128.192/16"
+7,ptf_ipv6,,"FC00:2::10:250:128:192/64"
+8,server,,"server_1"
+9,vm_base,,"VM0200,VM0232"
+10,dut,,"as5812-54x,as7926"
+11,comment,,"Tests vms"
