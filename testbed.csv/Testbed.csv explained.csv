@@ -1,5 +1,5 @@
 # index,name,description,samle data
-1,conf-name,configuratoin name,,"2-7_t0,2-8_t0"
+1,conf-name,configuratoin name,"2-7_t0,2-8_t0"
 2,group-name,group name,"vms2-7,vms2-8"
 3,topo,topology,t0
 4,ptf_image_name,pytest frame image name,docker-ptf
