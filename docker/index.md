@@ -99,8 +99,11 @@ docker run -it -v "path1": "path2" "image"
 
 docker run -it -v "path1": "path2":or "image" ##container只可讀取
 
-docker build -f "path" -t "name" .##用dockerfile创建镜像
+docker build -f "path" -t "name" . ##用dockerfile创建镜像
 
+docker save -o XXX.tar "image's name" ##備份 image 到本地
+
+docker load -i XXX.tar ##從檔案載入 image
 
 ### dockerfile體系結構
 
