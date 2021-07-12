@@ -1,5 +1,44 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
+#### 安裝
+
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
+sudo apt-get update
+
+sudo apt-get install \
+
+  apt-transport-https \
+  
+  ca-certificates \
+  
+  curl \
+  
+  gnupg-agent \
+  
+  software-properties-common
+  
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo apt-key fingerprint 0EBFCD88
+
+sudo add-apt-repository \
+
+  "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+  
+  $(lsb_release -cs) \
+  
+  stable"
+  
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+sudo docker run hello-world
+
+sudo chmod 777 /var/run/docker.sock
+
+#### 指令
 docker images (-a -q)
 
 docker search -s 30 "image" ##只搜尋超過30星的image
