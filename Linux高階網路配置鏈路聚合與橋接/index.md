@@ -1,4 +1,6 @@
+[上一頁](https://jian-hong-wu.github.io/blog/)
 
+# Linux高階網路配置鏈路聚合與橋接
 
 鏈路聚合：兩個網絡卡邦在一起
 balance-rr 輪循  任務輪流來  增快傳輸速率
