@@ -170,3 +170,5 @@ ficonfig br0 down
 brctl delif br0 eth0  
 brctl delbr br0  
 brctl  show  
+
+來自 [Linux高階網路配置鏈路聚合與橋接](https://www.itread01.com/content/1542591433.html)
