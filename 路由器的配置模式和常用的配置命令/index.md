@@ -36,7 +36,7 @@ show interface f0/1：
 ![](https://jian-hong-wu.github.io/blog/路由器的配置模式和常用的配置命令/7.png)
 
 2. 在路由器上用show arp
-3. 
+
 ![](https://jian-hong-wu.github.io/blog/路由器的配置模式和常用的配置命令/8.png)
 
 總結：
