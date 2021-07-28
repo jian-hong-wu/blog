@@ -3,9 +3,9 @@
 # 路由器的配置模式和常用的配置命令
 
 掌握路由器的配置模式之間的切換，常用的路由器配置指令，理解IP 資料包路 由過程。  
-原理  
+## 原理  
 這個實驗由於交換機是即插即用故不用配置三層交換機，只需配置路由器的的  
-拓撲結構  
+## 拓撲結構  
 
 ![](https://jian-hong-wu.github.io/blog/路由器的配置模式和常用的配置命令/1.png)
 
@@ -27,11 +27,11 @@
 
 6)用show interface f0/0來檢視區域網介面f0/0的詳細資訊，用show interface f0/1  
 來檢視區域網介面f0/1的詳細資訊。  
-show interface f0/0  
+#### show interface f0/0  
 
 ![](https://jian-hong-wu.github.io/blog/路由器的配置模式和常用的配置命令/6.png)
 
-show interface f0/1：
+#### show interface f0/1：
 
 ![](https://jian-hong-wu.github.io/blog/路由器的配置模式和常用的配置命令/7.png)
 
@@ -39,7 +39,7 @@ show interface f0/1：
 
 ![](https://jian-hong-wu.github.io/blog/路由器的配置模式和常用的配置命令/8.png)
 
-總結：  
+## 總結：  
 從主機192.168.1.1上ping主機192.168.2.1時，資料包是如何傳遞的？主機、交換機、路由器分別又是如何處理的？  
 主機192.168.1.1先檢視自己的mac地址如果沒有目標主機mac地址就給交換機進行廣播，如果廣播沒有迴應的，就交給閘道器，閘道器在交給路由器，路由器在去檢視自己的路由表，如果查到最長相似的就交給它，再有它轉發給目標地址  
 
