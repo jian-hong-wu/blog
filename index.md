@@ -4,7 +4,7 @@
        
    1. [How to create a blog like this!](https://jian-hong-wu.github.io/blog/createblog/)
    2. [testcase](https://jian-hong-wu.github.io/blog/testcase/)
-   3. [IEEE 802.3ad 鏈路聚合與LACP的簡單知識&EtherChannel 總結](https://jian-hong-wu.github.io/blog/802.3ad/)
+   3. [802.3ad](https://jian-hong-wu.github.io/blog/802.3ad/)
    4. [user_menu](https://jian-hong-wu.github.io/blog/user_menu/)
    5. [VMs](https://jian-hong-wu.github.io/blog/VMs/)
    6. [Docker_commands](https://jian-hong-wu.github.io/blog/Docker_commands/)
