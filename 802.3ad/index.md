@@ -1,5 +1,7 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
-<font color="#dd2e0a"></font>
+
+# IEEE 802.3ad 鏈路聚合與LACP的簡單知識&EtherChannel 總結
+
 IEEE 802.3ad 鏈路聚合與LACP的簡單知識  
 內容提要:本文主要介紹了鏈路聚合的概念以及鏈路聚合與EtherChannel（以太通道）的區別。  
 
