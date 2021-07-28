@@ -73,13 +73,13 @@ Active（主動）：使端口進入主動協商狀態，被配置的端口主�
 LACP要求端口只能工作在全雙工模式下。  
 一個EtherChannel中所有端口必須配置到相同的VLAN中，必須具有相同的幹道模式。  
 
-3. EtherChannel負載均衡  
+3.EtherChannel負載均衡  
 EtherChannel支持基於2層MAC，3層IP，4層端口號的源/目的的負載均衡，高效地使用現有鏈路，當EtherChannel內有鏈路DOWN掉後，立即采用其它鏈路承擔該鏈路的流量，這在事實上使EtherChannel具有了鏈路熱備份的特性，提高了鏈路的冗余性。  
 
-4. EtherChannel與STP  
+4.EtherChannel與STP  
 STP將EtherChannel當作單個邏輯端口，這樣EtherChannel中的端口不會因為STP而被阻塞，提高了鏈路的使用效率。  
 
-5. EtherChannel使用目的  
+5.EtherChannel使用目的  
 一般我們使用EtherChannel是為了增加現有鏈路帶寬，這種增加帶寬的方法不需要增加更多的成本，只需要有多余的端口即可。EtherChannel我們一般也說鏈路捆綁。  
 
 6.其它  
