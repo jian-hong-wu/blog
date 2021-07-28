@@ -1,4 +1,4 @@
-[上一頁](https://jian-hong-wu.github.io/blog/)
+[上一頁](https://jian-hong-wu.github.io/blog/802.3ad/)
 
 # Linux高階網路配置鏈路聚合與橋接
 
