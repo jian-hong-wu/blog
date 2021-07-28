@@ -1,4 +1,4 @@
-[上一頁](https://jian-hong-wu.github.io/blog/)
+[上一頁](https://jian-hong-wu.github.io/blog/802.3ad/)
 
 # IEEE 802.3ad 鏈路聚合與LACP的簡單知識&EtherChannel 總結
 
