@@ -19,7 +19,7 @@
    15. [testbed-cli.sh文件](https://jian-hong-wu.github.io/blog/testbed-cli.sh/)
    16. [常用的docker指令](https://jian-hong-wu.github.io/blog/docker/)
    17. [常用的shell指令](https://jian-hong-wu.github.io/blog/shell/)
-   18. [puttyz安裝指令](https://jian-hong-wu.github.io/blog/putty/)
+   18. [putty安裝指令](https://jian-hong-wu.github.io/blog/putty/)
    19. [jenkins安裝指令](https://jian-hong-wu.github.io/blog/jenkins/)
    20. [VScode安裝指令](https://jian-hong-wu.github.io/blog/VScode/)
 
