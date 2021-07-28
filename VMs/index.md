@@ -27,8 +27,8 @@ In /home/jlo/sonic/src/202012_latest, type :
 (in the container)  
 /# ansible -m ping -i veos server_1
 
-(In the server)   10.250.1.100 ~ 10.250.1.167  
-$ ping 10.250.1.100
+(In the server)   10.250.2.100 ~ 10.250.2.163  
+$ ping 10.250.2.100
 
  
 
