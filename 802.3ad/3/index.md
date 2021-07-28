@@ -1,4 +1,4 @@
-[上一頁](https://jian-hong-wu.github.io/blog/)
+[上一頁](https://jian-hong-wu.github.io/blog/802.3ad/)
 
 # 路由器的配置模式和常用的配置命令
 
