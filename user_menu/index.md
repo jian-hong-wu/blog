@@ -1,5 +1,5 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
-[Arista](https://jian-hong-wu.github.io/blog/user_menu/Arista_EOS-4.26.1F-Manual.pdf)  
+[Arista](https://jian-hong-wu.github.io/blog/user_menu/Arista EOS-4.26.1F-Manual.pdf)  
 [Cumulus](https://jian-hong-wu.github.io/blog/user_menu/Cumulus/)  
 [Juniper](https://jian-hong-wu.github.io/blog/user_menu/Juniper/)
