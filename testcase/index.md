@@ -76,9 +76,9 @@
 - NIC#3 <-> ens2f0np0
  
 2. VMs  
-VM0100 : 10.250.1.100  
+VM0100 : 10.250.2.100  
 ….  
-VM0167 : 10.250.1.167
+VM0167 : 10.250.2.163
 
 3. In Root Fanout  
 10.250.1.2
@@ -125,16 +125,16 @@ cd ../ansible/
 vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/testbed.csv/)
 
 #### a. deploy topology
-//新增一個 topology，vmbase 為 VM0200，名稱為 2-7_t0，設定密碼 ~/.password，使用帶有 lastest 標籤的 PTF image 創建 PTF container  
-./[testbed-cli.sh](https://github.com/Azure/sonic-mgmt/blob/master/ansible/testbed-cli.sh) -b VM0200 [add-topo](https://jian-hong-wu.github.io/blog/testcase/addtopo/) 2-7_t0 ~/.password -e ptf_imagetag=lastest
+//新增一個 topology，vmbase 為 VM0232，名稱為 2-4_t0，設定密碼 ~/.password，使用帶有 lastest 標籤的 PTF image 創建 PTF container  
+./[testbed-cli.sh](https://github.com/Azure/sonic-mgmt/blob/master/ansible/testbed-cli.sh) -b VM0200 [add-topo](https://jian-hong-wu.github.io/blog/testcase/addtopo/) 2-4_t0 ~/.password -e ptf_imagetag=lastest
 
 #### b. deploy minigraph
-//設定 inventory = lab， 指定目標為 as5812-54x，名稱為 2-7_t0，將新生成的 minigraph 保存並部署到目標 DUT  
-[ansible-playbook](https://jian-hong-wu.github.io/blog/testcase/playbook/) -i lab [config_sonic_basedon_testbed.yml](https://jian-hong-wu.github.io/blog/testcase/config_sonic_basedon_testbed/) -l as5812-54x -e testbed_name=2-7_t0 -e deploy=true -e save=true
+//設定 inventory = lab， 指定目標為 as7726-32x-1，名稱為 2-4_t0，將新生成的 minigraph 保存並部署到目標 DUT  
+[ansible-playbook](https://jian-hong-wu.github.io/blog/testcase/playbook/) -i lab [config_sonic_basedon_testbed.yml](https://jian-hong-wu.github.io/blog/testcase/config_sonic_basedon_testbed/) -l as7726-32x-1 -e testbed_name=2-4_t0 -e deploy=true -e save=true
 
 #### c. run test
 //testcase 檔案位於 ~/sonic-mgmt/ansible/roles/test/vars/testcases.yml，選擇執行 testcase 中的 syslog  
-ansible-playbook -i lab --limit as5812-54x [test_sonic.yml](https://jian-hong-wu.github.io/blog/testcase/test_sonic/) -e testbed_name=2-7_t0 -e testcase_name=syslog -vvvv
+ansible-playbook -i lab --limit as7726-32x-1 [test_sonic.yml](https://jian-hong-wu.github.io/blog/testcase/test_sonic/) -e testbed_name=2-4_t0 -e testcase_name=syslog -vvvv
 
 ![](https://jian-hong-wu.github.io/blog/testcase/ansible1.png)
 ![](https://jian-hong-wu.github.io/blog/testcase/ansible2.png)
@@ -143,7 +143,7 @@ ansible-playbook -i lab --limit as5812-54x [test_sonic.yml](https://jian-hong-wu
 cd ../tests
 
 //用 py .test 執行測試 test_syslog.py  
-py.test --inventory=lab --host-pattern=2-7_t0 --module-path ../ansible/library/ --testbed=2-7_t0 --testbed_file=../ansible/testbed.csv ./syslog/test_syslog.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0
+py.test --inventory=lab --host-pattern=2-4_t0 --module-path ../ansible/library/ --testbed=2-4_t0 --testbed_file=../ansible/testbed.csv ./syslog/test_syslog.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0
 
 ![](https://jian-hong-wu.github.io/blog/testcase/pytest1.png)
 ![](https://jian-hong-wu.github.io/blog/testcase/pytest2.png)
@@ -153,8 +153,8 @@ py.test --inventory=lab --host-pattern=2-7_t0 --module-path ../ansible/library/ 
 //返回上一層並進入資料夾 ansible  
 cd ../ansible
 
-//移除 topology 2-7_t0  
-./testbed-cli.sh remove-topo 2-7_t0 ~/.password
+//移除 topology 2-4_t0  
+./testbed-cli.sh remove-topo 2-4_t0 ~/.password
 
 //離開  
 exit
