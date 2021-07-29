@@ -5,7 +5,7 @@
    1. [How to create a blog like this!](https://jian-hong-wu.github.io/blog/createblog/)
    2. [testcase](https://jian-hong-wu.github.io/blog/testcase/)
    3. [802.3ad](https://jian-hong-wu.github.io/blog/802.3ad/)
-   4. [user_menu](https://jian-hong-wu.github.io/blog/user_menu/)
+   4. [user_manual](https://jian-hong-wu.github.io/blog/user_manual/)
    5. [ONIE](https://jian-hong-wu.github.io/blog/ONIE/)
    6. [VMs](https://jian-hong-wu.github.io/blog/VMs/)
    7. [Docker_commands](https://jian-hong-wu.github.io/blog/Docker_commands/)
