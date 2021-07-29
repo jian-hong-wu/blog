@@ -3,11 +3,12 @@
 # Layer 2 command
 
 show arp 
+
 ![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/1.png)
 
-or
-
+or  
 cat /proc/net/arp 
+
 ![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/1.1.png)
 
 sudo config vlan add 1200  
