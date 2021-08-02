@@ -21,10 +21,6 @@ show interface breakout
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/8.png)
 
-show interface counters
-
-![](https://jian-hong-wu.github.io/blog/sonic_command/general/9.png)
-
 show interface description
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/10.png)
@@ -36,10 +32,6 @@ show interface naming_mode
 show interface neighbor expected
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/12.png)
-
-show interface portchannel
-
-![](https://jian-hong-wu.github.io/blog/sonic_command/general/13.png)
 
 show interface status
 
