@@ -34,6 +34,10 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 輸入完密碼後即可選擇安裝所需的插件，系統會自動安裝建議的套件
 
+如果遇到錯誤訊息：W: GPG error: http://ppa.launchpad.net jaunty Release: 由於無法取得它們的公鑰，以下簽章無法進行驗證： NO_PUBKEY 71240B8FB3641232
+
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 71240B8FB3641232
+
 #### 參考:
 
 https://oranwind.org/-devops-jenkins-yu-centos-ubuntu-an-zhuang-jiao-xue/
