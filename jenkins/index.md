@@ -26,7 +26,7 @@ sudo apt-get install jenkins
 
 sudo service jenkins start  
 
-開啟 Jenkins 網頁頁面 http://yourserverIP:8080
+開啟 Jenkins 網頁頁面 http://localhost:8080
 
 出現畫面後需要取得初始的 admin 密碼
 
