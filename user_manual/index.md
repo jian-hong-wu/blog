@@ -1,5 +1,10 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
 [Arista](https://jian-hong-wu.github.io/blog/user_manual/Arista_EOS-4.26.1F-Manual.pdf)  
+[AOS](https://jian-hong-wu.github.io/blog/user_manual/AOS_Manual_AS5812_CLI-R02_20191203.pdf)
+[AS5812-54X-EC](https://www.edge-core.com/tw/productsInfo.php?cls=72&cls2=85&cls3=152&id=293)
+[A5835-54X-quick-start-guide](https://jian-hong-wu.github.io/blog/user_manual/A5835-54X_QSG-EN-SC-TC-R01_20200910.pdf)
+[AS5835-54X](https://www.edge-core.com/tw/productsInfo.php?cls=71&cls2=78&cls3=95&id=793)
+[AOS_user_experience](https://jian-hong-wu.github.io/blog/user_manual/AOS_experience)
 [Cumulus](https://jian-hong-wu.github.io/blog/user_manual/Cumulus/)  
 [Juniper](https://jian-hong-wu.github.io/blog/user_manual/Juniper/)
