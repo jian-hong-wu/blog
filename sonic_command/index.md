@@ -1,6 +1,6 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
-# sonic_command
+# sonic command
 
 [general](https://jian-hong-wu.github.io/blog/sonic_command/general/)  
 [Layer_2_command](https://jian-hong-wu.github.io/blog/sonic_command/layer2/)  
