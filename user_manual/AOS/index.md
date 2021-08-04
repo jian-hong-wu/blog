@@ -5,3 +5,4 @@
 [A5835-54X-quick-start-guide](https://jian-hong-wu.github.io/blog/user_manual/AOS/A5835-54X_QSG-EN-SC-TC-R01_20200910.pdf)  
 [AS5835-54X](https://www.edge-core.com/tw/productsInfo.php?cls=71&cls2=78&cls3=95&id=793)  
 [AOS_user_experience](https://jian-hong-wu.github.io/blog/user_manual/AOS/AOS_experience.docx)
+[AOS_user_experience2](https://jian-hong-wu.github.io/blog/user_manual/AOS/AOS_Commands-0804.docx
