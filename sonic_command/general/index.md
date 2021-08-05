@@ -1,6 +1,6 @@
 [上一頁](https://jian-hong-wu.github.io/blog/sonic_command/)
 
-# general commands
+# General commands
 show environment
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/1.png)
