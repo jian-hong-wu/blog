@@ -1,7 +1,7 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
-# sonic command
+# Sonic Commands
 
-[general](https://jian-hong-wu.github.io/blog/sonic_command/general/)  
-[Layer_2_command](https://jian-hong-wu.github.io/blog/sonic_command/layer2/)  
-[layer_3_command](https://jian-hong-wu.github.io/blog/sonic_command/layer3/)
+[General commands](https://jian-hong-wu.github.io/blog/sonic_command/general/)  
+[Layer 2 commands](https://jian-hong-wu.github.io/blog/sonic_command/layer2/)  
+[Layer 3 commands](https://jian-hong-wu.github.io/blog/sonic_command/layer3/)
