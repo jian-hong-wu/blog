@@ -1,6 +1,6 @@
 [上一頁](https://jian-hong-wu.github.io/blog/sonic_command/)
 
-# layer 3 command
+# Layer 3 commands
 
 show interfaces counters
 
