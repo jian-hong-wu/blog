@@ -2,7 +2,7 @@
 
 # 安裝puttyz的方法
 
-sudo apt-get install putty
+$ sudo apt-get install putty
 
 #### 參考:
 

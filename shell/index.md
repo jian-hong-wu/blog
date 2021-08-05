@@ -1,56 +1,56 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
-ls -a
+$ ls -a
 
-cd
+$ cd
 
-pwd
+$ pwd
 
-uname
+$ uname
 
-clear
+$ clear
 
-cat
+$ cat
 
-sudo
+$ sudo
 
-cp
+$ cp
 
-su
+$ su
 
-mv
+$ mv
 
-mkdir
+$ mkdir
 
-touch
+$ touch
 
-rm
+$ rm
 
-rmdir
+$ rmdir
 
-ifconfig
+$ ifconfig
 
-reboot
+$ reboot
 
-poweroff
+$ poweroff
 
-man
+$ man
 
-sync
+$ sync
 
-find
+$ find
 
-grep
+$ grep
 
-du
+$ du
 
-df
+$ df
 
-gedit
+$ gedit
 
-ps
+$ ps
 
-top
+$ top
 
-file
+$ file
 

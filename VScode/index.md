@@ -12,11 +12,11 @@ https://code.visualstudio.com/download
 
 在終端機中輸入下方指令
 
-sudo dpkg -i 下載的安裝檔名稱
+$ sudo dpkg -i 下載的安裝檔名稱
 
 請在終端機中輸入下方指令
 
-code
+$ code
 
 #### 參考：
 

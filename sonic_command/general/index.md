@@ -1,50 +1,50 @@
 [上一頁](https://jian-hong-wu.github.io/blog/sonic_command/)
 
 # General commands
-show environment
+$ show environment
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/1.png)
 
-show platform summary
+$ show platform summary
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/2.png)
 
-show platform syseeprom
+$ show platform syseeprom
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/3.png)
 
-show interface alias
+$ show interface alias
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/7.png)
 
-show interface breakout
+$ show interface breakout
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/8.png)
 
-show interface description
+$ show interface description
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/10.png)
 
-show interface naming_mode
+$ show interface naming_mode
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/11.png)
 
-show interface neighbor expected
+$ show interface neighbor expected
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/12.png)
 
-show interface status
+$ show interface status
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/14.png)
 
-show interfaces transceiver eeprom --dom Ethernet0
+$ show interfaces transceiver eeprom --dom Ethernet0
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/4.png)
 
-show interfaces transceiver lpmode Ethernet100
+$ show interfaces transceiver lpmode Ethernet100
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/5.png)
 
-show interfaces transceiver presence Ethernet100
+$ show interfaces transceiver presence Ethernet100
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/general/6.png)

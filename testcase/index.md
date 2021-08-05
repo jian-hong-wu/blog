@@ -102,48 +102,48 @@ Once you are in the directory.
 #### 2.  下面是會用到的command:
 
 //查看存在的 images  
-docker image ls
+$ docker image ls
 
 ![image](https://jian-hong-wu.github.io/blog/testcase/image.png)
 
 //在 server 的環境, 建立一個名為 mgmt 的 container  
-docker run -it --name mgmt sonic-mgmt-dev bash
+$ docker run -it --name mgmt sonic-mgmt-dev bash
 
 //在 container 裡進入資料夾 sonic-mgmt  
-cd sonic-mgmt/
+$ cd sonic-mgmt/
 
 //進入資料夾 server_config  
-cd server_config
+$ cd server_config
 
 //選擇server 2  
-./server.sh 2
+$ ./server.sh 2
 
 //返回上一層並進入資料夾 ansible  
-cd ../ansible/
+$ cd ../ansible/
 
 //查看檔案 testbed.csv，並決定要測試的 topology  
-vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/testbed.csv/)
+$ vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/testbed.csv/)
 
 #### a. deploy topology
 //新增一個 topology，vmbase 為 VM0232，名稱為 2-4_t0，設定密碼 ~/.password，使用帶有 lastest 標籤的 PTF image 創建 PTF container  
-./[testbed-cli.sh](https://github.com/Azure/sonic-mgmt/blob/master/ansible/testbed-cli.sh) -b VM0200 [add-topo](https://jian-hong-wu.github.io/blog/testcase/addtopo/) 2-4_t0 ~/.password -e ptf_imagetag=lastest
+$ ./[testbed-cli.sh](https://github.com/Azure/sonic-mgmt/blob/master/ansible/testbed-cli.sh) -b VM0200 [add-topo](https://jian-hong-wu.github.io/blog/testcase/addtopo/) 2-4_t0 ~/.password -e ptf_imagetag=lastest
 
 #### b. deploy minigraph
 //設定 inventory = lab， 指定目標為 as7726-32x-1，名稱為 2-4_t0，將新生成的 minigraph 保存並部署到目標 DUT  
-[ansible-playbook](https://jian-hong-wu.github.io/blog/testcase/playbook/) -i lab [config_sonic_basedon_testbed.yml](https://jian-hong-wu.github.io/blog/testcase/config_sonic_basedon_testbed/) -l as7726-32x-1 -e testbed_name=2-4_t0 -e deploy=true -e save=true
+$ [ansible-playbook](https://jian-hong-wu.github.io/blog/testcase/playbook/) -i lab [config_sonic_basedon_testbed.yml](https://jian-hong-wu.github.io/blog/testcase/config_sonic_basedon_testbed/) -l as7726-32x-1 -e testbed_name=2-4_t0 -e deploy=true -e save=true
 
 #### c. run test
 //testcase 檔案位於 ~/sonic-mgmt/ansible/roles/test/vars/testcases.yml，選擇執行 testcase 中的 syslog  
-ansible-playbook -i lab --limit as7726-32x-1 [test_sonic.yml](https://jian-hong-wu.github.io/blog/testcase/test_sonic/) -e testbed_name=2-4_t0 -e testcase_name=syslog -vvvv
+$ ansible-playbook -i lab --limit as7726-32x-1 [test_sonic.yml](https://jian-hong-wu.github.io/blog/testcase/test_sonic/) -e testbed_name=2-4_t0 -e testcase_name=syslog -vvvv
 
 ![](https://jian-hong-wu.github.io/blog/testcase/ansible1.png)
 ![](https://jian-hong-wu.github.io/blog/testcase/ansible2.png)
 
 //返回上一層並進入資料夾 tsets  
-cd ../tests
+$ cd ../tests
 
 //用 py .test 執行測試 test_syslog.py  
-py.test --inventory=lab --host-pattern=2-4_t0 --module-path ../ansible/library/ --testbed=2-4_t0 --testbed_file=../ansible/testbed.csv ./syslog/test_syslog.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0
+$ py.test --inventory=lab --host-pattern=2-4_t0 --module-path ../ansible/library/ --testbed=2-4_t0 --testbed_file=../ansible/testbed.csv ./syslog/test_syslog.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0
 
 ![](https://jian-hong-wu.github.io/blog/testcase/pytest1.png)
 ![](https://jian-hong-wu.github.io/blog/testcase/pytest2.png)
@@ -151,16 +151,16 @@ py.test --inventory=lab --host-pattern=2-4_t0 --module-path ../ansible/library/ 
 
 #### d. remove topology
 //返回上一層並進入資料夾 ansible  
-cd ../ansible
+$ cd ../ansible
 
 //移除 topology 2-4_t0  
-./testbed-cli.sh remove-topo 2-4_t0 ~/.password
+$ ./testbed-cli.sh remove-topo 2-4_t0 ~/.password
 
 //離開  
-exit
+$ exit
 
 //刪除 container test  
-docker rm mgmt
+$ docker rm mgmt
 
 ## <font color="#0091FF">testbed-cli.sh命令詳解:</font>
 
