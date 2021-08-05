@@ -1,3 +1,5 @@
+[上一頁](https://jian-hong-wu.github.io/blog/)
+
 # 製作Live USB隨身碟的軟體Unetbootin
 
 必須將USB隨身碟格式化為FAT32的格式，製作完成的隨身碟才能開機。
