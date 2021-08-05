@@ -1,6 +1,6 @@
 [上一頁](https://jian-hong-wu.github.io/blog/sonic_command/)
 
-# Layer 2 command
+# Layer 2 commands
 
 show arp 
 
