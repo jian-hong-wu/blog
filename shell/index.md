@@ -62,7 +62,7 @@ $ date -d “now” %Y-%m-%d
 //取昨天時間  
 $ date -d “yesterday” %Y-%m-%d  
 $ date -d “1 days ago” %Y-%m-%d  
-## -d, –date=STRING         display time described by STRING, not `now’  
+//-d, –date=STRING         display time described by STRING, not `now’  
 STRING可以為‘now’ 、 ‘yesterday’、 ‘n days ago’  
 ‘n days ago’  表示n天前的那一天
 
