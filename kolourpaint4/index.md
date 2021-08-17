@@ -1,6 +1,6 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
-# 好用的 linux 繪圖軟體
+# 好用的 linux 繪圖軟體 kolourpaint4
 
 $ sudo apt-get install kolourpaint4
 
