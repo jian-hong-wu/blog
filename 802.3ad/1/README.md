@@ -1,8 +1,8 @@
-### big header
+# big header
 
 ## medium header
 
-# header
+### header
 
 . Pentium
 . AMD
