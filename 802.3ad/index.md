@@ -1,5 +1,7 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
+[go here](https://www.google.com)
+
 # 802.3ad
 
 1. [IEEE 802.3ad 鏈路聚合與LACP的簡單知識&EtherChannel 總結](https://jian-hong-wu.github.io/blog/802.3ad/1/)
