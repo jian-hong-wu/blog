@@ -30,12 +30,12 @@
 
 <div class="row">
   <div class="column">
-       1. t
-       2. t2
+         1. t </br>
+       2. t2 </br> 
   </div>
   <div class="column">
-       3. t3
-       4. t4
+       3. t3 </br>
+       4. t4 </br>
   </div>
 </div>
 
