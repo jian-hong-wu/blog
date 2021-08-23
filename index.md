@@ -27,6 +27,8 @@
    23. [ngrok](https://zoejoyuliao.medium.com/%E9%80%8F%E9%81%8E-github-webhook-%E8%A7%B8%E7%99%BC%E6%9C%AC%E5%9C%B0-jenkins-pipeline-%E8%AE%93%E4%BD%A0-push-code-%E5%88%B0-github-%E5%B0%B1%E6%9C%83%E8%87%AA%E5%8B%95%E8%B7%91-ci-cd-7c4bd7a22446)
    24. [kolourpaint](https://jian-hong-wu.github.io/blog/kolourpaint4/)
    25. [Sonic installation](https://jian-hong-wu.github.io/blog/sonic_install)
+   26. [Communicty sonic](https://jian-hong-wugithub.io/blog/sonic_comm)
+  
 
 <div class="row">
   <div class="column">
