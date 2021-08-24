@@ -17,5 +17,6 @@
 ## Test results
 
 ## Build-test cycle
-
+![build-test cycle](/blog/sonic_comm/pngs/buildtest-s.png "Build Test Cycle")
+Build Test Cycle
 
