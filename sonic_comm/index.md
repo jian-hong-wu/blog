@@ -1,3 +1,4 @@
+
 # Community Sonic
 
 ## The latest build
@@ -13,8 +14,8 @@
    b. address issue b
    c. address issue c
    
-## test results
+## Test results
 
-## build-test cycle
+## Build-test cycle
 
 
