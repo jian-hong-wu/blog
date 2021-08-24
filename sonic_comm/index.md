@@ -20,3 +20,16 @@
 ![build-test cycle](/blog/sonic_comm/pngs/buildtest-s.png "Build Test Cycle")
 Build Test Cycle
 
+![](https://github.com/jian-hong-wu/blog/blob/gh-pages/blog/sonic_comm/pngs/buildtest-s.png)
+Build Test Cycle II
+
+![](/jian-hong-wu/blog/blob/gh-pages/blog/sonic_comm/pngs/buildtest-s.png)
+Build Test Cycle III
+
+![](/blog/blob/gh-pages/blog/sonic_comm/pngs/buildtest-s.png)
+Build Test Cycle IV
+
+
+
+
+
