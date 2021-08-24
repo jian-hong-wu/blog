@@ -1,11 +1,12 @@
 
-# Community Sonic
+## Community Sonic
+We support community sonic, and you can get the latest package from here. We only support Accton branded models, for now.
 
 ## Our latest build
    You can download our binary from the following link:
    - [Our latest build](https://www.example.com)
 
-   The latest Build in the past 5 days:
+   Our latest Build in the past 5 days:
    - [link #1](https://www.example.com)
    - [link #2](https://www.example.com)
    - [link #3](https://www.example.com)
@@ -22,7 +23,11 @@
    c. address issue c
    
 ## Test report
-
+  Select the model to view our test report:
+  
+  - AS5835
+  - AS7326
+  - AS7726
 
 ## Build-test cycle
 ![build-test cycle](/blog/sonic_comm/pngs/buildtest-s.png)
