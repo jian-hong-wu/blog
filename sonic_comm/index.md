@@ -2,32 +2,37 @@
 ## Community Sonic
 We support community sonic, and you can get the latest package from here. We only support Accton branded models, for now.
 
-## Our latest build
-   You can download our binary from the following link:
-   - [Our latest build](https://www.example.com)
 
-   Our latest Build in the past 5 days:
-   - [link #1](https://www.example.com)
-   - [link #2](https://www.example.com)
-   - [link #3](https://www.example.com)
-   - [link #4](https://www.example.com)
-   - [link #5](https://www.example.com)
+## Our latest build
+You can download our binary from the following link:
+- [Our latest build](https://www.example.com)
+
+Our latest Build in the past 5 days:
+- [link #1](https://www.example.com)
+- [link #2](https://www.example.com)
+- [link #3](https://www.example.com)
+- [link #4](https://www.example.com)
+- [link #5](https://www.example.com)
    
-   Our latest stable build:
-   - [Our latest stable build](https://www.example.com)
+Our latest stable build:
+- [Our latest stable build](https://www.example.com)
+   
    
 ## Readme
-   2021.08.23:
-   a. address issue a
-   b. address issue b
-   c. address issue c
+2021.08.23:
+a. address issue a
+b. address issue b
+c. address issue c
    
 ## Test report
-  Select the model to view our test report:
+Select the model to view our test report:
   
-  - AS5835
-  - AS7326
-  - AS7726
+| Model       | Description | Readme        |
+| :---        |    :----:   |          ---: |
+| AS5835      | 10G         | link here     |
+| AS7326      | 25G         | link here     |
+| AS7726      | 100G        | link here     |
+  
 
 ## Build-test cycle
 ![build-test cycle](/blog/sonic_comm/pngs/buildtest-s.png)
