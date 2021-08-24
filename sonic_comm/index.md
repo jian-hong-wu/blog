@@ -3,7 +3,8 @@
 
 ## Our latest build
    You can download our binary from the following link:
-   
+   - [Our latest build](https://www.example.com)
+
    The latest Build in the past 5 days:
    - [link #1](https://www.example.com)
    - [link #2](https://www.example.com)
@@ -12,7 +13,7 @@
    - [link #5](https://www.example.com)
    
    Our latest stable build:
-   - [stable build](https://www.example.com)
+   - [Our latest stable build](https://www.example.com)
    
 ## Readme
    2021.08.23:
