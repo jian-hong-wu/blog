@@ -1,6 +1,6 @@
 [上一頁](/blog/sonic_command/)
 
-## General commands
+### General commands
 * [$ help](/blog/sonic_command/general/show/)
 * [$ cd](/blog/sonic_command/general/show/)
 * [$ mkdir](/blog/sonic_command/general/show/)
