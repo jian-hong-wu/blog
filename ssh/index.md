@@ -61,8 +61,7 @@ Path          :
 Online        : True  
 RestartNeeded : False
 
-## 啟動及設定 OpenSSH 伺服器
-
+#啟動及設定 OpenSSH 伺服器  
 #Start the sshd service  
 $ Start-Service sshd
 
@@ -76,4 +75,4 @@ $ Get-NetFirewallRule -Name *ssh*
 #If the firewall does not exist, create one  
 $ New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
 
-安裝之後便可以使用 ssh 連線
+之後便可以使用 ssh 連線
