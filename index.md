@@ -11,7 +11,7 @@
    7. [Docker commands](https://jian-hong-wu.github.io/blog/Docker_commands/)
    8. [Git Submodule 用法筆記](https://blog.chh.tw/posts/git-submodule/)
    9. [Linux TCP/IP networking: net-tools vs. iproute2](https://www.xmodulo.com/linux-tcpip-networking-net-tools-iproute2.html)
-   10. [server.sh文件](https://jian-hong-wu.github.io/blog/server.sh/)
+   10. [ssh](https://jian-hong-wu.github.io/blog/ssh/)
    11. [testbed.csv文件](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/testbed.csv/)
    12. [pytest.org文件](https://jian-hong-wu.github.io/blog/pytest.org/)
    13. [pytest.run文件](https://jian-hong-wu.github.io/blog/pytest.run/)
