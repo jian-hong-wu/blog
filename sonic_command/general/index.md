@@ -1,15 +1,15 @@
 [上一頁](/blog/sonic_command/)
 
-# General commands
-[$ show environment](/blog/sonic_command/general/show/)
-[$ show platform](/blog/sonic_command/general/show/)
-[$ show ip](/blog/sonic_command/general/show/)
-[$ show interface](/blog/sonic_command/general/show/)
-[$ show vlan](/blog/sonic_command/general/show/)
-[$ show vxlan](/blog/sonic_command/general/show/)
-[$ show watermark](/blog/sonic_command/general/show/)
-[$ show ztp](/blog/sonic_command/general/show/)
-[$ show](/blog/sonic_command/general/show/)
+## General commands
+- [$ show environment](/blog/sonic_command/general/show/)
+- [$ show platform](/blog/sonic_command/general/show/)
+- [$ show ip](/blog/sonic_command/general/show/)
+- [$ show interface](/blog/sonic_command/general/show/)
+- [$ show vlan](/blog/sonic_command/general/show/)
+- [$ show vxlan](/blog/sonic_command/general/show/)
+- [$ show watermark](/blog/sonic_command/general/show/)
+- [$ show ztp](/blog/sonic_command/general/show/)
+- [$ show](/blog/sonic_command/general/show/)
 
 
 
