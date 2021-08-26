@@ -1,6 +1,6 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
-# 當 ssh 連線失敗
+當 ssh 連線失敗，原因可能是由於安裝 openssh-server
 
 ssh: connect to host 192.168.x.xx port 22: Connection refused
 
