@@ -8,7 +8,11 @@ ssh: connect to host 192.168.x.xx port 22: Connection refused
 
 $ sudo apt-get install openssh-server
 
-如果要在 Linux 上產生 SSH 登入用的金鑰，可以使用 ssh-keygen 這個指令。在建立金鑰之前，要先建立 ~/.ssh 這個目錄，並設定正確的權限
+在相同網域之下即可使用 ssh 連線
+
+若不想要輸入密碼登入伺服器則需要使用金鑰
+
+要在 Linux 上產生 SSH 登入用的金鑰，可以使用 ssh-keygen 這個指令。在建立金鑰之前，要先建立 ~/.ssh 這個目錄，並設定正確的權限
 
 $ mkdir -p ~/.ssh
 $ chmod 700 ~/.ssh
@@ -17,7 +21,7 @@ $ chmod 700 ~/.ssh
 
 $ ssh-keygen
 
-在產生金鑰的過程中，會詢問一些問題，對於一般的使用者而言，全部都使用預設值（直接按下 Enter 鍵）即可。
+在產生金鑰的過程中，會詢問一些問題，對於一般的使用者而言，全部都使用預設值（不須輸入直接按下 Enter 鍵）即可。
 
 將產生的 id_rsa.pub 檔案內容這個公開金鑰複製到 Linux 伺服器上的 ~/.ssh/authorized_keys 檔案中
 
