@@ -8,13 +8,13 @@ ssh: connect to host 192.168.x.xx port 22: Connection refused
 
 $ sudo apt-get install openssh-server
 
-在相同網域之下即可使用 ssh 連線
+安裝完畢後，在相同網域之下即可使用 ssh 連線
 
 若不想要輸入密碼登入伺服器則需要使用金鑰
 
 要在 Linux 上產生 SSH 登入用的金鑰，可以使用 ssh-keygen 這個指令。在建立金鑰之前，要先建立 ~/.ssh 這個目錄，並設定正確的權限
 
-$ mkdir -p ~/.ssh
+$ mkdir -p ~/.ssh  
 $ chmod 700 ~/.ssh
 
 在客戶端產生金鑰 
@@ -41,38 +41,39 @@ $ Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
 
 如果尚未安裝，這應該會傳回下列輸出：
 
-Name  : OpenSSH.Client~~~~0.0.1.0
+Name  : OpenSSH.Client~~~~0.0.1.0  
 State : NotPresent
 
-Name  : OpenSSH.Server~~~~0.0.1.0
+Name  : OpenSSH.Server~~~~0.0.1.0  
 State : NotPresent
 
 然後，視需要安裝伺服器或用戶端元件：
 
-# Install the OpenSSH Client
+# Install the OpenSSH Client  
 Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 
-# Install the OpenSSH Server
+# Install the OpenSSH Server  
 Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 
 這兩個都應該會傳回下列輸出：
 
-Path          :
-Online        : True
+Path          :  
+Online        : True  
 RestartNeeded : False
 
 ## 啟動及設定 OpenSSH 伺服器
 
-# Start the sshd service
+# Start the sshd service  
 $ Start-Service sshd
 
-# OPTIONAL but recommended:
+# OPTIONAL but recommended:  
 $ Set-Service -Name sshd -StartupType 'Automatic'
 
-# Confirm the firewall rule is configured. It should be created automatically by setup.
+# Confirm the firewall rule is configured. It should be created automatically by setup.  
 $ Get-NetFirewallRule -Name *ssh*
 
-# There should be a firewall rule named "OpenSSH-Server-In-TCP", which should be enabled
-# If the firewall does not exist, create one
+# There should be a firewall rule named "OpenSSH-Server-In-TCP", which should be enabled  
+# If the firewall does not exist, create one  
 $ New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
 
+安裝之後便可以使用 ssh 連線
