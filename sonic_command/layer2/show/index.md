@@ -1,6 +1,6 @@
 [上一頁](/blog/sonic_command/layer2/)
 
-### Show commands (miscellous)
+### Show commands (各种各样的)
 
 $ show
 ---
