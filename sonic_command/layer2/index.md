@@ -6,8 +6,9 @@
 * [$ show ip](/blog/sonic_command/layer2/show/ip/)
 * [$ show interface](/blog/sonic_command/layer2/show/interface/)
 * [$ show vlan & vxlan](/blog/sonic_command/layer2/show/vlan/)
-* [$ show （其他指令)](/blog/sonic_command/layer2/show/misc/)
+* [$ show (其他指令)](/blog/sonic_command/layer2/show/misc/)
 
+Show是最常用的指令
 
 $ show
 ---
