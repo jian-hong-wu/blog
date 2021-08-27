@@ -2,8 +2,12 @@
 
 # Layer 3 commands
 * [$ show interfaces counters](https://jian-hong-wu.github.io/blog/sonic_command/layer3/#-show-interfaces-counters)
-
-
+* [$ show ip route](https://jian-hong-wu.github.io/blog/sonic_command/layer3/#-show-ip-route)
+* [$ show ip route 10.1.0.1](https://jian-hong-wu.github.io/blog/sonic_command/layer3/#-show-ip-route-10.1.0.1)
+* [$ show ip bgp summary](https://jian-hong-wu.github.io/blog/sonic_command/layer3/#-show-ip-bgp-summary)
+* [$ show ip bgp neighbors](https://jian-hong-wu.github.io/blog/sonic_command/layer3/#-show-ip-bgp-neighbors)
+* [$ show ip bgp neighbors 10.0.0.1](https://jian-hong-wu.github.io/blog/sonic_command/layer3/#-show-ip-bgp-neighbors-10.0.0.1)
+* [$ show ipv6 bgp summary](https://jian-hong-wu.github.io/blog/sonic_command/layer3/#-show-ipv6-bgp-summary)
 
 $ show interfaces counters
 ---
