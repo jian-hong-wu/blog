@@ -103,9 +103,7 @@ Commands:
   temperature  Show device temperature information
 admin@sonic:~$ </pre>
 ---
-
 $ show platform firmware
-
 ---
 <pre>admin@sonic:~$ show platform firmware
 Traceback (most recent call last):
