@@ -1,7 +1,8 @@
 [上一頁](/blog/sonic_command/layer2/show/)
 
-show commands (misc)
+show (其他指令) commands
 
+Show是最常用的指令，其他常用的show command包含下列：
 
 $ show arp 
 <pre>admin@sonic:~$ show arp
@@ -29,10 +30,6 @@ $ sudo config vlan member add 1200 Ethernet8
 $ show vlan config
 
 ![](/blog/sonic_command//layer2/2.png)
-
-$ show interfaces portchannel
-
-![](/blog/sonic_command//layer2/3.png)
 
 $ show lldp table
 
