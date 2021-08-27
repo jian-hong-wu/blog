@@ -118,19 +118,23 @@ admin@sonic:~$
 </pre>
 ---
 
-$ cd
----
-
----
-
 $ mkdir
 ---
+<pre>admin@sonic:~$ mkdir directory
+admin@sonic:~$ </pre>
+---
 
+$ cd
+---
+<pre>admin@sonic:~$ cd directory
+admin@sonic:~/directory$ </pre>
 ---
 
 $ rmdir
 ---
-
+<pre>admin@sonic:~$ rmdir directory
+admin@sonic:~$ 
+</pre>
 ---
 
 $ ls
