@@ -1,7 +1,7 @@
 [上一頁](https://jian-hong-wu.github.io/blog/sonic_command/)
 
 ### General commands
-* [$ help](https://jian-hong-wu.github.io/blog/sonic_command/general/index.md#-help)
+* [$ help](https://jian-hong-wu.github.io/blog/sonic_command/general/#-help)
 * [$ cd](/blog/sonic_command/general/help/)
 * [$ mkdir](/blog/sonic_command/general/help/)
 * [$ rmdir](/blog/sonic_command/general/help/)
