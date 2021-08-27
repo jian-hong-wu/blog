@@ -1,19 +1,19 @@
 [上一頁](/blog/sonic_command/)
 
 ### Layer 2 commands
-* [$ show](/blog/sonic_command/layer2/show/)
+* [$ show (各种各样的命令)](/blog/sonic_command/layer2/show/)
 * [$ show platform & environment](/blog/sonic_command/layer2/show/platform/)
 * [$ show ip](/blog/sonic_command/layer2/show/ip/)
 * [$ show interface](/blog/sonic_command/layer2/show/interface/)
 * [$ show vlan & vxlan](/blog/sonic_command/layer2/show/vlan/)
-* [$ show misc & ect](/blog/sonic_command/layer2/show/misc/)
+* [$ show （其他指令)](/blog/sonic_command/layer2/show/misc/)
 
 
 $ show
 ---
 <pre>admin@sonic:~$ show
 Usage: show [OPTIONS] COMMAND [ARGS]...
-
+命令
   SONiC command line - &apos;show&apos; command
 
 Options:
