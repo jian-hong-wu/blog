@@ -1,7 +1,7 @@
 [上一頁](https://jian-hong-wu.github.io/blog/sonic_command/)
 
 # Layer 3 commands
-* [$ show interfaces counters](https://jian-hong-wu.github.io/blog/sonic_command/general/#-show-interfaces-counters)
+* [$ show interfaces counters](https://jian-hong-wu.github.io/blog/sonic_command/layer3/#-show-interfaces-counters)
 
 
 
