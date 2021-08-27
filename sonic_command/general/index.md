@@ -2,10 +2,10 @@
 
 ### General commands
 * [$ help](https://jian-hong-wu.github.io/blog/sonic_command/general/#-help)
-* [$ cd](https://jian-hong-wu.github.io/blog/sonic_command/general/#-cd)
 * [$ mkdir](https://jian-hong-wu.github.io/blog/sonic_command/general/#-mkdir)
-* [$ rmdir](https://jian-hong-wu.github.io/blog/sonic_command/general/#-rmdir)
 * [$ ls](https://jian-hong-wu.github.io/blog/sonic_command/general/#-ls)
+* [$ cd](https://jian-hong-wu.github.io/blog/sonic_command/general/#-cd)
+* [$ rmdir](https://jian-hong-wu.github.io/blog/sonic_command/general/#-rmdir)
 * [$ dir](https://jian-hong-wu.github.io/blog/sonic_command/general/#-dir)
 * [$ rm](https://jian-hong-wu.github.io/blog/sonic_command/general/#-rm)
 * [$ cat](https://jian-hong-wu.github.io/blog/sonic_command/general/#-cat)
@@ -124,6 +124,15 @@ $ mkdir
 admin@sonic:~$ </pre>
 ---
 
+$ ls
+---
+<pre>admin@sonic:~$ ls
+directory
+admin@sonic:$ 
+</pre>
+---
+
+
 $ cd
 ---
 <pre>admin@sonic:~$ cd directory
@@ -135,11 +144,6 @@ $ rmdir
 <pre>admin@sonic:~$ rmdir directory
 admin@sonic:~$ 
 </pre>
----
-
-$ ls
----
-
 ---
 
 $ dir
