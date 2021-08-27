@@ -1,8 +1,8 @@
 [上一頁](/blog/sonic_command/layer2/)
 
-### show commands
+### Show commands
 
-$ show commands
+$ show
 ---
 <pre>admin@sonic:~$ show
 Usage: show [OPTIONS] COMMAND [ARGS]...
@@ -103,7 +103,9 @@ Commands:
   temperature  Show device temperature information
 admin@sonic:~$ </pre>
 ---
+
 $ show platform firmware
+
 ---
 <pre>admin@sonic:~$ show platform firmware
 Traceback (most recent call last):
