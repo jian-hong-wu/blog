@@ -4,9 +4,9 @@
 
 [ONIE official home page(part of Open Compute Project)](https://opencomputeproject.github.io/onie/)
 
-[You can download onie here](/blog/ONIE/download/)
+[You can download ONIE here](/blog/ONIE/download/)
 
-[Download user Guide here](/blog/ONIE/guide/)
+[User guide download](/blog/ONIE/guide/)
 
 [ONIE Tutorial](/blog/ONIE/tutorial/)
 
