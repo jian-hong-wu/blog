@@ -1,16 +1,15 @@
-[上一頁](https://jian-hong-wu.github.io/blog/)
+[上一頁](/blog/)
 
 # ONIE
 
 [ONIE home page](https://opencomputeproject.github.io/onie/)
 
-[Download onie here](?)
+[Download onie here](/blog/ONIE/download/)
 
-[Download user Guide](?)
+[Download user Guide here](/blog/ONIE/guide/)
 
-[Tutorial]
-
+[ONIE Tutorial](/blog/ONIE/tutorial/)
 
 [Lenovo_Network_ONIE_Quick_Start_Guide](https://jian-hong-wu.github.io/blog/ONIE/Lenovo_Network_ONIE_Quick_Start_Guide.pdf)  
 [OCP_Summit_SJ_ONIE_16x9_final](https://jian-hong-wu.github.io/blog/ONIE/OCP_Summit_SJ_ONIE_16x9_final.pdf)  
-[Login](https://jian-hong-wu.github.io/blog/ONIE/Login/)
+[Lab Login](/blog/ONIE/Login/)
