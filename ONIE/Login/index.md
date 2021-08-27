@@ -29,6 +29,7 @@ $ reboot
 
 ![](https://jian-hong-wu.github.io/blog/ONIE/Login/11.png)
 
+ONIE: Install OS
 ---
 <pre>4..3..2..1..Info: eth0:  Checking link... down.
 ONIE: eth0: link down.  Skipping configuration.
