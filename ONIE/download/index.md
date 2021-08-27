@@ -15,9 +15,9 @@
 
 ### ONIE - Accton specific configurations, release notes
 Choose your Accton model and do a download    
-[accton_833435_b21](/blog/ONIE/download/) &nbsp&nbsp&nbsp&nbsp      [accton_as4222_28pe](/blog/ONIE/download/)      [accton_as4510_52t](/blog/ONIE/download/)    
-[accton_as4600_54t](/blog/ONIE/download/) &nbsp&nbsp&nbsp&nbsp      [accton_as4610_30](/blog/ONIE/download/  )      [accton_as4610_54](/blog/ONIE/download/)    
-[accton_as4620_54pe](/blog/ONIE/download/) &nbsp&nbsp&nbsp&nbsp     [accton_as4630_54pe](/blog/ONIE/download/)      [accton_as5512_54x](/blog/ONIE/download/)    
+[accton_833435_b21](/blog/ONIE/download/) &nbsp;&nbsp;&nbsp;&nbsp;  [accton_as4222_28pe](/blog/ONIE/download/)      [accton_as4510_52t](/blog/ONIE/download/)    
+[accton_as4600_54t](/blog/ONIE/download/) &nbsp;&nbsp;&nbsp;&nbsp;  [accton_as4610_30](/blog/ONIE/download/)        [accton_as4610_54](/blog/ONIE/download/)    
+[accton_as4620_54pe](/blog/ONIE/download/) &nbsp;&nbsp;&nbsp;&nbsp; [accton_as4630_54pe](/blog/ONIE/download/)      [accton_as5512_54x](/blog/ONIE/download/)    
 [accton_as5600_52x](/blog/ONIE/download/)       [accton_as5610_52x](/blog/ONIE/download/)       [accton_as5700_96x](/blog/ONIE/download/)    
 [accton_as5710_54x](/blog/ONIE/download/)       [accton_as5712_54x](/blog/ONIE/download/)       [accton_as5812_54t](/blog/ONIE/download/)    
 
