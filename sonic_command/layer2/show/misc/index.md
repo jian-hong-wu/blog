@@ -4,8 +4,18 @@ show commands (misc)
 
 
 $ show arp 
+<pre>admin@sonic:~$ show arp
+Address    MacAddress    Iface    Vlan
+---------  ------------  -------  ------
+Total number of entries 0 
+admin@sonic:~$ 
+</pre>
 
-![](/blog/sonic_command/layer2/1.png)
+<pre>admin@sonic:~$ show arp
+Error fetching Neighbors: /bin/sh: /usr/sbin/arp: not found
+
+admin@sonic:~$ 
+</pre>
 
 or  
 $ cat /proc/net/arp 
