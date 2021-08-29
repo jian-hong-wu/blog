@@ -14,7 +14,7 @@
    11. [pytest.run文件](/blog/pytest.run/)
    12. [py.test文件](/blog/py.test/)
    13. [Unetbootin](/blog/Unetbootin/)
-   14. [kolourpaint](/blog/kolourpaint4/)
+   14. [Kolourpaint](/blog/kolourpaint4/)
    15. [Communicty sonic](/blog/sonic_comm)
    16. [Sonic installation](/blog/sonic_install)
   
@@ -22,8 +22,8 @@
    1. [常用的sonic command指令](/blog/sonic_command/)
    2. [常用的docker指令](/blog/docker/)
    3. [常用的shell指令](/blog/shell/)
-   4. [putty安裝指令](/blog/putty/)
-   5. [jenkins安裝指令](/blog/jenkins/)
+   4. [Putty安裝指令](/blog/putty/)
+   5. [Jenkins安裝指令](/blog/jenkins/)
    6. [VScode安裝指令](/blog/VScode/)
    7. [Docker commands](/blog/Docker_commands/)
 
@@ -38,8 +38,8 @@
    8. [Docker教學 - 入門介紹](https://www.youtube.com/watch?v=pa1Zao1Hy2c&list=PLVVMQF8vWNCJnlO0Y34AE_1AgCapldp38)
    9. [Ubuntu 入門](https://www.youtube.com/watch?v=u6-IMozWQG0&list=PLkmkNssEXKuxfpeezLrnmHsUoJRJzWVui&index=1)
    10. [Jenkins 教學](https://www.youtube.com/watch?v=SbMabIXQd_A&list=PLmOn9nNkQxJE_3wrOfHdL1dWRY6CCHBnh)
-   11. [ansible 教學](https://www.youtube.com/watch?v=4lIi8d6m27c&list=PLOfJyn_hHwP_ATbd7GkDobQUiA2i7jLhN&index=1)
-   12. [ngrok](https://zoejoyuliao.medium.com/%E9%80%8F%E9%81%8E-github-webhook-%E8%A7%B8%E7%99%BC%E6%9C%AC%E5%9C%B0-jenkins-pipeline-%E8%AE%93%E4%BD%A0-push-code-%E5%88%B0-github-%E5%B0%B1%E6%9C%83%E8%87%AA%E5%8B%95%E8%B7%91-ci-cd-7c4bd7a22446)
+   11. [Ansible 教學](https://www.youtube.com/watch?v=4lIi8d6m27c&list=PLOfJyn_hHwP_ATbd7GkDobQUiA2i7jLhN&index=1)
+   12. [Ngrok](https://zoejoyuliao.medium.com/%E9%80%8F%E9%81%8E-github-webhook-%E8%A7%B8%E7%99%BC%E6%9C%AC%E5%9C%B0-jenkins-pipeline-%E8%AE%93%E4%BD%A0-push-code-%E5%88%B0-github-%E5%B0%B1%E6%9C%83%E8%87%AA%E5%8B%95%E8%B7%91-ci-cd-7c4bd7a22446)
 
 ## 客戶用例
    1. [Spine-leaf topology](/blog/usecases/spine_leaf)
