@@ -15,9 +15,9 @@
    12. [py.test文件](/blog/py.test/)
    13. [Unetbootin](/blog/Unetbootin/)
    14. [kolourpaint](/blog/kolourpaint4/)
-   15. [Sonic installation](/blog/sonic_install)
-   16. [Communicty sonic](/blog/sonic_comm)
- 
+   15. [Communicty sonic](/blog/sonic_comm)
+   16. [Sonic installation](/blog/sonic_install)
+  
 ## 學習專區 - 常用的指令
    1. [常用的sonic command指令](/blog/sonic_command/)
    2. [常用的docker指令](/blog/docker/)
