@@ -1,7 +1,7 @@
+[上一頁](/blog/)
 
 ## Community Sonic
 We support community sonic, and you can get the latest package from here. We only support Accton branded models, for now.
-
 
 ## Our latest build
 You can download our binary from the following link:
