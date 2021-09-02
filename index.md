@@ -31,7 +31,7 @@
    1. [計算機概論](http://linux.vbird.org/linux_basic/0105computers.php)
    2. [基礎網路概念](http://linux.vbird.org/linux_server/0110network_basic.php)
    3. [Linux TCP/IP networking: net-tools vs. iproute2](https://www.xmodulo.com/linux-tcpip-networking-net-tools-iproute2.html)
-   4. [Git GitHub GitLab使用教程](/blog/git/)https://www.youtube.com/watch?v=usgghEA_BEk&list=PL5eFspCU9xDe4Gz0LotCdRg5V68AD3icH&index=1
+   4. [Git GitHub GitLab使用教程](/blog/git/)
    5. [Git Submodule 用法筆記](https://blog.chh.tw/posts/git-submodule/)
    6. [尚硅谷 Docker教學](https://www.youtube.com/watch?v=37b3cWIIxUg&list=PLmOn9nNkQxJFX0YVLDw5EMUL-4cVzXL33&index=1)
    7. [Docker入门教学](https://www.youtube.com/watch?v=bumV64OfLCs&list=PLliocbKHJNwubNT2oK-xlB1GXTXuLFb0I)
