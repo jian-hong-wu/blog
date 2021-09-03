@@ -1,6 +1,6 @@
 [上一頁](https://jian-hong-wu.github.io/blog/ONIE/)
 
-How to update ONIE on Edgecore x86 platform switch
+# How to update ONIE on Edgecore x86 platform switch
 
 Reboot the data center.
 
