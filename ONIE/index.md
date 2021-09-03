@@ -20,5 +20,7 @@
 
 [NOS DIAG Installation(20171226)](https://jian-hong-wu.github.io/blog/ONIE/NOS_DIAG_Installation(20171226).pdf)
 
-[My lab login](/blog/ONIE/Login/)
+[My lab login](https://jian-hong-wu.github.io/blog/ONIE/Login/)
+
+[update onie](https://jian-hong-wu.github.io/blog/ONIE/onie_update/)
 
