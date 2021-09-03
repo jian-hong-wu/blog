@@ -1,4 +1,4 @@
-[上一頁](/blog/)
+[上一頁](https://jian-hong-wu.github.io/blog/)
 
 ### ONIE
 
