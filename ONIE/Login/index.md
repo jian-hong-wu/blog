@@ -1,9 +1,14 @@
 [上一頁](https://jian-hong-wu.github.io/blog/ONIE/)
 
+## ATEN Power Controller
 用瀏覽器登入 192.168.40.61 開啟指定機器
 
 ![](https://jian-hong-wu.github.io/blog/ONIE/Login/12.png)
 
+## ATEN Power Controller
+用瀏覽器登入 192.168.40.60 開啟指定機器
+
+## ATEN Console Server
 //連到機器輸入帳密  
 $ telnet 192.168.40.50  
 ![](https://jian-hong-wu.github.io/blog/ONIE/Login/1.png)
