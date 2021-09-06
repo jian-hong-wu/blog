@@ -11,7 +11,7 @@
         jlo@jlo-server01:/home/jlo/sonic/src/202012_latest.    
     2.2 可使用下列指令下載 sonic-mgmt source code from git, you can also get the sonic build image from git.         
     &nbsp;&nbsp;&nbsp;&nbsp;$ git clone https://github.com/Azure/sonic-mgmt   
-    &nbsp;&nbsp;&nbsp;&nbsp;$ git clone https://github.com/Azure/sonic-buildimage   
+    &nbsp; &nbsp; &nbsp; &nbsp; $ git clone https://github.com/Azure/sonic-buildimage   
     2.3 Follow sonic build instructions to build sonic-mgmt-dev container and docker-ptf container.   
     2.4 ~: points to prject root directory: /home/jlo/sonic/src/202012_latest.   
     
