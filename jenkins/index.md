@@ -4,7 +4,7 @@
 
 先安裝java:
 
-$ sudo apt-get update
+$ - -sudo apt-get update
 
 $ sudo apt-get upgrade
 
