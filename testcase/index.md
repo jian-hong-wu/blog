@@ -7,16 +7,19 @@
 1.  支援 Python 2.7 (Ansible 現在只支援 Python 2.7 )
 
 2.  Current test source code is based on sonic 202012_latest branch, test server is jlo-server01, server OS is Ubuntu 20.04.   
-    2.1 our default git source directory is under ~/sonic/src/202012_latest directory. So the full path will be 
-        jlo@jlo-server01:/home/jlo/sonic/src/202012_latest
-    2.2 可使用下列指令下載 sonic-mgmt source code from git, you can also get the sonic build image      
-        $ git clone https://github.com/Azure/sonic-mgmt   
-	$ git clone https://github.com/Azure/sonic-buildimage   
-    2.3 follow sonic build instructions to build sonic-mgmt-dev container and docker-ptf container.   
+    2.1 Our default git source directory is under ~/sonic/src/202012_latest directory. So the full path will be 
+        jlo@jlo-server01:/home/jlo/sonic/src/202012_latest    
+    2.2 可使用下列指令下載 sonic-mgmt source code from git, you can also get the sonic build image from git         
+            $ git clone https://github.com/Azure/sonic-mgmt   
+	    $ git clone https://github.com/Azure/sonic-buildimage   
+    2.3 Follow sonic build instructions to build sonic-mgmt-dev container and docker-ptf container.   
     2.4 ~: points to prject root directory: /home/jlo/sonic/src/202012_latest   
     
-3.  ~/sonic-mgmt/ansible/veos-vm/images   
-    這裡有兩個檔案 : Aboot-veos-serial-8.0.0.iso and vEOS-lab-4.20.15M.vmdk  
+3.  ~/sonic-mgmt/ansible/veos-vm/images 這裡save 有VM檔案   
+    For now, we copy these two files under ~/veos-vm/images directory    
+    這裡有兩個檔案 :   
+    a.   5242880 Aboot-veos-serial-8.0.0.iso and   
+    b. 336789504 vEOS-lab-4.20.15M.vmdk  
     [可點選從此處下載](https://www.arista.com/en/support/software-download)   
 
 4.  檢查 `sonic-mgmt-dev` and `docker-ptf`是否被下載到 docker 裡面了，可以使用指令 docker images 確認     
