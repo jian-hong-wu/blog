@@ -24,7 +24,7 @@
     (Please refer to Sonic document to learn how to build these two containers.)
 
 5.  在 server 的環境, 建立一個名為 WORK 的 container  
-    $ cd ~/sonic-mgmt/ansible
+    $ cd ~
     $ docker run --name WORK -v $PWD:/data -it sonic-mgmt-dev  
     
     *NOTE : 從這裡開始所有步驟都在 container `sonic-mgmt-dev` 中執行*
