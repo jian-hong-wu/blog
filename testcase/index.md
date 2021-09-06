@@ -8,16 +8,16 @@
 
 2.  Current test source code is based on sonic 202012_latest branch, test server is jlo-server01, server OS is Ubuntu 20.04.   
     2.1 Our default git source directory is under ~/sonic/src/202012_latest directory. So the full path will be 
-        jlo@jlo-server01:/home/jlo/sonic/src/202012_latest    
-    2.2 可使用下列指令下載 sonic-mgmt source code from git, you can also get the sonic build image from git         
+        jlo@jlo-server01:/home/jlo/sonic/src/202012_latest.    
+    2.2 可使用下列指令下載 sonic-mgmt source code from git, you can also get the sonic build image from git.         
             $ git clone https://github.com/Azure/sonic-mgmt   
 	    $ git clone https://github.com/Azure/sonic-buildimage   
     2.3 Follow sonic build instructions to build sonic-mgmt-dev container and docker-ptf container.   
-    2.4 ~: points to prject root directory: /home/jlo/sonic/src/202012_latest   
+    2.4 ~: points to prject root directory: /home/jlo/sonic/src/202012_latest.   
     
-3.  ~/sonic-mgmt/ansible/veos-vm/images 這裡save 有VM檔案   
+3.  ~/sonic-mgmt/ansible/veos-vm/images 這裡save有VM檔案   
     For now, we copy these two files under ~/veos-vm/images directory    
-    這裡有兩個檔案 :   
+    這裡有兩個檔案:   
     a.   5242880 Aboot-veos-serial-8.0.0.iso and   
     b. 336789504 vEOS-lab-4.20.15M.vmdk  
     [可點選從此處下載](https://www.arista.com/en/support/software-download)   
@@ -32,6 +32,11 @@
     
     *NOTE : 從這裡開始所有步驟都在 container `sonic-mgmt-dev` 中執行*
 
+    5.1 You have names a container called "WORK". after you exit the container (type ctrl-D, or exit()), docker ps -a -f "name=WORK" will list the container.   
+    5.2 Docker ps will not show a stopped process.   
+    5.3 To continue your work, try "docker exec ..."    
+    5.4 Please refer to the docker manual for how to commit the changes and create a newer imager.    
+         
 6.  Prepare Testbed Configuration  
     進入 docker container 後，要修改 testbed configuration files 以反映 lab setup。  
 
