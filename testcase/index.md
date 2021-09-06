@@ -18,8 +18,8 @@
 3.  ~/sonic-mgmt/ansible/veos-vm/images 這裡save有VM檔案   
     For now, we copy these two files under ~/veos-vm/images directory    
     這裡有兩個檔案:   
-    a.   5242880 Aboot-veos-serial-8.0.0.iso and   
-    b. 336789504 vEOS-lab-4.20.15M.vmdk  
+    &nbsp;&nbsp;&nbsp;&nbsp;a.&nbsp;&nbsp;5242880 Aboot-veos-serial-8.0.0.iso and   
+    &nbsp;&nbsp;&nbsp;&nbsp;b. 336789504 vEOS-lab-4.20.15M.vmdk  
     [可點選從此處下載](https://www.arista.com/en/support/software-download)   
 
 4.  檢查 `sonic-mgmt-dev` and `docker-ptf`是否被下載到 docker 裡面了，可以使用指令 docker images 確認     
