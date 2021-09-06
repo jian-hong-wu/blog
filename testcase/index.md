@@ -6,25 +6,25 @@
 
 1.  支援 Python 2.7 (Ansible 現在只支援 Python 2.7 )
 
-2.  Current test source code is based on sonic 202012_latest branch, test server is jlo-server01, server OS is Ubuntu 20.04.
+2.  Current test source code is based on sonic 202012_latest branch, test server is jlo-server01, server OS is Ubuntu 20.04.   
     2.1 our default git source directory is under ~/sonic/src/202012_latest directory. So the full path will be 
         jlo@jlo-server01:/home/jlo/sonic/src/202012_latest
-    2.2 可使用下列指令下載 sonic-mgmt source code from git, you can also get the sonic build image  
-        $ git clone https://github.com/Azure/sonic-mgmt
-	$ git clone https://github.com/Azure/sonic-buildimage
-    2.3 follow sonic build instructions to build sonic-mgmt-dev container and docker-ptf container.
-    2.4 ~: points to prject root directory: /home/jlo/sonic/src/202012_latest
+    2.2 可使用下列指令下載 sonic-mgmt source code from git, you can also get the sonic build image      
+        $ git clone https://github.com/Azure/sonic-mgmt   
+	$ git clone https://github.com/Azure/sonic-buildimage   
+    2.3 follow sonic build instructions to build sonic-mgmt-dev container and docker-ptf container.   
+    2.4 ~: points to prject root directory: /home/jlo/sonic/src/202012_latest   
     
-3.  ~/sonic-mgmt/ansible/veos-vm/images  
+3.  ~/sonic-mgmt/ansible/veos-vm/images   
     這裡有兩個檔案 : Aboot-veos-serial-8.0.0.iso and vEOS-lab-4.20.15M.vmdk  
-    [可點選從此處下載](https://www.arista.com/en/support/software-download)
+    [可點選從此處下載](https://www.arista.com/en/support/software-download)   
 
-4.  檢查 `sonic-mgmt-dev` and `docker-ptf`是否被下載到 docker 裡面了，可以使用指令 docker images 確認  
+4.  檢查 `sonic-mgmt-dev` and `docker-ptf`是否被下載到 docker 裡面了，可以使用指令 docker images 確認     
 ![image001](https://jian-hong-wu.github.io/blog/testcase/image001.png)  
-    (Please refer to Sonic document to learn how to build these two containers.)
+    (Please refer to Sonic document to learn how to build these two containers.)   
 
 5.  在 server 的環境, 建立一個名為 WORK 的 container  
-    $ cd ~
+    $ cd ~   
     $ docker run --name WORK -v $PWD:/data -it sonic-mgmt-dev  
     
     *NOTE : 從這裡開始所有步驟都在 container `sonic-mgmt-dev` 中執行*
