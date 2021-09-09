@@ -1,0 +1,103 @@
+Script started on 2021-09-09 08:37:16+0000
+$ py.test --inventory=lab --host-pattern=2-26_t0 --module-path ../ansible/library/ --testbed=2-26_t0 --testbed_file=../ansible/testbed.csv ./portstat/test_portstat.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0
+/usr/local/lib/python2.7/dist-packages/ansible/parsing/vault/__init__.py:44: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.exceptions import InvalidSignature
+[1m=========================================================================================== test session starts ===========================================================================================[0m
+platform linux2 -- Python 2.7.17, pytest-4.6.5, py-1.10.0, pluggy-0.13.1 -- /usr/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '2.7.17', 'Platform': 'Linux-4.4.0-87-generic-x86_64-with-Ubuntu-18.04-bionic', 'Packages': {'py': '1.10.0', 'pytest': '4.6.5', 'pluggy': '0.13.1'}, 'Plugins': {u'repeat': u'0.9.1', u'ansible': u'2.2.2', u'xdist': u'1.28.0', u'html': u'1.22.1', u'forked': u'1.3.0', u'metadata': u'1.11.0'}}
+ansible: 2.8.12
+rootdir: /var/ubuntu/sonic-mgmt/tests, inifile: pytest.ini
+plugins: metadata-1.11.0, forked-1.3.0, html-1.22.1, repeat-0.9.1, xdist-1.28.0, ansible-2.2.2
+[1mcollecting ... [0m[1mcollected 21 items                                                                                                                                                                                        [0m
+
+portstat/test_portstat.py::test_portstat_clear[as7726-32x-4-portstat -c] [32mPASSED[0m[36m                                                                                                                     [  4%][0m
+portstat/test_portstat.py::test_portstat_delete_all[as7726-32x-4-portstat -D] [32mPASSED[0m[36m                                                                                                                [  9%][0m
+portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat -d -t] [32mPASSED[0m[36m                                                                                                             [ 14%][0m
+portstat/test_portstat.py::test_portstat_display_all[as7726-32x-4-portstat -a] [32mPASSED[0m[36m                                                                                                               [ 19%][0m
+portstat/test_portstat.py::test_portstat_period[as7726-32x-4-portstat -p 1] [32mPASSED[0m[36m                                                                                                                  [ 23%][0m
+portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -h] [32mPASSED[0m[36m                                                                                                             [ 28%][0m
+portstat/test_portstat.py::test_portstat_clear[as7726-32x-4-portstat --clear] [32mPASSED[0m[36m                                                                                                                [ 33%][0m
+portstat/test_portstat.py::test_portstat_delete_all[as7726-32x-4-portstat --delete-all] [32mPASSED[0m[36m                                                                                                      [ 38%][0m
+portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat -d --tag] [32mPASSED[0m[36m                                                                                                          [ 42%][0m
+portstat/test_portstat.py::test_portstat_display_all[as7726-32x-4-portstat --all] [32mPASSED[0m[36m                                                                                                            [ 47%][0m
+portstat/test_portstat.py::test_portstat_period[as7726-32x-4-portstat --period 1] [32mPASSED[0m[36m                                                                                                            [ 52%][0m
+portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --help] [32mPASSED[0m[36m                                                                                                         [ 57%][0m
+portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat --delete -t] [32mPASSED[0m[36m                                                                                                       [ 61%][0m
+portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat] [32mPASSED[0m[36m                                                                                                                [ 66%][0m
+portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat --delete --tag] [32mPASSED[0m[36m                                                                                                    [ 71%][0m
+portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -v] [32mPASSED[0m[36m                                                                                                             [ 76%][0m
+portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --version] [32mPASSED[0m[36m                                                                                                      [ 80%][0m
+portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -j] [32mPASSED[0m[36m                                                                                                             [ 85%][0m
+portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --json] [32mPASSED[0m[36m                                                                                                         [ 90%][0m
+portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -r] [32mPASSED[0m[36m                                                                                                             [ 95%][0m
+portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --raw] [32mPASSED[0m[36m                                                                                                          [100%][0m
+
+========================================================================================= slowest test durations ==========================================================================================
+40.06s setup    portstat/test_portstat.py::test_portstat_clear[as7726-32x-4-portstat -c]
+33.99s call     portstat/test_portstat.py::test_portstat_clear[as7726-32x-4-portstat --clear]
+33.85s call     portstat/test_portstat.py::test_portstat_clear[as7726-32x-4-portstat -c]
+6.00s call     portstat/test_portstat.py::test_portstat_delete_all[as7726-32x-4-portstat -D]
+5.92s call     portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat --delete --tag]
+5.50s call     portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat --delete -t]
+4.99s call     portstat/test_portstat.py::test_portstat_delete_all[as7726-32x-4-portstat --delete-all]
+4.93s call     portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat -d --tag]
+4.39s call     portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat -d -t]
+3.80s teardown portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --json]
+3.79s teardown portstat/test_portstat.py::test_portstat_clear[as7726-32x-4-portstat -c]
+3.07s teardown portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat --delete --tag]
+3.03s teardown portstat/test_portstat.py::test_portstat_delete_all[as7726-32x-4-portstat --delete-all]
+3.03s teardown portstat/test_portstat.py::test_portstat_period[as7726-32x-4-portstat --period 1]
+3.00s teardown portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --raw]
+2.98s teardown portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --help]
+2.98s teardown portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat -d --tag]
+2.98s teardown portstat/test_portstat.py::test_portstat_display_all[as7726-32x-4-portstat --all]
+2.97s teardown portstat/test_portstat.py::test_portstat_clear[as7726-32x-4-portstat --clear]
+2.97s teardown portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --version]
+2.93s teardown portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -v]
+2.93s teardown portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat --delete -t]
+2.93s teardown portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat]
+2.91s teardown portstat/test_portstat.py::test_portstat_delete_all[as7726-32x-4-portstat -D]
+2.90s teardown portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -r]
+2.90s teardown portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -j]
+2.64s teardown portstat/test_portstat.py::test_portstat_period[as7726-32x-4-portstat -p 1]
+2.58s teardown portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -h]
+2.54s teardown portstat/test_portstat.py::test_portstat_display_all[as7726-32x-4-portstat -a]
+2.50s call     portstat/test_portstat.py::test_portstat_period[as7726-32x-4-portstat --period 1]
+2.44s teardown portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat -d -t]
+2.39s call     portstat/test_portstat.py::test_portstat_period[as7726-32x-4-portstat -p 1]
+2.20s setup    portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -j]
+2.07s setup    portstat/test_portstat.py::test_portstat_period[as7726-32x-4-portstat --period 1]
+1.92s setup    portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat -d --tag]
+1.91s call     portstat/test_portstat.py::test_portstat_display_all[as7726-32x-4-portstat --all]
+1.88s setup    portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --raw]
+1.82s setup    portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -v]
+1.82s setup    portstat/test_portstat.py::test_portstat_delete_all[as7726-32x-4-portstat --delete-all]
+1.81s setup    portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat]
+1.77s setup    portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --help]
+1.77s setup    portstat/test_portstat.py::test_portstat_display_all[as7726-32x-4-portstat --all]
+1.77s setup    portstat/test_portstat.py::test_portstat_delete_all[as7726-32x-4-portstat -D]
+1.75s call     portstat/test_portstat.py::test_portstat_display_all[as7726-32x-4-portstat -a]
+1.74s setup    portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --version]
+1.74s setup    portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat --delete -t]
+1.72s setup    portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat --delete --tag]
+1.71s setup    portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --json]
+1.65s setup    portstat/test_portstat.py::test_portstat_delete_tag[as7726-32x-4-portstat -d -t]
+1.64s setup    portstat/test_portstat.py::test_portstat_clear[as7726-32x-4-portstat --clear]
+1.58s setup    portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -h]
+1.56s setup    portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -r]
+1.50s setup    portstat/test_portstat.py::test_portstat_period[as7726-32x-4-portstat -p 1]
+1.49s setup    portstat/test_portstat.py::test_portstat_display_all[as7726-32x-4-portstat -a]
+0.98s call     portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat]
+0.98s call     portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -j]
+0.95s call     portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --json]
+0.94s call     portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --raw]
+0.90s call     portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -r]
+0.49s call     portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -v]
+0.47s call     portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --help]
+0.47s call     portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat --version]
+0.44s call     portstat/test_portstat.py::test_portstat_no_exceptions[as7726-32x-4-portstat -h]
+[32m[1m======================================================================================= 21 passed in 252.50 seconds =======================================================================================[0m
+$ exit
+
+Script done on 2021-09-09 08:41:47+0000

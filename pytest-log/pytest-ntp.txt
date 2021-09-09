@@ -1,0 +1,23 @@
+Script started on 2021-09-09 08:30:59+0000
+$ py.test --inventory=lab --host-pattern=2-26_t0 --module-path ../ansible/library/ --testbed=2-26_t0 --testbed_file=../ansible/testbed.csv ./ntp/test_ntp.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0
+/usr/local/lib/python2.7/dist-packages/ansible/parsing/vault/__init__.py:44: CryptographyDeprecationWarning: Python 2 is no longer supported by the Python core team. Support for it is now deprecated in cryptography, and will be removed in the next release.
+  from cryptography.exceptions import InvalidSignature
+[1m=========================================================================================== test session starts ===========================================================================================[0m
+platform linux2 -- Python 2.7.17, pytest-4.6.5, py-1.10.0, pluggy-0.13.1 -- /usr/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '2.7.17', 'Platform': 'Linux-4.4.0-87-generic-x86_64-with-Ubuntu-18.04-bionic', 'Packages': {'py': '1.10.0', 'pytest': '4.6.5', 'pluggy': '0.13.1'}, 'Plugins': {u'repeat': u'0.9.1', u'ansible': u'2.2.2', u'xdist': u'1.28.0', u'html': u'1.22.1', u'forked': u'1.3.0', u'metadata': u'1.11.0'}}
+ansible: 2.8.12
+rootdir: /var/ubuntu/sonic-mgmt/tests, inifile: pytest.ini
+plugins: metadata-1.11.0, forked-1.3.0, html-1.22.1, repeat-0.9.1, xdist-1.28.0, ansible-2.2.2
+[1mcollecting ... [0m[1mcollected 1 item                                                                                                                                                                                          [0m
+
+ntp/test_ntp.py::test_ntp [32mPASSED[0m[36m                                                                                                                                                                    [100%][0m
+
+========================================================================================= slowest test durations ==========================================================================================
+221.81s call     ntp/test_ntp.py::test_ntp
+76.43s setup    ntp/test_ntp.py::test_ntp
+30.35s teardown ntp/test_ntp.py::test_ntp
+[32m[1m======================================================================================= 1 passed in 328.68 seconds ========================================================================================[0m
+$ exit
+
+Script done on 2021-09-09 08:36:43+0000
