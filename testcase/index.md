@@ -13,9 +13,9 @@
     &nbsp;&nbsp;&nbsp;&nbsp;$ git clone https://github.com/Azure/sonic-mgmt   
     &nbsp; &nbsp; &nbsp; &nbsp; $ git clone https://github.com/Azure/sonic-buildimage   
     2.3 Follow sonic build instructions to build sonic-mgmt-dev container and docker-ptf container.   
-    2.4 ~: points to prject root directory: /home/jlo/sonic/src/202012_latest.   
+    2.4 <font color="#0091FF"> ~$: points to prject root directory: /home/jlo/sonic/src/202012_latest. </font>   
     
-3.  ~/sonic-mgmt/ansible/veos-vm/images 這裡save有VM檔案   
+3.  ~$/sonic-mgmt/ansible/veos-vm/images 這裡save有VM檔案   
     For now, we copy these two files under ~/veos-vm/images directory    
     這裡有兩個檔案:   
     &nbsp;&nbsp;&nbsp;&nbsp;a.&nbsp;&nbsp;5242880 Aboot-veos-serial-8.0.0.iso and   
@@ -27,8 +27,8 @@
     (Please refer to Sonic document to learn how to build these two containers.)   
 
 5.  在 server 的環境, 建立一個名為 WORK 的 container  
-    $ cd ~   
-    $ docker run --name WORK -v $PWD:/data -it sonic-mgmt-dev  
+    $ cd ~$   
+    ~$ docker run --name WORK -v $PWD:/data -it sonic-mgmt-dev  
     
     *NOTE : 從這裡開始所有步驟都在 container `sonic-mgmt-dev` 中執行*
 
