@@ -1,5 +1,7 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
+**This operation guide only applies to jlo-server01**
+
 ## <font color="#0091FF">為 Sonic 測試設置環境:</font>
 
 在 Sonic 測試開始前，下列項目應於伺服器端設置完成：
