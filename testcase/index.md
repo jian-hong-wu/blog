@@ -26,18 +26,18 @@
 ![image001](https://jian-hong-wu.github.io/blog/testcase/image001.png)  
     (Please refer to Sonic document to learn how to build these two containers.)   
 
-5.  在 server 的環境, 建立一個名為 WORK 的 container  
+5.  在 server 的環境, 建立一個名為 sonic-mgmt-work 的 container  
     $ cd ~$   
-    ~$ docker run --name WORK -v $PWD:/data -it sonic-mgmt-dev  
+    ~$ docker run --name sonic-mgmt-work -it sonic-mgmt-dev:ec202012 /bin/bash  
     
     *NOTE : 從這裡開始所有步驟都在 container `sonic-mgmt-dev` 中執行*
 
     5.1 You have names a container called "WORK". after you exit the container (type ctrl-D, or exit()), docker ps -a -f "name=WORK" will list the container.   
     5.2 Docker ps will not show a stopped process.   
-    5.3 To continue your work, try "docker exec ..."    
+    5.3 To continue your work, try $ docker exec -it sonic-mgmt-work /bin/bash    
     5.4 Please refer to the docker manual for how to commit the changes and create a newer imager.    
          
-6.  Prepare Testbed Configuration  
+6.  Prepare Testbed Configuration  (若使用 $ ./server.sh ，則這部份可以跳過)
     進入 docker container 後，要修改 testbed configuration files 以反映 lab setup。  
 
     Update the server management IP in [`ansible/veos`](/ansible/veos).  
@@ -63,7 +63,7 @@
     ```
     Update the docker registry information in [`vars/docker_registry.yml`](/ansible/vars/docker_registry.yml).
 
-7.  Setup VMs on the Server
+7.  Setup VMs on the Server (若VMs已經存在請跳過此步驟)
 
     a. 啟動 virtual machine
     ```
@@ -77,8 +77,11 @@
 
     b. 檢查所有 VM 是否已啟動並正在運行
     ```
-    ansible -m ping -i veos server_1
+    $ ping "vm_ip"
     ```
+    c. 一般情況下不關閉VMs，若有需要可使用
+    $ cd sonic-mgmt/ansible/
+    $ ./testbed-cli.sh stop-vms server_1 ~/.password
     
 8.  更新 testbed.csv。至少應該更新 PTF 管理界面設置。
 
@@ -86,13 +89,13 @@
 
 1. In server
 - Br107 <-> enx000ec6a96640 (192.168.40.25)
-- Br1 <-> enx00e04c680215 (10.250.1.44)
+- Br1 <-> enx00e04c680215 (10.250.2.44)
 - NIC#3 <-> ens2f0np0
  
 2. VMs  
-VM0100 : 10.250.2.100  
+VM0200 : 10.250.2.100  
 ….  
-VM0167 : 10.250.2.163
+VM0267 : 10.250.2.163
 
 3. In Root Fanout  
 10.250.1.2
@@ -121,7 +124,9 @@ $ docker image ls
 ![image](https://jian-hong-wu.github.io/blog/testcase/image.png)
 
 //在 server 的環境, 建立一個名為 mgmt 的 container  
-$ docker run -it --name mgmt sonic-mgmt-dev bash
+$ docker run -it --name sonic-mgmt-name sonic-mgmt-dev:ec202012 /bin/bash
+//或者進入一個已經存在的 container 並跳到[步驟a](https://jian-hong-wu.github.io/blog/testcase/#a.-deploy-topology)
+$ docker exec -it sonic-mgmt-name /bin/bash
 
 //在 container 裡進入資料夾 sonic-mgmt  
 $ cd sonic-mgmt/
@@ -135,7 +140,13 @@ $ ./server.sh 2
 //返回上一層並進入資料夾 ansible  
 $ cd ../ansible/
 
-//查看檔案 testbed.csv，並決定要測試的 topology  
+$ vi host_vars/STR-ACS-SERV-02-1.yml
+Confirm this line is correct : external_port: ens2f0np0
+
+check the IP of ens2f0np0 in the **server**
+$ ifconfig ens2f0np0 or $ ifconfig ens2f0np0 10.250.2.44
+
+//回到 container，查看檔案 testbed.csv，並決定要測試的 topology，根據要使用的VM進行調整
 $ vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/testbed.csv/)
 
 #### a. deploy topology
@@ -172,9 +183,6 @@ $ ./testbed-cli.sh remove-topo 2-4_t0 ~/.password
 
 //離開  
 $ exit
-
-//刪除 container test  
-$ docker rm mgmt
 
 ## <font color="#0091FF">testbed-cli.sh命令詳解:</font>
 
