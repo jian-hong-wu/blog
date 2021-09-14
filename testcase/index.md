@@ -124,8 +124,8 @@ $ docker image ls
 ![image](https://jian-hong-wu.github.io/blog/testcase/image.png)
 
 //在 server 的環境, 建立一個名為 mgmt 的 container  
-$ docker run -it --name sonic-mgmt-name sonic-mgmt-dev:ec202012 /bin/bash
-//或者進入一個已經存在的 container 並跳到[步驟a](https://jian-hong-wu.github.io/blog/testcase/#a.-deploy-topology)
+$ docker run -it --name sonic-mgmt-name sonic-mgmt-dev:ec202012 /bin/bash  
+//或者進入一個已經存在的 container 並跳到[步驟a](https://jian-hong-wu.github.io/blog/testcase/#a.-deploy-topology)  
 $ docker exec -it sonic-mgmt-name /bin/bash
 
 //在 container 裡進入資料夾 sonic-mgmt  
@@ -140,13 +140,13 @@ $ ./server.sh 2
 //返回上一層並進入資料夾 ansible  
 $ cd ../ansible/
 
-$ vi host_vars/STR-ACS-SERV-02-1.yml
+$ vi host_vars/STR-ACS-SERV-02-1.yml  
 Confirm this line is correct : external_port: ens2f0np0
 
-check the IP of ens2f0np0 in the **server**
+check the IP of ens2f0np0 in the **server**  
 $ ifconfig ens2f0np0 or $ ifconfig ens2f0np0 10.250.2.44
 
-//回到 container，查看檔案 testbed.csv，並決定要測試的 topology，根據要使用的VM進行調整
+//回到 container，查看檔案 testbed.csv，並決定要測試的 topology，根據要使用的VM進行調整  
 $ vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.csv/testbed.csv/)
 
 #### a. deploy topology
