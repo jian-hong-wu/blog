@@ -1,6 +1,6 @@
 [上一頁](https://jian-hong-wu.github.io/blog/)
 
-**This operation guide only applies to jlo-server01**
+**This operation guide only applies to jlo-server01!**
 
 ## <font color="#0091FF">為 Sonic 測試設置環境:</font>
 
