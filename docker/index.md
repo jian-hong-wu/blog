@@ -85,7 +85,7 @@ $ exit ##停止退出
 
 $ ctrl+P+Q ##不停止退出
 
-$ docker cp "container ID""path1" "path2" ##從container複製檔案到本機
+$ docker cp "container ID":"path1" "path2" ##從container複製檔案到本機
 
 
 
