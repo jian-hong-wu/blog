@@ -125,7 +125,7 @@ $ docker image ls
 
 //在 server 的環境, 建立一個名為 mgmt 的 container  
 $ docker run -it --name sonic-mgmt-name sonic-mgmt-dev:ec202012 /bin/bash  
-//或者進入一個已經存在的 container 並跳到[步驟a](https://jian-hong-wu.github.io/blog/testcase/#a.-deploy-topology)  
+//或者進入一個已經存在的 container 並跳到[步驟a](https://jian-hong-wu.github.io/blog/testcase/#a-deploy-topology)  
 $ docker exec -it sonic-mgmt-name /bin/bash
 
 //在 container 裡進入資料夾 sonic-mgmt  
