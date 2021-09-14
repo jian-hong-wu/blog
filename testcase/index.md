@@ -161,18 +161,11 @@ $ [ansible-playbook](https://jian-hong-wu.github.io/blog/testcase/playbook/) -i 
 //testcase 檔案位於 ~/sonic-mgmt/ansible/roles/test/vars/testcases.yml，選擇執行 testcase 中的 syslog  
 $ ansible-playbook -i lab --limit as7726-32x-1 [test_sonic.yml](https://jian-hong-wu.github.io/blog/testcase/test_sonic/) -e testbed_name=2-4_t0 -e testcase_name=syslog -vvvv
 
-![](https://jian-hong-wu.github.io/blog/testcase/ansible1.png)
-![](https://jian-hong-wu.github.io/blog/testcase/ansible2.png)
-
 //返回上一層並進入資料夾 tsets  
 $ cd ../tests
 
 //用 py .test 執行測試 test_syslog.py  
 $ py.test --inventory=lab --host-pattern=2-4_t0 --module-path ../ansible/library/ --testbed=2-4_t0 --testbed_file=../ansible/testbed.csv ./syslog/test_syslog.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0
-
-![](https://jian-hong-wu.github.io/blog/testcase/pytest1.png)
-![](https://jian-hong-wu.github.io/blog/testcase/pytest2.png)
-![](https://jian-hong-wu.github.io/blog/testcase/pytest3.png)
 
 #### d. remove topology
 //返回上一層並進入資料夾 ansible  
