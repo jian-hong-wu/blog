@@ -77,5 +77,5 @@ $ date -d 'last Mon' +%Y-%m-%d
 
 $sed
 
-//希望將裡面的在 settings.conf 裡取代所有的 Mary 字串, 替換成 Leo
+//希望將裡面的在 settings.conf 裡取代所有的 Mary 字串, 替換成 Leo  
 $ sed -i 's/Mary/Leo/g' settings.conf
