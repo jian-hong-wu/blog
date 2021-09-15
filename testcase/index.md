@@ -34,12 +34,12 @@
     
     *NOTE : 從這裡開始所有步驟都在 container `sonic-mgmt-dev` 中執行*
 
-    5.1 You have names a container called "WORK". after you exit the container (type ctrl-D, or exit()), docker ps -a -f "name=WORK" will list the container.   
+    5.1 You have names a container called "sonic-mgmt-work". after you exit the container (type ctrl-D, or exit()), docker ps -a -f "name=sonic-mgmt-work" will list the container.   
     5.2 Docker ps will not show a stopped process.   
     5.3 To continue your work, try $ docker exec -it sonic-mgmt-work /bin/bash    
     5.4 Please refer to the docker manual for how to commit the changes and create a newer imager.    
          
-6.  Prepare Testbed Configuration  (若使用 $ ./server.sh ，則這部份可以跳過)
+6.  Prepare Testbed Configuration  (若使用 $ ./server.sh ，則這部份可以跳過)  
     進入 docker container 後，要修改 testbed configuration files 以反映 lab setup。  
 
     Update the server management IP in [`ansible/veos`](/ansible/veos).  
@@ -125,7 +125,7 @@ $ docker image ls
 
 ![image](https://jian-hong-wu.github.io/blog/testcase/image.png)
 
-//在 server 的環境, 建立一個名為 mgmt 的 container  
+//在 server 的環境, 建立一個名為 sonic-mgmt-name 的 container  
 $ docker run -it --name sonic-mgmt-name sonic-mgmt-dev:ec202012 /bin/bash  
 //或者進入一個已經存在的 container 並跳到[步驟a](https://jian-hong-wu.github.io/blog/testcase/#a-deploy-topology)  
 $ docker exec -it sonic-mgmt-name /bin/bash
