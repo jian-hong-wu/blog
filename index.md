@@ -8,7 +8,7 @@
    5. [testcase](/blog/testcase/)
    6. [802.3ad](/blog/802.3ad/)
    7. [user manual](/blog/user_manual/)
-   8. [testbed.csv文件](/blog/testbed.csv/testbed.csv/)
+   8. [testbed.csv文件](/blog/testbed.csv/)
    9. [testbed-cli.sh文件](/blog/testbed-cli.sh/)
    10. [pytest.org文件](/blog/pytest.org/)
    11. [pytest.run文件](/blog/pytest.run/)
