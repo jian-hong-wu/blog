@@ -1,0 +1,253 @@
+pipeline {
+    agent {
+        docker {
+            image 'sonic-mgmt-dev:ec202012'
+            label 'taipeilab'
+            args  '-v /home/jlo/sonic/src/hong/sonic:/data'
+        }
+    }
+    stages {
+        stage('topo and minigraph') {
+            steps {
+                sh "cp -r /data/sonic-mgmt ${env.WORKSPACE}/"
+                dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                    sh "./testbed-cli.sh -b VM0200 add-topo 2-4_t0 ~/.password -e ptf_imagetag=latest"
+                    sh "ansible-playbook -i lab config_sonic_basedon_testbed.yml -l as7726-32x-1 -e testbed_name=2-4_t0 -e deploy=true -e save=true"
+                }
+            }
+        }
+        stage('warm-reboot-multi-sad-inboot'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "mkdir ansible-jlo-t0"
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=warm-reboot-multi-sad-inboot -vvvv | tee -a ansible-jlo-t0/warm-reboot-multi-sad-inboot.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('pim'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=pim -vvvv | tee -a ansible-jlo-t0/pim.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('warm-reboot-sad'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=warm-reboot-sad -vvvv | tee -a ansible-jlo-t0/warm-reboot-sad.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('fast-reboot'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=fast-reboot -vvvv | tee -a ansible-jlo-t0/fast-reboot.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('warm-reboot-sad-bgp'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=warm-reboot-sad-bgp -vvvv | tee -a ansible-jlo-t0/warm-reboot-sad-bgp.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('syslog'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=syslog -vvvv | tee -a ansible-jlo-t0/syslog.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('warm-reboot'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=warm-reboot -vvvv | tee -a ansible-jlo-t0/warm-reboot.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('warm-reboot-sad-lag-member'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=warm-reboot-sad-lag-member -vvvv | tee -a ansible-jlo-t0/warm-reboot-sad-lag-member.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('warm-reboot-sad-lag'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=warm-reboot-sad-lag -vvvv | tee -a ansible-jlo-t0/warm-reboot-sad-lag.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('service_acl'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=service_acl -vvvv | tee -a ansible-jlo-t0/service_acl.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('read_mac'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=read_mac -vvvv | tee -a ansible-jlo-t0/read_mac.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('repeat_harness'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=repeat_harness -vvvv | tee -a ansible-jlo-t0/repeat_harness.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('warm-reboot-multi-sad'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=warm-reboot-multi-sad -vvvv | tee -a ansible-jlo-t0/warm-reboot-multi-sad.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('warm-reboot-sad-vlan-port'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=warm-reboot-sad-vlan-port -vvvv | tee -a ansible-jlo-t0/warm-reboot-sad-vlan-port.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('continuous_link_flap'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=continuous_link_flap -vvvv | tee -a ansible-jlo-t0/continuous_link_flap.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('port_toggle'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=port_toggle -vvvv | tee -a ansible-jlo-t0/port_toggle.txt"
+                            sh "mv ansible-jlo-t0 /data/"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('remove topo'){
+            steps {
+                dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                    sh "./testbed-cli.sh remove-topo 2-4_t0 ~/.password"
+                }
+            }
+        }
+    }
+}
