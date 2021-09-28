@@ -1,0 +1,99 @@
+pipeline {
+    agent {
+        docker {
+            image 'sonic-mgmt-dev:ec202012'
+            label 'tainanlab'
+            args  '-v /home/sonic/tmp_hong/sonic:/data'
+        }
+    }
+    stages {
+        stage('topo and minigraph') {
+            steps {
+                sh "cp -r /data/sonic-mgmt ${env.WORKSPACE}/"
+                dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                    sh "./testbed-cli.sh add-topo 2-4_ptf32 ~/.password -e ptf_imagetag=ec202012"
+                    sh "ansible-playbook -i lab config_sonic_basedon_testbed.yml -l as7726-32x-1 -e testbed_name=2-4_ptf32 -e deploy=true -e save=true"
+                }
+            }
+        }
+        stage('pim'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "mkdir ansible-tainan-ptf"
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_ptf32 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=pim -vvvv | tee -a ansible-tainan-ptf/pim.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('syslog'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_ptf32 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=syslog -vvvv | tee -a ansible-tainan-ptf/syslog.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('service_acl'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_ptf32 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=service_acl -vvvv | tee -a ansible-tainan-ptf/service_acl.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('repeat_harness'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_ptf32 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=repeat_harness -vvvv | tee -a ansible-tainan-ptf/repeat_harness.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('port_toggle'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                        try {
+                            sh "ansible-playbook -i lab --limit as7726-32x-1 test_sonic.yml -e testbed_name=2-4_ptf32 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=port_toggle -vvvv | tee -a ansible-tainan-ptf/port_toggle.txt"
+                            sh "mv ansible-tainan-ptf /data/"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('remove topo'){
+            steps {
+                dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                    sh "./testbed-cli.sh remove-topo 2-4_ptf32 ~/.password"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,490 @@
+pipeline {
+    agent {
+        docker {
+            image 'sonic-mgmt-dev:ec202012'
+            label 'tainanlab'
+            args  '-v /home/sonic/tmp_hong/sonic:/data'
+        }
+    }
+    stages {
+        stage('topo and minigraph') {
+            steps {
+                sh "cp -r /data/sonic-mgmt ${env.WORKSPACE}/"
+                dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                    sh "./testbed-cli.sh add-topo 2-4_ptf32 ~/.password -e ptf_imagetag=ec202012"
+                    sh "ansible-playbook -i lab config_sonic_basedon_testbed.yml -l as7726-32x-1 -e testbed_name=2-4_ptf32 -e deploy=true -e save=true"
+                }
+            }
+        }
+        stage('test_mgmtvrf'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "mkdir pytest-tainan-ptf"
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./mvrf/test_mgmtvrf.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_mgmtvrf.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_sequential_restart'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./platform_tests/test_sequential_restart.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_sequential_restart.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_port_breakout'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./platform_tests/test_port_breakout.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_port_breakout.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_cacl_application'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./cacl/test_cacl_application.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_cacl_application.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_syslog'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./syslog/test_syslog.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_syslog.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_procdockerstatsd'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./test_procdockerstatsd.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_procdockerstatsd.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_link_flap'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./platform_tests/link_flap/test_link_flap.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_link_flap.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_portstat'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./portstat/test_portstat.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_portstat.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_cacl_function'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./cacl/test_cacl_function.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_cacl_function.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_neighbor_mac_noptf'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./arp/test_neighbor_mac_noptf.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_neighbor_mac_noptf.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_ntp'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./ntp/test_ntp.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_ntp.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_show_platform'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./platform_tests/cli/test_show_platform.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_show_platform.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_reload_config'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./platform_tests/test_reload_config.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_reload_config.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_snmp_interfaces'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./snmp/test_snmp_interfaces.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_snmp_interfaces.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_snmp_queue'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./snmp/test_snmp_queue.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_snmp_queue.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_mgmt_img'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./mgmt-framework/test_mgmt_img.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_mgmt_img.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_ro_user'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./tacacs/test_ro_user.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_ro_user.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_sag'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./sag/test_sag.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_sag.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_xcvr_info_in_db'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./platform_tests/test_xcvr_info_in_db.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_xcvr_info_in_db.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_neighbor_mac'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./arp/test_neighbor_mac.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_neighbor_mac.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_bgp_unnumbered'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./bgp_unnumbered/test_bgp_unnumbered.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_bgp_unnumbered.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_reboot'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./platform_tests/test_reboot.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_reboot.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_snmp_pfc_counters'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./snmp/test_snmp_pfc_counters.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_snmp_pfc_counters.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_iface_namingmode'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./iface_namingmode/test_iface_namingmode.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_iface_namingmode.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_interfaces'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./test_interfaces.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_interfaces.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_telemetry'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./telemetry/test_telemetry.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_telemetry.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_rw_user'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./tacacs/test_rw_user.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_rw_user.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_snmp_cpu'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./snmp/test_snmp_cpu.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_snmp_cpu.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_sensors'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./platform_tests/test_sensors.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_sensors.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_snmp_psu'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./snmp/test_snmp_psu.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_snmp_psu.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_techsupport'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./show_techsupport/test_techsupport.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_techsupport.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_features'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./test_features.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_features.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('test_pfc_config'){
+            steps {
+                script {
+                    dir("${env.WORKSPACE}/sonic-mgmt/tests"){
+                        try {
+                            sh "py.test --inventory=lab --host-pattern=2-4_ptf32 --module-path ../ansible/library/ --testbed=2-4_ptf32 --testbed_file=../ansible/testbed.csv ./pfcwd/test_pfc_config.py --log-level=DEBUG -vvvv --show-capture=stdout --duration=0 | tee -a pytest-tainan-ptf/test_pfc_config.txt"
+                        }catch (err) {
+                            echo err.getMessage()
+                            echo "Error detected, but we will continue."
+                        }
+                    }
+                }
+            }
+        }
+        stage('remove topo'){
+            steps {
+                dir("${env.WORKSPACE}/sonic-mgmt/ansible"){
+                    sh "./testbed-cli.sh remove-topo 2-4_ptf32 ~/.password"
+                }
+            }
+        }
+    }
+}
