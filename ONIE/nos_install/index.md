@@ -29,3 +29,4 @@ $ onie-nos-install sonic-broadcom.bin
 
 Now, you have install the sonic NOS.
 
+![](https://jian-hong-wu.github.io/blog/ONIE/nos_install/6.png)
