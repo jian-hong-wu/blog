@@ -21,7 +21,11 @@
     4.1 $ ifconfig   
 ![](https://jian-hong-wu.github.io/blog/ONIE/onie_update/4.png)
 
-5. Input "onie-nos-install sonic-broadcom.bin" command and the install will start.
+5. Use "scp" to copy sonic-broadcom.bin from server.
+ .
+$ scp jlo@192.168.40.25:~/sonic/src2/artifactory/202106/20211004/sonic-broadcom.bin .
+
+6. Input "onie-nos-install sonic-broadcom.bin" command and the install will start.
 
 $ onie-nos-install sonic-broadcom.bin
 
