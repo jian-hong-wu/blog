@@ -10,7 +10,7 @@
 
 2. Select "ONIE: Install ONIE" menu item.   
  
-![](https://jian-hong-wu.github.io/blog/ONIE/onie_update/2.png)
+![](https://jian-hong-wu.github.io/blog/ONIE/onie_install/2.png)
 
 3. $ onie-discovery-stop
 
@@ -25,7 +25,7 @@
 
 $ onie-nos-install sonic-broadcom.bin
 
-![](https://jian-hong-wu.github.io/blog/ONIE/onie_update/5.png)
+![](https://jian-hong-wu.github.io/blog/ONIE/onie_install/5.png)
 
 Now, you have install the sonic NOS.
 
