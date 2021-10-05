@@ -6,6 +6,6 @@ $ show vlan brief
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/vlan/1.png)
 
-$ show vlan 
+$ show vlan config
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/vlan/2.png)
