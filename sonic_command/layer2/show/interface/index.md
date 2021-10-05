@@ -34,7 +34,7 @@ $ show interface naming_mode
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/interface/8.png)
 
-$ show interface neighbor   
+$ show interface neighbor expected
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/interface/9.png)
 
@@ -52,19 +52,19 @@ $ show interface tpid
 
 $ show interface transceiver 
 
-![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/interface/13.png)
+
 
 $ show interface transceiver eeprom
 
-![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/interface/14.png)
+![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/interface/13.png)
 
 $ show interface transceiver error-status
 
-![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/interface/15.png)
+![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/interface/14.png)
 
 $ show interface transceiver lpmode
 
-![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/interface/16.png)
+![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/interface/15.png)
 
 $ show interface transceiver presence
 
