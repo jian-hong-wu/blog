@@ -4,8 +4,8 @@
 
 $ show vlan brief
 
-![](https://jian-hong-wu.github.io/blog/ONIE/onie_update/1.png)
+![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/1.png)
 
 $ show vlan 
 
-![](https://jian-hong-wu.github.io/blog/ONIE/onie_update/1.png)
+![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/2.png)
