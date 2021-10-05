@@ -1,4 +1,4 @@
-[上一頁](/blog/sonic_command/layer2/show/)
+[上一頁](/blog/sonic_command/layer2/)
 
 ### show vlan commands
 
