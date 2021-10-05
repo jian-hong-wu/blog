@@ -4,6 +4,8 @@
 
 $ show interface
 
+![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/interface/1.png)
+
 $ show interface alias
 
 $ show interface autoneg   
