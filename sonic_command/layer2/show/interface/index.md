@@ -1,4 +1,4 @@
-[上一頁](/blog/sonic_command/layer2/show/interface/)
+[上一頁](/blog/sonic_command/layer2/show/)
 
 ### Show interface commands
 
