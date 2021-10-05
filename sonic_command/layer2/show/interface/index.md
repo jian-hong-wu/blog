@@ -50,10 +50,6 @@ $ show interface tpid
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/interface/12.png)
 
-$ show interface transceiver 
-
-
-
 $ show interface transceiver eeprom
 
 ![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/interface/13.png)
