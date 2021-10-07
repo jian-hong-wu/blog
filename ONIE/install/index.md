@@ -1,3 +1,5 @@
+[上一頁](https://jian-hong-wu.github.io/blog/ONIE/)
+
 ## Getting Started With the Accton Open Networking Switches
 
 To install and run Sonic on the Accton switch you will need ONIE and the Sonic binary. Relevant pointers can be found at [Sonic] and [ONIE].
@@ -44,4 +46,4 @@ If your Accton Wedge does not have ONIE installed, you will need to install it b
 
 ## Sonic Manual Install
 
-[nos-install](/blog/ONIE/install/nos_install/)
+[nos_install](/blog/ONIE/install/nos_install/)
