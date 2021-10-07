@@ -1,4 +1,4 @@
-[上一頁](https://jian-hong-wu.github.io/blog/ONIE/)
+[上一頁](https://jian-hong-wu.github.io/blog/ONIE/install/)
 
 # How to install NOS on Accton Open Networking switch
 
