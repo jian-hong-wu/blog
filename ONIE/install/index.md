@@ -44,4 +44,4 @@ If your Accton Wedge does not have ONIE installed, you will need to install it b
 
 ## Sonic Manual Install
 
-
+[nos-install](/blog/ONIE/install/nos_install/)
