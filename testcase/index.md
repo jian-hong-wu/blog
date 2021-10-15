@@ -133,19 +133,19 @@ $ docker exec -it sonic-mgmt-name /bin/bash
 //在 container 裡進入資料夾 sonic-mgmt  
 $ cd sonic-mgmt/
 
-//進入資料夾 server_config  
+//進入資料夾 server_config (在taipei lab跳過這步驟)  
 $ cd server_config
 
-//選擇server 2  
-$ ./server.sh 2
+//選擇server n=1~6 (在taipei lab跳過這步驟)  
+$ ./server.sh n
 
 //返回上一層並進入資料夾 ansible  
 $ cd ../ansible/
 
-$ vi host_vars/STR-ACS-SERV-02-1.yml  
+$ vi host_vars/STR-ACS-SERV-02-1.yml //在tainan lab跳過這步驟  
 Confirm this line is correct : external_port: ens2f0np0
 
-check the IP of ens2f0np0 in the **server**  
+check the IP of ens2f0np0 in the **server** //在tainan lab跳過這步驟  
 $ ifconfig ens2f0np0 or $ ifconfig ens2f0np0 10.250.2.44
 
 //回到 container，查看檔案 testbed.csv，並決定要測試的 topology，根據要使用的VM進行調整  
@@ -161,7 +161,7 @@ $ [ansible-playbook](https://jian-hong-wu.github.io/blog/testcase/playbook/) -i 
 
 #### c. run test
 //testcase 檔案位於 ~/sonic-mgmt/ansible/roles/test/vars/testcases.yml，選擇執行 testcase 中的 syslog  
-$ ansible-playbook -i lab --limit as7726-32x-1 [test_sonic.yml](https://jian-hong-wu.github.io/blog/testcase/test_sonic/) -e testbed_name=2-4_t0 -e testcase_name=syslog -vvvv
+$ ansible-playbook -i lab --limit as7726-32x-1 [test_sonic.yml](https://jian-hong-wu.github.io/blog/testcase/test_sonic/) -e testbed_name=2-4_t0 -e ptf_host=ptf2-4 -e vm_file=veos -e testcase_name=syslog -vvvv
 
 //返回上一層並進入資料夾 tsets  
 $ cd ../tests
@@ -176,7 +176,7 @@ $ cd ../ansible
 //移除 topology 2-4_t0  
 $ ./testbed-cli.sh remove-topo 2-4_t0 ~/.password
 
-//離開  
+//離開docker  
 $ exit
 
 ## <font color="#0091FF">testbed-cli.sh命令詳解:</font>
