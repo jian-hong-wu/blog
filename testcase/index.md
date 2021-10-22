@@ -81,8 +81,8 @@
     ```
     $ ping "vm_ip"
     ```
-    c. 一般情況下不關閉VMs，若有需要可使用
-    $ cd sonic-mgmt/ansible/
+    c. 一般情況下不關閉VMs，若有需要可使用  
+    $ cd sonic-mgmt/ansible/  
     $ ./testbed-cli.sh stop-vms server_1 ~/.password
     
 8.  更新 testbed.csv。至少應該更新 PTF 管理界面設置。
