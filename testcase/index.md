@@ -153,7 +153,7 @@ $ vi [testbed.csv](https://github.com/jian-hong-wu/blog/blob/gh-pages/testbed.cs
 
 #### a. deploy topology
 //新增一個 topology，vmbase 為 VM0232，名稱為 2-4_t0，設定密碼 ~/.password，使用帶有 lastest 標籤的 PTF image 創建 PTF container  
-$ ./[testbed-cli.sh](https://github.com/Azure/sonic-mgmt/blob/master/ansible/testbed-cli.sh) -b VM0200 [add-topo](https://jian-hong-wu.github.io/blog/testcase/addtopo/) 2-4_t0 ~/.password -e ptf_imagetag=lastest
+$ ./[testbed-cli.sh](https://github.com/Azure/sonic-mgmt/blob/master/ansible/testbed-cli.sh) -b VM0200 [add-topo](https://jian-hong-wu.github.io/blog/testcase/addtopo/) 2-4_t0 ~/.password -e ptf_imagetag=latest
 
 #### b. deploy minigraph
 //設定 inventory = lab， 指定目標為 as7726-32x-1，名稱為 2-4_t0，將新生成的 minigraph 保存並部署到目標 DUT  
