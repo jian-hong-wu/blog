@@ -26,4 +26,4 @@
 
 [ONIE install](/blog/ONIE/install/)
 
-
+[Installation & Upgrade image](https://support.edge-core.com/hc/en-us/articles/900000208626--Edgecore-SONiC-Installation-Upgrade-image)
