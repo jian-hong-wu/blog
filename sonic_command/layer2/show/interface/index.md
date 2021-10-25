@@ -16,7 +16,11 @@ $ show interface autoneg
 
 $ show interface breakout    
 
-![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/interface/4.png)
+![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/interface/4-1.png)
+
+$ show interface breakout current-mode    
+
+![](https://jian-hong-wu.github.io/blog/sonic_command/layer2/show/interface/4-2.png)
 
 $ show interface counters   
 
