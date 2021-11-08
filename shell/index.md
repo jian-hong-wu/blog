@@ -79,3 +79,12 @@ $sed
 
 //希望將裡面的在 settings.conf 裡取代所有的 Mary 字串, 替換成 Leo  
 $ sed -i 's/Mary/Leo/g' settings.conf
+
+//install <file.whl>
+$ pip install <file.whl>
+
+//install <.deb file name>
+$ dpkg -i <.deb file name>
+
+//purge <.deb file name>
+$ dpkg -p <.deb file name>
