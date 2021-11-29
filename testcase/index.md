@@ -29,7 +29,6 @@
     (Please refer to Sonic document to learn how to build these two containers.)   
 
 5.  在 server 的環境, 建立一個名為 sonic-mgmt-work 的 container  
-    $ cd ~$   
     ~$ docker run --name sonic-mgmt-work -it sonic-mgmt-dev:ec202012 /bin/bash  
     
     *NOTE : 從這裡開始所有步驟都在 container `sonic-mgmt-dev` 中執行*
