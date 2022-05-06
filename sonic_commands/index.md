@@ -1,4 +1,0 @@
-bcmcmd
-
-show
-
