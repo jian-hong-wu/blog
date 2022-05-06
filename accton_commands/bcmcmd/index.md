@@ -1,4 +1,4 @@
-* bcmcmd ps
+# bcmcmd ps
 
 admin@sonic:~$ **bcmcmd ps**
 ```
