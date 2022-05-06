@@ -1,4 +1,5 @@
-**bcmcmd ps**    
+**bcmcmd ps**
+
 admin@sonic:~$ bcmcmd ps  
 ena/ speed/ link auto STP lrn inter max cut loop  
 port link Lns duplex scan neg? state pause discrd ops face frame thru? back encap  
