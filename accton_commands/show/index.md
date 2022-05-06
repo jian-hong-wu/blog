@@ -69,6 +69,16 @@ admin@sonic:~$ show interfaces status | more
 admin@sonic:~$  
 ```
 
+### show interfaces status Ethernet2
+admin@sonic:~$ **show interfaces status Ethernet2**
+```
+admin@sonic:~$ show interfaces status Ethernet2
+  Interface    Lanes    Speed    MTU    FEC          Alias    Vlan    Oper    Admin            Type    Asym PFC    Oper Speed
+-----------  -------  -------  -----  -----  -------------  ------  ------  -------  --------------  ----------  ------------
+  Ethernet2        4      25G   9100   none  Eth6/4(Port3)  routed    down       up  SFP/SFP+/SFP28         N/A           25G
+admin@sonic:~$
+```
+
 ### show interfaces transceiver presence | more
 admin@sonic:~$ **show interfaces transceiver presence | more**
 ```
@@ -113,6 +123,15 @@ Ethernet76  Not present
 admin@sonic:~$
 ```
 
+### show interfaces transceiver presence Ethernet2
+admin@sonic:~$ **show interfaces transceiver presence Ethernet2**
+```
+admin@sonic:~$ show interfaces transceiver presence Ethernet2
+Port       Presence
+---------  ----------
+Ethernet2  Present
+admin@sonic:~$
+```
 ### show interfaces transceiver lpmode ?
 admin@sonic:~$ **show interfaces transceiver lpmode ?**
 ```
@@ -174,7 +193,6 @@ Ethernet76  Off
 admin@sonic:~$
 ```
 ### show interfaces transceiver eeprom
-
 
 ```
 admin@sonic:~$ show interfaces transceiver eeprom ?
@@ -357,4 +375,88 @@ Commands:
 admin@sonic:~$
 ```
 
+### show
+admin@sonic:~$ **show**
+```
+admin@sonic:~$ show
+Usage: show [OPTIONS] COMMAND [ARGS]...
 
+  SONiC command line - 'show' command
+
+Options:
+  -h, -?, --help  Show this message and exit.
+
+Commands:
+  aaa                   Show AAA configuration
+  acl                   Show ACL related information
+  arp                   Show IP ARP table
+  boot                  Show boot configuration
+  buffer                Show buffer information
+  buffer_pool           Show details of the buffer pools
+  chassis-modules       Show chassis-modules information
+  clock                 Show date and time
+  dropcounters          Show drop counter related information
+  ecn                   Show ECN configuration
+  environment           Show environmentals (voltages, fans, temps)
+  feature               Show feature status
+  fgnhg                 Show FGNHG information
+  headroom-pool         Show details of headroom pool
+  interfaces            Show details of the network interfaces
+  ip                    Show IP (IPv4) commands
+  ipv6                  Show IPv6 commands
+  kdump                 Show kdump configuration, status and information
+  kubernetes
+  ldap                  Show LDAP configuration
+  line                  Show all console lines and their info include...
+  lldp                  LLDP (Link Layer Discovery Protocol) information
+  logging               Show system log
+  mac                   Show MAC (FDB) entries
+  management_interface  Show management interface parameters
+  mclag                 Show MCLAG related information
+  mgmt-vrf              Show management VRF attributes
+  mirror_session        Show existing everflow sessions
+  mmu                   Show mmu configuration
+  muxcable              SONiC command line - 'show muxcable' command
+  nat                   Show details of the nat
+  ndp                   Show IPv6 Neighbour table
+  neigh-suppress        show neigh-suppress
+  ntp                   Show NTP information
+  pfc                   Show details of the priority-flow-control (pfc)
+  pfcwd                 Show details of the pfc watchdog
+  pim                   Show details of the pims
+  platform              Show platform-specific hardware info
+  policer               Show existing policers
+  priority-group        Show details of the PGs
+  processes             Display process information
+  qos                   Show qos related information
+  queue                 Show details of the queues
+  reboot-cause          Show cause of most recent reboot
+  route-map             show route-map
+  runningconfiguration  Show current running configuration information
+  sag                   show sag information
+  services              Show all daemon services
+  sflow                 Show sFlow related information
+  snmpagentaddress      Show SNMP agent listening IP address configuration
+  snmptrap              Show SNMP agent Trap server configuration
+  spanning-tree         Show spanning_tree commands
+  startupconfiguration  Show startup configuration information
+  storm-control         show storm-control
+  subinterfaces         Show details of the sub port interfaces
+  system                Show system status
+  system-health         SONiC command line - 'show system-health' command
+  system-memory         Show memory information
+  tacacs                Show TACACS+ configuration
+  techsupport           Gather information for troubleshooting
+  uptime                Show system uptime
+  users                 Show users
+  version               Show version information
+  vlan                  Show VLAN information
+  vlan-stacking
+  vnet                  Show vnet related information
+  vrf                   Show vrf config
+  vxlan                 Show vxlan related information
+  warm_restart          Show warm restart configuration and state
+  watermark             Show details of watermark
+  ztp                   Show Zero Touch Provisioning status
+admin@sonic:~$
+```
