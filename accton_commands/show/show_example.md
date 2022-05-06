@@ -45,6 +45,95 @@ Existing files will be overwritten, continue? [y/N]: y
 Running command: /usr/local/bin/sonic-cfggen -d --print-data > /etc/sonic/config_db.json
 admin@sonic:~$
 ```
+### try to set the breakout port speed to 1G
+admin@sonic:~$ show interfaces status Ethernet12
+  Interface    Lanes    Speed    MTU    FEC            Alias    Vlan    Oper    Admin            Type    Asym PFC    Oper Speed
+-----------  -------  -------  -----  -----  ---------------  ------  ------  -------  --------------  ----------  ------------
+ Ethernet12       23      25G   9100   none  Eth18/3(Port13)  routed    down       up  SFP/SFP+/SFP28         N/A           25G
+admin@sonic:~$ 
+admin@sonic:~$ sudo config interface speed Ethernet12 10000
+
+Due to the special circuit scheme on PCB of this device, the port specified
+in the command is one of the child port out of 4 internally broken out ports.
+To change port speed as 1G or 10G, you must use "config interface breakout"
+command to change the port breakout mode as "4x10G[1G]". This will change
+port speed as 10G upon 4 ports at the same time. Under "4x10G[1G]" breakout mode,
+it is allowed to use "config interface speed" command to set port speed upon
+any port out of those 4 ports as 1G or 10G.
+
+admin@sonic:~$ sudo config interface breakout Ethernet12
+Usage: config interface breakout [OPTIONS] <interface_name> MODE
+Try "config interface breakout -h" for help.
+
+Error: Missing argument "MODE".
+admin@sonic:~$
+admin@sonic:~$ sudo config interface breakout -h
+Usage: config interface breakout [OPTIONS] <interface_name> MODE
+
+  Set interface breakout mode
+
+Options:
+  -f, --force-remove-dependencies
+                                  Clear all dependencies internally first.
+  -l, --load-predefined-config    load predefied user configuration (alias,
+                                  lanes, speed etc) first.
+  -y, --yes
+  -v, --verbose                   Enable verbose output
+  -?, -h, --help                  Show this message and exit.
+admin@sonic:~$
+admin@sonic:~$ sudo config interface breakout Ethernet12 -h
+Usage: config interface breakout [OPTIONS] <interface_name> MODE
+
+  Set interface breakout mode
+
+Options:
+  -f, --force-remove-dependencies
+                                  Clear all dependencies internally first.
+  -l, --load-predefined-config    load predefied user configuration (alias,
+                                  lanes, speed etc) first.
+  -y, --yes
+  -v, --verbose                   Enable verbose output
+  -h, -?, --help                  Show this message and exit.
+admin@sonic:~$
+admin@sonic:~$
+admin@sonic:~$ show interfaces status | head -15
+  Interface            Lanes    Speed    MTU    FEC            Alias    Vlan    Oper    Admin             Type    Asym PFC    Oper Speed
+-----------  ---------------  -------  -----  -----  ---------------  ------  ------  -------  ---------------  ----------  ------------
+  Ethernet0                3      25G   9100   none    Eth6/3(Port1)  routed    down       up              N/A         N/A           25G
+  Ethernet1                2      25G   9100   none    Eth6/2(Port2)  routed    down       up              N/A         N/A           25G
+  Ethernet2                4      25G   9100   none    Eth6/4(Port3)  routed    down       up   SFP/SFP+/SFP28         N/A           25G
+  Ethernet3                8      25G   9100   none    Eth7/4(Port4)  routed    down       up              N/A         N/A           25G
+  Ethernet4                7      25G   9100   none    Eth7/3(Port5)  routed    down     down              N/A         N/A           25G
+  Ethernet5                1      25G   9100   none    Eth6/1(Port6)  routed    down       up              N/A         N/A           25G
+  Ethernet6                5      25G   9100   none    Eth7/1(Port7)   trunk    down       up              N/A         N/A           25G
+  Ethernet7               16      25G   9100   none   Eth11/4(Port8)   trunk    down       up              N/A         N/A           25G
+  Ethernet8                6      25G   9100   none    Eth7/2(Port9)  routed    down       up              N/A         N/A           25G
+  Ethernet9               14      25G   9100   none  Eth11/2(Port10)  routed    down       up              N/A         N/A           25G
+ Ethernet10               13      25G   9100   none  Eth11/1(Port11)  routed    down       up              N/A         N/A           25G
+ Ethernet11               15      25G   9100   none  Eth11/3(Port12)  routed    down       up              N/A         N/A           25G
+ Ethernet12               23      25G   9100   none  Eth18/3(Port13)  routed    down       up   SFP/SFP+/SFP28         N/A           25G
+admin@sonic:~$
+```
+
+### change the Ethernet72 port speed to 40G
+```
+admin@sonic:~$  sudo config interface speed Ethernet72 40000
+admin@sonic:~$ sudo config interface speed Ethernet72 25000
+
+Can't set the port speed. Only support port speed: 100000, 40000.
+admin@sonic:~$ show interfaces status | tail -10
+ Ethernet46               72      25G   9100   none  Eth44/4(Port47)  routed    down       up              N/A         N/A           25G
+ Ethernet47               70      25G   9100   none  Eth44/2(Port48)  routed    down       up              N/A         N/A           25G
+ Ethernet48      77,78,79,80      40G   9100   none  Eth49/1(Port49)  routed      up       up  QSFP28 or later         N/A           40G
+ Ethernet52      85,86,87,88     100G   9100   none  Eth50/1(Port50)   trunk    down       up              N/A         N/A          100G
+ Ethernet56      93,94,95,96     100G   9100   none  Eth51/1(Port51)  routed    down       up  QSFP28 or later         N/A          100G
+ Ethernet60     97,98,99,100     100G   9100   none  Eth52/1(Port52)  routed    down       up              N/A         N/A          100G
+ Ethernet64  105,106,107,108     100G   9100   none  Eth53/1(Port53)  routed    down       up              N/A         N/A          100G
+ Ethernet68  113,114,115,116     100G   9100   none  Eth54/1(Port54)  routed    down       up              N/A         N/A          100G
+ Ethernet72  121,122,123,124      40G   9100   none  Eth55/1(Port55)  routed    down       up              N/A         N/A           40G
+ Ethernet76  125,126,127,128     100G   9100   none  Eth56/1(Port56)  routed    down       up              N/A         N/A          100G
+admin@sonic:~$
+```
 
 ### config_db.json
 admin@sonic:~$ **cat /etc/sonic/config_db.json**
