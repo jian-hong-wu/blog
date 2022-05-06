@@ -12,9 +12,9 @@
 [ip](/blog/sonic_commands/ip/)  
 
 ## show ip route
-[ip route show](/blog/sonic_commands/ip/)    // show ip route
-[ip -s link](/blog/sonic_commands/ip/)    // show port statistics 
-[ip -s link ls Ethernet1](/blog/sonic_commands/ip/)    // show port statistics
+[ip route show](/blog/sonic_commands/ip/)    // show ip route  
+[ip -s link](/blog/sonic_commands/ip/)    // show port statistics   
+[ip -s link ls Ethernet1](/blog/sonic_commands/ip/)    // show port statistics  
 
-[ip addr add 192.168.0.24/24 dev Ethernet2](/blog/sonic_commands/ip/)    // set ip address
-[ip addr show dev Ethernet2](/blog/sonic_commands/ip/)    // show ip address
+[ip addr add 192.168.0.24/24 dev Ethernet2](/blog/sonic_commands/ip/)    // set ip address  
+[ip addr show dev Ethernet2](/blog/sonic_commands/ip/)    // show ip address  
