@@ -20,6 +20,7 @@
 [ip addr show dev Ethernet2](/blog/sonic_commands/ip/)    // show ip address  
 
 ## system status
+[show logging](/blog/sonic_commands/logging/)    //show system log  
 [show logging | more](/blog/sonic_commands/logging/)    //show system log  
 [psuutil status](/blog/sonic_commands/)    //show psu status  
 [sfputil show eeprom](/blog/sonic_commands/)    // show transceiver eeprom  
