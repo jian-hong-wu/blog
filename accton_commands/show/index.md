@@ -113,6 +113,206 @@ Ethernet76  Not present
 admin@sonic:~$
 ```
 
+### show interfaces transceiver lpmode ?
+admin@sonic:~$ **show interfaces transceiver lpmode ?**
+```
+admin@sonic:~$ show interfaces transceiver lpmode ?
+Error: invalid port '?'
+
+Valid values for port: ['Ethernet0', 'Ethernet1', 'Ethernet2', 'Ethernet3', 'Ethernet4', 'Ethernet5', 'Ethernet6', 'Ethernet7', 'Ethernet8', 'Ethernet9', 'Ethernet10', 'Ethernet11', 'Ethernet12', 'Ethernet13', 'Ethernet14', 'Ethernet15', 'Ethernet16', 'Ethernet17', 'Ethernet18', 'Ethernet19', 'Ethernet20', 'Ethernet21', 'Ethernet22', 'Ethernet23', 'Ethernet24', 'Ethernet25', 'Ethernet26', 'Ethernet27', 'Ethernet28', 'Ethernet29', 'Ethernet30', 'Ethernet31', 'Ethernet32', 'Ethernet33', 'Ethernet34', 'Ethernet35', 'Ethernet36', 'Ethernet37', 'Ethernet38', 'Ethernet39', 'Ethernet40', 'Ethernet41', 'Ethernet42', 'Ethernet43', 'Ethernet44', 'Ethernet45', 'Ethernet46', 'Ethernet47', 'Ethernet48', 'Ethernet52', 'Ethernet56', 'Ethernet60', 'Ethernet64', 'Ethernet68', 'Ethernet72', 'Ethernet76']
+admin@sonic:~$
+```
+### show interfaces transceiver lpmode [port]
+```
+admin@sonic:~$ show interfaces transceiver lpmode Ethernet76
+Port        Low-power Mode
+----------  ----------------
+Ethernet76  Off
+admin@sonic:~$ show interfaces transceiver lpmode Ethernet75
+Error: invalid port 'Ethernet75'
+
+Valid values for port: ['Ethernet0', 'Ethernet1', 'Ethernet2', 'Ethernet3', 'Ethernet4', 'Ethernet5', 'Ethernet6', 'Ethernet7', 'Ethernet8', 'Ethernet9', 'Ethernet10', 'Ethernet11', 'Ethernet12', 'Ethernet13', 'Ethernet14', 'Ethernet15', 'Ethernet16', 'Ethernet17', 'Ethernet18', 'Ethernet19', 'Ethernet20', 'Ethernet21', 'Ethernet22', 'Ethernet23', 'Ethernet24', 'Ethernet25', 'Ethernet26', 'Ethernet27', 'Ethernet28', 'Ethernet29', 'Ethernet30', 'Ethernet31', 'Ethernet32', 'Ethernet33', 'Ethernet34', 'Ethernet35', 'Ethernet36', 'Ethernet37', 'Ethernet38', 'Ethernet39', 'Ethernet40', 'Ethernet41', 'Ethernet42', 'Ethernet43', 'Ethernet44', 'Ethernet45', 'Ethernet46', 'Ethernet47', 'Ethernet48', 'Ethernet52', 'Ethernet56', 'Ethernet60', 'Ethernet64', 'Ethernet68', 'Ethernet72', 'Ethernet76']
+admin@sonic:~$
+admin@sonic:~$ show interfaces transceiver lpmode | more
+Port        Low-power Mode
+----------  ----------------
+Ethernet0   Off
+Ethernet1   Off
+Ethernet2   Off
+Ethernet3   Off
+Ethernet4   Off
+Ethernet5   Off
+Ethernet6   Off
+Ethernet7   Off
+Ethernet8   Off
+Ethernet9   Off
+Ethernet10  Off
+Ethernet11  Off
+Ethernet12  Off
+Ethernet13  Off
+Ethernet14  Off
+Ethernet15  Off
+Ethernet16  Off
+Ethernet17  Off
+Ethernet18  Off
+Ethernet19  Off
+Ethernet20  Off
+--More--
+
+Ethernet44  Off
+Ethernet45  Off
+Ethernet46  Off
+Ethernet47  Off
+Ethernet48  Off
+Ethernet52  Off
+Ethernet56  Off
+Ethernet60  Off
+Ethernet64  Off
+Ethernet68  Off
+Ethernet72  Off
+Ethernet76  Off
+admin@sonic:~$
+```
+### show interfaces transceiver eeprom
+
+
+```
+admin@sonic:~$ show interfaces transceiver eeprom ?
+?: SFP EEPROM Not detected
+admin@sonic:~$ show interfaces transceiver eeprom Ethernet52
+Ethernet52: SFP EEPROM Not detected
+admin@sonic:~$
+admin@sonic:~$ show interfaces transceiver eeprom Ethernet12
+Ethernet12: SFP EEPROM detected
+        Application Advertisement: N/A
+        Connector: CopperPigtail
+        DOM Capability:
+                sff8472_dom_support: no
+        Encoding: Unspecified
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Extended RateSelect Compliance: Unspecified
+        Identifier: SFP/SFP+/SFP28
+        LengthOM3(UnitsOf10m): 0
+        Nominal Bit Rate(100Mbs): 255
+        Specification compliance:
+                SFP+CableTechnology: Passive Cable
+        Vendor Date Code(YYYY-MM-DD Lot): 2021-11-01
+        Vendor Name: Edgecore
+        Vendor OUI: 70-72-cf
+        Vendor PN: ET7402-25DAC-1M
+        Vendor Rev: 01
+        Vendor SN: J12045200001
+admin@sonic:~$
+admin@sonic:~$ show interfaces transceiver eeprom Ethernet56
+Ethernet56: SFP EEPROM detected
+        Application Advertisement: N/A
+        Connector: No separable connector
+        DOM Capability:
+                Rx_power_support: no
+                Temp_support: no
+                Tx_power_support: no
+                Voltage_support: no
+        Encoding: Unspecified
+        Extended Identifier: Power Class 1(1.5W max)
+        Extended RateSelect Compliance: QSFP+ Rate Select Version 1
+        Identifier: QSFP28 or later
+        Length Cable Assembly(m): 1
+        Nominal Bit Rate(100Mbs): 255
+        Specification compliance:
+        Vendor Date Code(YYYY-MM-DD Lot): 2017-06-28
+        Vendor Name: Edgecore
+        Vendor OUI: 70-72-cf
+        Vendor PN: ET7402-100DAC-1M
+        Vendor Rev: 01
+        Vendor SN: J11917004024
+admin@sonic:~$
+admin@sonic:~$ show interfaces transceiver eeprom | more
+Ethernet0: SFP EEPROM Not detected
+
+Ethernet1: SFP EEPROM Not detected
+
+Ethernet2: SFP EEPROM detected
+        Application Advertisement: N/A
+        Connector: CopperPigtail
+        DOM Capability:
+                sff8472_dom_support: no
+        Encoding: Unspecified
+        Extended Identifier: GBIC/SFP defined by twowire interface ID
+        Extended RateSelect Compliance: Unspecified
+        Identifier: SFP/SFP+/SFP28
+        LengthOM3(UnitsOf10m): 0
+        Nominal Bit Rate(100Mbs): 103
+        Specification compliance:
+                SFP+CableTechnology: Passive Cable
+        Vendor Date Code(YYYY-MM-DD Lot): 2016-12-21
+        Vendor Name: Edgecore
+        Vendor OUI: 70-72-cf
+        Vendor PN: ET5402-DAC-3M
+        Vendor Rev: 01
+        Vendor SN: J11852000097
+--More--
+
+Ethernet24: SFP EEPROM Not detected
+
+Ethernet25: SFP EEPROM Not detected
+
+Ethernet26: SFP EEPROM Not detected
+
+Ethernet27: SFP EEPROM Not detected
+
+Ethernet28: SFP EEPROM Not detected
+
+Ethernet29: SFP EEPROM Not detected
+
+Ethernet30: SFP EEPROM Not detected
+
+Ethernet31: SFP EEPROM Not detected
+
+Ethernet32: SFP EEPROM Not detected
+
+Ethernet33: SFP EEPROM Not detected
+
+Ethernet34: SFP EEPROM Not detected
+
+Ethernet35: SFP EEPROM Not detected
+--More--
+
+Ethernet52: SFP EEPROM Not detected
+
+Ethernet56: SFP EEPROM detected
+        Application Advertisement: N/A
+        Connector: No separable connector
+        DOM Capability:
+                Rx_power_support: no
+                Temp_support: no
+                Tx_power_support: no
+                Voltage_support: no
+        Encoding: Unspecified
+        Extended Identifier: Power Class 1(1.5W max)
+        Extended RateSelect Compliance: QSFP+ Rate Select Version 1
+        Identifier: QSFP28 or later
+        Length Cable Assembly(m): 1
+        Nominal Bit Rate(100Mbs): 255
+        Specification compliance:
+        Vendor Date Code(YYYY-MM-DD Lot): 2017-06-28
+        Vendor Name: Edgecore
+        Vendor OUI: 70-72-cf
+        Vendor PN: ET7402-100DAC-1M
+        Vendor Rev: 01
+        Vendor SN: J11917004024
+
+Ethernet60: SFP EEPROM Not detected
+
+Ethernet64: SFP EEPROM Not detected
+
+Ethernet68: SFP EEPROM Not detected
+
+Ethernet72: SFP EEPROM Not detected
+
+Ethernet76: SFP EEPROM Not detected
+admin@sonic:~$
+```
+
 ### show interfaces transceiver
 admin@sonic:~$ **show interfaces transceiver**
 ```
