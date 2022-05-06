@@ -50,4 +50,38 @@
 </PortChannel>
 </PortChannelInterfaces>
 ```
+[config save]    // save configuration  
+
+## show interfaces portchannel
+[show interfaces portchannel](/blog/sonic_commands/)  // show interfaces portchannel  
+
+## teamshow
+
+
+## configuration using .json file
+1. Create a myconfig.json file
+2. edit myconfig.json file
+3. config load myconfig.json
+4. config file example
+
+```
+{
+    "VLAN": {
+        "vlan100": {
+        "vlanid": 100
+        },
+        "vlan200": {
+        "vlanid": 200
+        }
+    },
+    "VLAN_MEMBER": {
+        "vlan100|Ethernet1": {
+        "tagging_mode": "untagged"
+        },
+        "vlan200|Ethernet2": {
+        "tagging_mode": "tagged"
+        }
+    }
+}
+```
 
