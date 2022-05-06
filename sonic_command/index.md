@@ -20,15 +20,19 @@
 [ip addr show dev Ethernet2](/blog/sonic_commands/ip/)    // show ip address  
 
 ## system status
-[show logging](/blog/sonic_commands/logging/)    //show system log  
-[show logging | more](/blog/sonic_commands/logging/)    //show system log  
-[psuutil status](/blog/sonic_commands/)    //show psu status  
-[sfputil show eeprom](/blog/sonic_commands/)    // show transceiver eeprom  
-[sfputil show presence](/blog/sonic_commands/)    // show transceiver present  
+[show logging](/blog/sonic_commands/show/)    //show system log  
+[show logging | more](/blog/sonic_commands/show/)    //show system log
+[psuutil](/blog/sonic_commands/psuutil)    //psuutil command
+[sudo psuutil status](/blog/sonic_commands/)    //show psu status  
+[sfputil](/blog/sonic_commands/sfputil)    //sfputil command
+[sudo sfputil show eeprom](/blog/sonic_commands/)    // show transceiver eeprom  
+[shdo sfputil show presence](/blog/sonic_commands/)    // show transceiver present  
 [sfputil show presence --port Ethernet0](/blog/sonic_commands/)    // show transceiver present  
 
-## enable lpmode
-[sfputil lpmode on Ethernet1](/blog/sonic_commands/)    // enable lpmode  
+## enable lpmode/reset SFP transceiver/show version
+[sudo sfputil lpmode on Ethernet1](/blog/sonic_commands/)    // enable lpmode  
+[sudo sfputil reset Ethernet1](/blog/sonic_commands/)    // enable lpmode  
+[sudo sfputil version](/blog/sonic_commands/)    // enable lpmode  
 
 ## show/clear mac table
 [fdbshow](/blog/sonic_commands/)    // show mac table  
