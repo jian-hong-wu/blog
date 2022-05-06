@@ -42,6 +42,19 @@ admin@sonic:~$ show interfaces status | more
   Ethernet8                6      25G   9100   none    Eth7/2(Port9)  routed  down       up              N/A         N/A           25G
   Ethernet9               14      25G   9100   none  Eth11/2(Port10)  routed  
   --More--
+  
+ Ethernet10               13      25G   9100   none  Eth11/1(Port11)  routed  down       up              N/A         N/A           25G
+ Ethernet11               15      25G   9100   none  Eth11/3(Port12)  routed  down       up              N/A         N/A           25G
+ Ethernet12               23      25G   9100   none  Eth18/3(Port13)  routed  down       up   SFP/SFP+/SFP28         N/A           25G
+ Ethernet13               22      25G   9100   none  Eth18/2(Port14)  routed  down       up              N/A         N/A           25G
+ Ethernet14               24      25G   9100   none  Eth18/4(Port15)  routed  down       up              N/A         N/A           25G
+ Ethernet15               32      25G   9100   none  Eth19/4(Port16)  routed  down       up   SFP/SFP+/SFP28         N/A           25G
+ Ethernet16               31      25G   9100   none  Eth19/3(Port17)  routed  down       up              N/A         N/A           25G
+ Ethernet17               21      25G   9100   none  Eth18/1(Port18)  routed  down       up              N/A         N/A           25G
+ Ethernet18               29      25G   9100   none  Eth19/1(Port19)  routed  down       up   SFP/SFP+/SFP28         N/A           25G
+ Ethernet19               36      25G   9100   none  Eth23/4(Port20)  routed  down       up              N/A         N/A           25G
+ Ethernet20               30      25G   9100   none  Eth19/2(Port21)  routed  down       up              N/A         N/A           25G
+--More--
 
  Ethernet46               72      25G   9100   none  Eth44/4(Port47)  routed  down       up              N/A         N/A           25G
  Ethernet47               70      25G   9100   none  Eth44/2(Port48)  routed  down       up              N/A         N/A           25G
@@ -54,6 +67,68 @@ admin@sonic:~$ show interfaces status | more
  Ethernet72  121,122,123,124     100G   9100   none  Eth55/1(Port55)  routed  down       up              N/A         N/A          100G
  Ethernet76  125,126,127,128     100G   9100   none  Eth56/1(Port56)  routed  down       up              N/A         N/A          100G
 admin@sonic:~$  
+```
+
+### show interfaces transceiver presence | more
+admin@sonic:~$ **show interfaces transceiver presence | more**
+```
+admin@sonic:~$ show interfaces transceiver presence | more
+Port        Presence
+----------  -----------
+Ethernet0   Not present
+Ethernet1   Not present
+Ethernet2   Present
+Ethernet3   Not present
+Ethernet4   Not present
+Ethernet5   Not present
+Ethernet6   Not present
+Ethernet7   Not present
+Ethernet8   Not present
+Ethernet9   Not present
+Ethernet10  Not present
+Ethernet11  Not present
+Ethernet12  Present
+Ethernet13  Not present
+Ethernet14  Not present
+Ethernet15  Present
+Ethernet16  Not present
+Ethernet17  Not present
+Ethernet18  Present
+Ethernet19  Not present
+Ethernet20  Not present
+--More--
+
+Ethernet44  Not present
+Ethernet45  Not present
+Ethernet46  Not present
+Ethernet47  Not present
+Ethernet48  Present
+Ethernet52  Not present
+Ethernet56  Present
+Ethernet60  Not present
+Ethernet64  Not present
+Ethernet68  Not present
+Ethernet72  Not present
+Ethernet76  Not present
+admin@sonic:~$
+```
+
+### show interfaces transceiver
+admin@sonic:~$ **show interfaces transceiver**
+```
+admin@sonic:~$ show interfaces transceiver
+Usage: show interfaces transceiver [OPTIONS] COMMAND [ARGS]...
+
+  Show SFP Transceiver information
+
+Options:
+  -?, -h, --help  Show this message and exit.
+
+Commands:
+  eeprom    Show interface transceiver EEPROM information
+  lpmode    Show interface transceiver low-power mode status
+  presence  Show interface transceiver presence
+admin@sonic:~$ show interfaces transceiver presence
 ```
 
 ### show interfaces
