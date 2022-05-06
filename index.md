@@ -19,7 +19,7 @@
    16. [Sonic installation](/blog/sonic_install)
   
 ## 學習專區 - 常用的指令
-   1. [常用的sonic command指令](/blog/sonic_command/)
+   1. [常用的accton commands指令](/blog/sonic_command/)
    2. [常用的docker指令](/blog/docker/)
    3. [常用的shell指令](/blog/shell/)
    4. [Putty安裝指令](/blog/putty/)
