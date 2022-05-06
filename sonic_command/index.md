@@ -56,7 +56,14 @@
 [show interfaces portchannel](/blog/sonic_commands/)  // show interfaces portchannel  
 
 ## teamshow
-
+```
+[teamshow]
+Flags: A - active, I - inactive, Up - up, Dw - Down, N/A - not available, S - selected, D - deselected
+No. Team Dev Protocol Ports
+----- ------------- ----------- -------
+01 PortChannel01 LACP(A)(Dw) N/A
+03 PortChannel03 LACP(A)(Dw) N/A
+```
 
 ## configuration using .json file
 1. Create a myconfig.json file
