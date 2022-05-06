@@ -45,7 +45,52 @@ Existing files will be overwritten, continue? [y/N]: y
 Running command: /usr/local/bin/sonic-cfggen -d --print-data > /etc/sonic/config_db.json
 admin@sonic:~$
 ```
+
 ### try to set the breakout port speed to 1G
+(You need to break out the port first, based on "show interface breakout")
+admin@sonic:~$ **sudo config interface breakout Ethernet72 '4x10G'**
+```
+admin@sonic:~$ sudo config interface breakout Ethernet72 '4x10G'
+Do you want to Breakout the port, continue? [y/N]: y
+
+Running Breakout Mode : 1x100G[40G]
+Target Breakout Mode : 4x10G
+
+Ports to be deleted :
+ {
+    "Ethernet72": "100000"
+}
+Ports to be added :
+ {
+    "Ethernet72": "10000",
+    "Ethernet73": "10000",
+    "Ethernet74": "10000",
+    "Ethernet75": "10000"
+}
+
+After running Logic to limit the impact
+
+Final list of ports to be deleted :
+ {
+    "Ethernet72": "100000"
+}
+Final list of ports to be added :
+ {
+    "Ethernet72": "10000",
+    "Ethernet73": "10000",
+    "Ethernet74": "10000",
+    "Ethernet75": "10000"
+}
+Loaded below Yang Models
+['sonic-acl', 'sonic-crm', 'sonic-device_metadata', 'sonic-device_neighbor', 'sonic-extension', 'sonic-flex_counter', 'sonic-interface', 'sonic-loopback-interface', 'sonic-port', 'sonic-portchannel', 'sonic-types', 'sonic-versions', 'sonic-vlan']
+Note: Below table(s) have no YANG models:
+SNMP_COMMUNITY, BREAKOUT_CFG, FEATURE, VXLAN_EVPN_NVO, VXLAN_TUNNEL_MAP, KDUMP, REST_SERVER, SNMP, VXLAN_TUNNEL,
+Breakout process got successfully completed.
+Please note loaded setting will be lost after system reboot. To preserve setting, run `config save`.
+admin@sonic:~$
+```
+
+```
 admin@sonic:~$ show interfaces status Ethernet12
   Interface    Lanes    Speed    MTU    FEC            Alias    Vlan    Oper    Admin            Type    Asym PFC    Oper Speed
 -----------  -------  -------  -----  -----  ---------------  ------  ------  -------  --------------  ----------  ------------
