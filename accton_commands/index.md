@@ -97,3 +97,22 @@ No. Team Dev Protocol Ports
 }
 ```
 
+## Configure 10G interface to be 1G interface
+
+
+## Configure 25G interface to be 10G interface
+[Configure 25G interface to be 10G interface](/blog/accton_commands/config/)    // configuration
+
+## Configure 100G interface (QSFP+) to be 40G interface
+```
+admin@sonic:~$ sudo config interface speed Ethernet48 40000
+admin@sonic:~$ sudo config interface speed Ethernet52 40000
+```
+Check the interface speed
+```
+admin@sonic:~$ show interface status | grep 'Ethernet48\|Ethernet52'
+ Ethernet48  37,38,39,40      40G   9100    N/A  Eth49/1  routed    down       up  QSFP+ or later         N/A
+ Ethernet52  29,30,31,32      40G   9100    N/A  Eth50/1  routed    down       up  QSFP+ or later         N/A
+```
+
+
