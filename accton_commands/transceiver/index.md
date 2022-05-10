@@ -1,4 +1,13 @@
-# Transceiver Commands
+# Transceiver Commands  
+
+## relative commands  
+1. Switch Port Attributes  
+2. LAG (Link Aggregation)  
+3. Transceiver status and DDMI  
+4. MTU (Maximum Transmission Unit)  
+5. Counter (Port counter and L3 RIF counter)  
+6. Dynamic Port Breakout)  
+
 
 ## Check transceiver present
 ```
